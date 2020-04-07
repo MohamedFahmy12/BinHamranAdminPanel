@@ -26,15 +26,14 @@ namespace BinHamranAdminPanel.Controllers
     private UserManager<AppUser> UserManager;
     private SignInManager<AppUser> SignInManager;
     private IPasswordHasher<AppUser> passwordHasher;
-    private readonly RoleManager<IdentityRole> roleManager;
+    
 
     public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager,
-      IPasswordHasher<AppUser> passwordHash, IOptions<ApplicationSettings> appSettings, RoleManager<IdentityRole> roleManager)
+      IPasswordHasher<AppUser> passwordHash, IOptions<ApplicationSettings> appSettings)
     {
       this.UserManager = userManager;
       this.SignInManager = signInManager;
       this.passwordHasher = passwordHash;
-      this.roleManager = roleManager;
       this.appSettings = appSettings.Value;
     }
 
@@ -52,7 +51,7 @@ namespace BinHamranAdminPanel.Controllers
       var result = await UserManager.CreateAsync(applicationuser, appUser.Password);
       if (result.Succeeded)
       {
-        await UserManager.AddToRoleAsync(applicationuser, appUser.Password);
+        await UserManager.AddToRoleAsync(applicationuser, appUser.Role);
         return Ok(result);
       }
       else
@@ -74,7 +73,7 @@ namespace BinHamranAdminPanel.Controllers
 
     }
     [HttpPost]
-    [Route("~/api/Account/Login")]
+    [Route("Login")]
     //Post:/api/ApplicationUser/Login
     public async Task<IActionResult> Login(LoginModel model)
     {

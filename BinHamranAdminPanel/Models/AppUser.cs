@@ -10,6 +10,9 @@ namespace BinHamranAdminPanel.Models
   {
     public string FirstName { get; set; }
     public string LastName { get; set; }
+    public DateTime Creationdate { get; set; }
+
+    public virtual ICollection<UserLog> UserLogs { get; set; }
 
   }
 }

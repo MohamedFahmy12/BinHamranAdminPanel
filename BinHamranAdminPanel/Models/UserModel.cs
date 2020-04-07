@@ -7,7 +7,7 @@ namespace BinHamranAdminPanel.Models
 {
   public class UserModel
   {
-    public string Id { get; set; }
+    public int Id { get; set; }
     public string UserName { get; set; }
 
     public string Email { get; set; }
@@ -25,6 +25,6 @@ namespace BinHamranAdminPanel.Models
 
     public int Count { get; set; }
 
-    public IEnumerable<AppRole> AppRoles { get; set; }
+    public IEnumerable<RoleModel> RoleModels { get; set; }
   }
 }

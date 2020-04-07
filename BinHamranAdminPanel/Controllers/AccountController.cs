@@ -26,16 +26,108 @@ namespace BinHamranAdminPanel.Controllers
     private UserManager<AppUser> UserManager;
     private SignInManager<AppUser> SignInManager;
     private IPasswordHasher<AppUser> passwordHasher;
-    
+    private RoleManager<IdentityRole> _roleManager;
 
     public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager,
-      IPasswordHasher<AppUser> passwordHash, IOptions<ApplicationSettings> appSettings)
+      IPasswordHasher<AppUser> passwordHash, IOptions<ApplicationSettings> appSettings, RoleManager<IdentityRole> roleManager)
     {
       this.UserManager = userManager;
       this.SignInManager = signInManager;
       this.passwordHasher = passwordHash;
+      this._roleManager = roleManager;
       this.appSettings = appSettings.Value;
     }
+
+    [HttpGet]
+    [Authorize(Roles = "SuperAdmin")]
+    [Route("GetAllRoles")]
+    public IEnumerable<RoleModel> GetAllRoles()
+    {
+      var roles = _roleManager.Roles.ToList();
+      var model = new List<RoleModel>();
+      roles.ForEach(item => model.Add(
+          new RoleModel
+          {
+            Id = item.Id,
+            Name = item.Name
+          }
+          ));
+      return (model);
+    }
+    [HttpGet]
+    [Authorize(Roles = "SuperAdmin")]
+    [Route("FirstOpen")]
+    public IActionResult FirstOpen()
+    {
+      UserModel model = new UserModel();
+      if (UserManager.Users.Count() == 0)
+      {
+        model.RoleModels = GetAllRoles();
+        return Ok(model);
+      }
+
+      else
+      {
+        model.Count = UserManager.Users.Count();
+        model.RoleModels = GetAllRoles();
+        return Ok(model);
+      }
+    }
+
+
+    [HttpGet]
+    [Authorize(Roles = "SuperAdmin")]
+    [Route("GetLastUser")]
+    public IActionResult GetLastUser()
+    {
+
+      if (UserManager.Users.Last() == null)
+      {
+        return Ok(0);
+      }
+      var LastUser = UserManager.Users.OrderBy(m => m.Creationdate).Last();
+      var model = new UserModel();
+      model.Id = LastUser.Id;
+      model.UserName = LastUser.UserName;
+      model.Email = LastUser.Email;
+      model.FirstName = LastUser.FirstName;
+      model.Password = LastUser.PasswordHash;
+      return Ok(model);
+    }
+
+    [HttpGet]
+    [Authorize(Roles = "SuperAdmin")]
+    [Route("Paging/{pageNumber}")]
+    public async Task<IActionResult> Pagination(int pageNumber)
+    {
+      if (pageNumber > 0)
+      {
+
+        var User = UserManager.Users.OrderBy(m => m.Creationdate).Skip(pageNumber - 1).Take(1).FirstOrDefault();
+        if (User == null)
+        {
+          return Ok(0);
+        }
+        var model = new UserModel();
+        model.Id = User.Id;
+        model.UserName = User.UserName;
+        model.Email = User.Email;
+        model.FirstName = User.FirstName;
+        model.LastName = User.LastName;
+        model.Password = User.PasswordHash;
+        model.ConfirmPassword = User.PasswordHash;
+        model.Count = UserManager.Users.Count();
+        var UserRoles = await UserManager.GetRolesAsync(User);
+        model.Role = UserRoles[0];
+        model.RoleModels = GetAllRoles();
+
+        return Ok(model);
+      }
+      else
+        return Ok(1);
+
+    }
+
 
     [HttpPost]
     [Route("Register")]

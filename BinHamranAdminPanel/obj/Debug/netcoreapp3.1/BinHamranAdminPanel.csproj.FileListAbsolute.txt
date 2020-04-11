@@ -159,6 +159,10 @@ D:\BinHamranAdminPanel\BinHamranAdminPanel\bin\Debug\netcoreapp3.1\runtimes\win\
 D:\BinHamranAdminPanel\BinHamranAdminPanel\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\BinHamranAdminPanel\BinHamranAdminPanel\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\BinHamranAdminPanel\BinHamranAdminPanel\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
+D:\BinHamranAdminPanel\BinHamranAdminPanel\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\BinHamranAdminPanel\BinHamranAdminPanel\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\BinHamranAdminPanel\BinHamranAdminPanel\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\BinHamranAdminPanel\BinHamranAdminPanel\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\BinHamranAdminPanel\BinHamranAdminPanel\obj\Debug\netcoreapp3.1\BinHamranAdminPanel.csproj.CoreCompileInputs.cache
 D:\BinHamranAdminPanel\BinHamranAdminPanel\obj\Debug\netcoreapp3.1\BinHamranAdminPanel.MvcApplicationPartsAssemblyInfo.cs
 D:\BinHamranAdminPanel\BinHamranAdminPanel\obj\Debug\netcoreapp3.1\BinHamranAdminPanel.MvcApplicationPartsAssemblyInfo.cache

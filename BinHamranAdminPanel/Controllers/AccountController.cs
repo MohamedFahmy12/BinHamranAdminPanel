@@ -26,10 +26,10 @@ namespace BinHamranAdminPanel.Controllers
     private UserManager<AppUser> UserManager;
     private SignInManager<AppUser> SignInManager;
     private IPasswordHasher<AppUser> passwordHasher;
-    private RoleManager<IdentityRole> _roleManager;
+    private RoleManager<AppRole> _roleManager;
 
     public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager,
-      IPasswordHasher<AppUser> passwordHash, IOptions<ApplicationSettings> appSettings, RoleManager<IdentityRole> roleManager)
+      IPasswordHasher<AppUser> passwordHash, IOptions<ApplicationSettings> appSettings, RoleManager<AppRole> roleManager)
     {
       this.UserManager = userManager;
       this.SignInManager = signInManager;

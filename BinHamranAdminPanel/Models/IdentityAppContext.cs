@@ -13,5 +13,7 @@ namespace BinHamranAdminPanel.Models
     {
 
     }
+    public DbSet<AppUser> AppUsers { get; set; }
+    public DbSet<UserLog> UserLogs { get; set; }
   }
 }

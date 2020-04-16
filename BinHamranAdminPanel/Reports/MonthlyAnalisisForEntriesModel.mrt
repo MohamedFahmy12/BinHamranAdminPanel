@@ -1,0 +1,1198 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <MS_x0020_SQL Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>MS SQL</Alias>
+        <ConnectionStringEncrypted>9HTPC2II08hsW7X8dOzhXtHEyaHGStOB7FvoXE0FJS/D0s8JWwXizcdL+dzldPYvgm7hiU5fwtVhTE3cZyX2v+J4989GbXvNfHv9GGHksXvgavujS1n68eEFzVBzeG2L3GzRy0tcS5n6Qe2l6djgp9MQswjFaKs=</ConnectionStringEncrypted>
+        <Name>MS SQL</Name>
+      </MS_x0020_SQL>
+    </Databases>
+    <DataSources isList="true" count="12">
+      <MonthlyAnalisisForEntriesModel Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>MonthlyAnalisisForEntriesModel</Alias>
+        <Columns isList="true" count="15">
+          <value>COM_BRN_CODE,System.Int32</value>
+          <value>COM_BRN_AR_NAME,System.String</value>
+          <value>DatabaseName,System.String</value>
+          <value>January,System.Double</value>
+          <value>February,System.Double</value>
+          <value>March,System.Double</value>
+          <value>April,System.Double</value>
+          <value>May,System.Double</value>
+          <value>June,System.Double</value>
+          <value>July,System.Double</value>
+          <value>August,System.Double</value>
+          <value>September,System.Double</value>
+          <value>October,System.Double</value>
+          <value>November,System.Double</value>
+          <value>December,System.Double</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>91d990520d634f9aa8001b527070a128</Key>
+        <Name>MonthlyAnalisisForEntriesModel</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="4">
+          <value>_x0040_STARTDATE,_x0022_2019_x0022_,12,7</value>
+          <value>_x0040_CompanyBranchID,_x0022_1_x002C_2_x002C_3_x002C_4_x002C_5_x002C_7_x002C_8_x0022_,12,20</value>
+          <value>_x0040_EntryID,_x0022_14_x002C_15_x002C_22_x002C_23_x002C_63_x002C_68_x002C_69_x002C_72_x002C_74_x002C_75_x002C_80_x002C_1_x002C_2_x002C_3_x002C_4_x002C_5_x002C_6_x002C_7_x002C_82_x002C_86_x002C_88_x002C_89_x002C_130_x0022_,12,50</value>
+          <value>_x0040_DatabaseID_x0020_,_x0022_1_x002C_2_x002C_3_x002C_4_x002C_5_x0022_,12,7</value>
+        </Parameters>
+        <SqlCommand>EXEC Rpt_MonthlyAnalisisForEntries @STARTDATE,
+  @CompanyBranchID,
+  @EntryID,
+  @DatabaseID </SqlCommand>
+      </MonthlyAnalisisForEntriesModel>
+      <AspNetRoleClaims Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>AspNetRoleClaims</Alias>
+        <Columns isList="true" count="4">
+          <value>Id,System.Int32</value>
+          <value>RoleId,System.Int32</value>
+          <value>ClaimType,System.String</value>
+          <value>ClaimValue,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>c4c6571b5ffa4c23b244e3adf53b2f43</Key>
+        <Name>AspNetRoleClaims</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from AspNetRoleClaims</SqlCommand>
+      </AspNetRoleClaims>
+      <AspNetRoles Ref="5" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>AspNetRoles</Alias>
+        <Columns isList="true" count="4">
+          <value>Id,System.Int32</value>
+          <value>Name,System.String</value>
+          <value>NormalizedName,System.String</value>
+          <value>ConcurrencyStamp,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>bc1a9fe5fd7c49c9a96cfeb17443e62b</Key>
+        <Name>AspNetRoles</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from AspNetRoles</SqlCommand>
+      </AspNetRoles>
+      <AspNetUserClaims Ref="6" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>AspNetUserClaims</Alias>
+        <Columns isList="true" count="4">
+          <value>Id,System.Int32</value>
+          <value>UserId,System.Int32</value>
+          <value>ClaimType,System.String</value>
+          <value>ClaimValue,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>ee097337d16a4c96b0853fc6d99ef0ea</Key>
+        <Name>AspNetUserClaims</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from AspNetUserClaims</SqlCommand>
+      </AspNetUserClaims>
+      <AspNetUserLogins Ref="7" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>AspNetUserLogins</Alias>
+        <Columns isList="true" count="4">
+          <value>LoginProvider,System.String</value>
+          <value>ProviderKey,System.String</value>
+          <value>UserId,System.Int32</value>
+          <value>ProviderDisplayName,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>10deb6f7729f45cb910ecf145b131fe6</Key>
+        <Name>AspNetUserLogins</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from AspNetUserLogins</SqlCommand>
+      </AspNetUserLogins>
+      <AspNetUserRoles Ref="8" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>AspNetUserRoles</Alias>
+        <Columns isList="true" count="2">
+          <value>UserId,System.Int32</value>
+          <value>RoleId,System.Int32</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>b35a0448f5ff490cae90133bc08148cc</Key>
+        <Name>AspNetUserRoles</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from AspNetUserRoles</SqlCommand>
+      </AspNetUserRoles>
+      <AspNetUserTokens Ref="9" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>AspNetUserTokens</Alias>
+        <Columns isList="true" count="4">
+          <value>UserId,System.Int32</value>
+          <value>LoginProvider,System.String</value>
+          <value>Name,System.String</value>
+          <value>Value,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>1769600995b444ca9bcecce8cea67e87</Key>
+        <Name>AspNetUserTokens</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from AspNetUserTokens</SqlCommand>
+      </AspNetUserTokens>
+      <AspNetUsers Ref="10" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>AspNetUsers</Alias>
+        <Columns isList="true" count="18">
+          <value>Id,System.Int32</value>
+          <value>EmailConfirmed,System.Boolean</value>
+          <value>LockoutEnabled,System.Boolean</value>
+          <value>AccessFailedCount,System.Int32</value>
+          <value>Creationdate,System.DateTime</value>
+          <value>PhoneNumberConfirmed,System.Boolean</value>
+          <value>TwoFactorEnabled,System.Boolean</value>
+          <value>LockoutEnd,System.DateTimeOffset</value>
+          <value>FirstName,System.String</value>
+          <value>LastName,System.String</value>
+          <value>PasswordHash,System.String</value>
+          <value>SecurityStamp,System.String</value>
+          <value>ConcurrencyStamp,System.String</value>
+          <value>PhoneNumber,System.String</value>
+          <value>UserName,System.String</value>
+          <value>NormalizedUserName,System.String</value>
+          <value>Email,System.String</value>
+          <value>NormalizedEmail,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>b1bdd69de7de412e85416ca60a55215c</Key>
+        <Name>AspNetUsers</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from AspNetUsers</SqlCommand>
+      </AspNetUsers>
+      <Branches Ref="11" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>Branches</Alias>
+        <Columns isList="true" count="5">
+          <value>Id,System.Int32</value>
+          <value>DbBranchID,System.Int32</value>
+          <value>DatabaseNameId,System.Int32</value>
+          <value>BRN_AR_NAME,System.String</value>
+          <value>BRN_EN_NAME,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>2c0441250b41487d9306150cedc3e629</Key>
+        <Name>Branches</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from Branches</SqlCommand>
+      </Branches>
+      <DbNames Ref="12" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>DbNames</Alias>
+        <Columns isList="true" count="4">
+          <value>DatabaseNameId,System.Int32</value>
+          <value>DbName,System.String</value>
+          <value>DbArabicName,System.String</value>
+          <value>DbEnglishName,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>42bfb5f7b5e447b183f94c462bd5cd0d</Key>
+        <Name>DbNames</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from DbNames</SqlCommand>
+      </DbNames>
+      <UserLogs Ref="13" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>UserLogs</Alias>
+        <Columns isList="true" count="6">
+          <value>UserLogID,System.Int32</value>
+          <value>PageName,System.String</value>
+          <value>OperationName,System.String</value>
+          <value>MobileView,System.Boolean</value>
+          <value>OperationDate,System.DateTime</value>
+          <value>UserId,System.Int32</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>0dec59a375ae47c7bb28bef5e11314f1</Key>
+        <Name>UserLogs</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from UserLogs</SqlCommand>
+      </UserLogs>
+      <__EFMigrationsHistory Ref="14" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>__EFMigrationsHistory</Alias>
+        <Columns isList="true" count="2">
+          <value>MigrationId,System.String</value>
+          <value>ProductVersion,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>93a1bbaf431441d280aac8d54012bc51</Key>
+        <Name>__EFMigrationsHistory</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from __EFMigrationsHistory</SqlCommand>
+      </__EFMigrationsHistory>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <Variables isList="true" count="1">
+      <value>,Date,Date,,System.String,,False,False,False,False</value>
+    </Variables>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <Key>0d14037af60c4985ac115b67f561cd9d</Key>
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="15" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="6">
+        <ReportTitle Ref="16" type="ReportTitleBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.2,10.22,0.7</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>ReportTitle</Name>
+          <Page isRef="15" />
+          <Parent isRef="15" />
+        </ReportTitle>
+        <HeaderBand1 Ref="17" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,1.3,10.22,0.6</ClientRectangle>
+          <Components isList="true" count="1">
+            <ReportTitleText Ref="18" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.9,0,4.5,0.5</ClientRectangle>
+              <ComponentStyle>Blue Steel_Report_Title1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>ReportTitleText</Name>
+              <Page isRef="15" />
+              <Parent isRef="17" />
+              <Text>التحليل الشهري لأنواع السندات لسنة {MonthlyAnalisisForEntriesModel.Parameters["@STARTDATE"].ParameterValue}</Text>
+              <TextBrush>[79:129:189]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </ReportTitleText>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>HeaderBand1</Name>
+          <Page isRef="15" />
+          <Parent isRef="15" />
+        </HeaderBand1>
+        <HeaderMonthlyAnalisisForEntriesModel Ref="19" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,2.3,10.22,0.3</ClientRectangle>
+          <Components isList="true" count="14">
+            <HeaderTextMonthlyAnalisisForEntriesModel2 Ref="20" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,0.7,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel2</Name>
+              <Page isRef="15" />
+              <Parent isRef="19" />
+              <Text>الاجمالى</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel2>
+            <HeaderTextMonthlyAnalisisForEntriesModel3 Ref="21" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0.7,0,0.8,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel3</Name>
+              <Page isRef="15" />
+              <Parent isRef="19" />
+              <Text>ديسمبر</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel3>
+            <HeaderTextMonthlyAnalisisForEntriesModel4 Ref="22" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>1.5,0,0.6,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel4</Name>
+              <Page isRef="15" />
+              <Parent isRef="19" />
+              <Text>نوفمبر</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel4>
+            <HeaderTextMonthlyAnalisisForEntriesModel5 Ref="23" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.1,0,0.8,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel5</Name>
+              <Page isRef="15" />
+              <Parent isRef="19" />
+              <Text>أكتوبر</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel5>
+            <HeaderTextMonthlyAnalisisForEntriesModel6 Ref="24" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.9,0,0.8,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel6</Name>
+              <Page isRef="15" />
+              <Parent isRef="19" />
+              <Text>سبتمبر</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel6>
+            <HeaderTextMonthlyAnalisisForEntriesModel7 Ref="25" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>3.7,0,0.7,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel7</Name>
+              <Page isRef="15" />
+              <Parent isRef="19" />
+              <Text>اغسطس</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel7>
+            <HeaderTextMonthlyAnalisisForEntriesModel8 Ref="26" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>4.4,0,0.8,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel8</Name>
+              <Page isRef="15" />
+              <Parent isRef="19" />
+              <Text>يوليو</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel8>
+            <HeaderTextMonthlyAnalisisForEntriesModel9 Ref="27" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>5.2,0,0.6,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel9</Name>
+              <Page isRef="15" />
+              <Parent isRef="19" />
+              <Text>يونيه</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel9>
+            <HeaderTextMonthlyAnalisisForEntriesModel10 Ref="28" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>5.8,0,0.8,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel10</Name>
+              <Page isRef="15" />
+              <Parent isRef="19" />
+              <Text>مايو</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel10>
+            <HeaderTextMonthlyAnalisisForEntriesModel11 Ref="29" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>6.6,0,0.7,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel11</Name>
+              <Page isRef="15" />
+              <Parent isRef="19" />
+              <Text>ابريل</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel11>
+            <HeaderTextMonthlyAnalisisForEntriesModel12 Ref="30" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>7.3,0,0.8,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel12</Name>
+              <Page isRef="15" />
+              <Parent isRef="19" />
+              <Text>مارس</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel12>
+            <HeaderTextMonthlyAnalisisForEntriesModel13 Ref="31" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>8.1,0,0.6,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel13</Name>
+              <Page isRef="15" />
+              <Parent isRef="19" />
+              <Text>فبراير</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel13>
+            <HeaderTextMonthlyAnalisisForEntriesModel14 Ref="32" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>8.7,0,0.8,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel14</Name>
+              <Page isRef="15" />
+              <Parent isRef="19" />
+              <Text>يناير</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel14>
+            <HeaderTextMonthlyAnalisisForEntriesModel15 Ref="33" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>9.5,0,0.7,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel15</Name>
+              <Page isRef="15" />
+              <Parent isRef="19" />
+              <Text>الفرع</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel15>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>HeaderMonthlyAnalisisForEntriesModel</Name>
+          <Page isRef="15" />
+          <Parent isRef="15" />
+        </HeaderMonthlyAnalisisForEntriesModel>
+        <GroupHeaderBand1 Ref="34" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,3,10.22,0.3</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text1 Ref="35" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.3,0,2.9,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Report_Title1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>10bd295c657c4431a7bc79d97945cd03</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="15" />
+              <Parent isRef="34" />
+              <Text>{MonthlyAnalisisForEntriesModel.DatabaseName}</Text>
+              <TextBrush>[79:129:189]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+          </Components>
+          <Condition>{MonthlyAnalisisForEntriesModel.DatabaseName}</Condition>
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderBand1</Name>
+          <Page isRef="15" />
+          <Parent isRef="15" />
+        </GroupHeaderBand1>
+        <DataMonthlyAnalisisForEntriesModel Ref="36" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,3.7,10.22,0.3</ClientRectangle>
+          <Components isList="true" count="14">
+            <DataTextMonthlyAnalisisForEntriesModel2 Ref="37" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,0.7,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel2</Name>
+              <Page isRef="15" />
+              <Parent isRef="36" />
+              <Text>{Stimulsoft.Report.Export.StiExportUtils.ConvertDigitsToArabic((Round(MonthlyAnalisisForEntriesModel.January +MonthlyAnalisisForEntriesModel.February + MonthlyAnalisisForEntriesModel.March+MonthlyAnalisisForEntriesModel.April+MonthlyAnalisisForEntriesModel.May+MonthlyAnalisisForEntriesModel.June+MonthlyAnalisisForEntriesModel.July+MonthlyAnalisisForEntriesModel.August+MonthlyAnalisisForEntriesModel.September+MonthlyAnalisisForEntriesModel.October+MonthlyAnalisisForEntriesModel.November+MonthlyAnalisisForEntriesModel.December,2)).ToString(), StiArabicDigitsType.Standard)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel2>
+            <DataTextMonthlyAnalisisForEntriesModel3 Ref="38" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0.7,0,0.8,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel3</Name>
+              <Page isRef="15" />
+              <Parent isRef="36" />
+              <Text>{Stimulsoft.Report.Export.StiExportUtils.ConvertDigitsToArabic((Round(MonthlyAnalisisForEntriesModel.December,2)).ToString(), StiArabicDigitsType.Standard)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel3>
+            <DataTextMonthlyAnalisisForEntriesModel4 Ref="39" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>1.5,0,0.6,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel4</Name>
+              <Page isRef="15" />
+              <Parent isRef="36" />
+              <Text>{Stimulsoft.Report.Export.StiExportUtils.ConvertDigitsToArabic((Round(MonthlyAnalisisForEntriesModel.November,2)).ToString(), StiArabicDigitsType.Standard)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel4>
+            <DataTextMonthlyAnalisisForEntriesModel5 Ref="40" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.1,0,0.8,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel5</Name>
+              <Page isRef="15" />
+              <Parent isRef="36" />
+              <Text>{Stimulsoft.Report.Export.StiExportUtils.ConvertDigitsToArabic((Round(MonthlyAnalisisForEntriesModel.October,2)).ToString(), StiArabicDigitsType.Standard)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel5>
+            <DataTextMonthlyAnalisisForEntriesModel6 Ref="41" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.9,0,0.8,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel6</Name>
+              <Page isRef="15" />
+              <Parent isRef="36" />
+              <Text>{Stimulsoft.Report.Export.StiExportUtils.ConvertDigitsToArabic((Round(MonthlyAnalisisForEntriesModel.September,2)).ToString(), StiArabicDigitsType.Standard)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel6>
+            <DataTextMonthlyAnalisisForEntriesModel7 Ref="42" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>3.7,0,0.7,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel7</Name>
+              <Page isRef="15" />
+              <Parent isRef="36" />
+              <Text>{Stimulsoft.Report.Export.StiExportUtils.ConvertDigitsToArabic((Round(MonthlyAnalisisForEntriesModel.August,2)).ToString(), StiArabicDigitsType.Standard)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel7>
+            <DataTextMonthlyAnalisisForEntriesModel8 Ref="43" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>4.4,0,0.8,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel8</Name>
+              <Page isRef="15" />
+              <Parent isRef="36" />
+              <Text>{Stimulsoft.Report.Export.StiExportUtils.ConvertDigitsToArabic((Round(MonthlyAnalisisForEntriesModel.July,2)).ToString(), StiArabicDigitsType.Standard)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel8>
+            <DataTextMonthlyAnalisisForEntriesModel9 Ref="44" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>5.2,0,0.6,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel9</Name>
+              <Page isRef="15" />
+              <Parent isRef="36" />
+              <Text>{Stimulsoft.Report.Export.StiExportUtils.ConvertDigitsToArabic((Round(MonthlyAnalisisForEntriesModel.June,2)).ToString(), StiArabicDigitsType.Standard)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel9>
+            <DataTextMonthlyAnalisisForEntriesModel10 Ref="45" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>5.8,0,0.8,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel10</Name>
+              <Page isRef="15" />
+              <Parent isRef="36" />
+              <Text>{Stimulsoft.Report.Export.StiExportUtils.ConvertDigitsToArabic((Round(MonthlyAnalisisForEntriesModel.May,2)).ToString(), StiArabicDigitsType.Standard)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel10>
+            <DataTextMonthlyAnalisisForEntriesModel11 Ref="46" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>6.6,0,0.7,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel11</Name>
+              <Page isRef="15" />
+              <Parent isRef="36" />
+              <Text>{Stimulsoft.Report.Export.StiExportUtils.ConvertDigitsToArabic((Round(MonthlyAnalisisForEntriesModel.April,2)).ToString(), StiArabicDigitsType.Standard)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel11>
+            <DataTextMonthlyAnalisisForEntriesModel12 Ref="47" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>7.3,0,0.8,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel12</Name>
+              <Page isRef="15" />
+              <Parent isRef="36" />
+              <Text>{Stimulsoft.Report.Export.StiExportUtils.ConvertDigitsToArabic((Round(MonthlyAnalisisForEntriesModel.March,2)).ToString(), StiArabicDigitsType.Standard)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel12>
+            <DataTextMonthlyAnalisisForEntriesModel13 Ref="48" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>8.1,0,0.6,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel13</Name>
+              <Page isRef="15" />
+              <Parent isRef="36" />
+              <Text>{Stimulsoft.Report.Export.StiExportUtils.ConvertDigitsToArabic((Round(MonthlyAnalisisForEntriesModel.February,2)).ToString(), StiArabicDigitsType.Standard)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel13>
+            <DataTextMonthlyAnalisisForEntriesModel14 Ref="49" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>8.7,0,0.8,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel14</Name>
+              <Page isRef="15" />
+              <Parent isRef="36" />
+              <Text>{Stimulsoft.Report.Export.StiExportUtils.ConvertDigitsToArabic((Round(MonthlyAnalisisForEntriesModel.January,2)).ToString(), StiArabicDigitsType.Standard)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel14>
+            <DataTextMonthlyAnalisisForEntriesModel15 Ref="50" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>9.5,0,0.7,0.3</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel15</Name>
+              <Page isRef="15" />
+              <Parent isRef="36" />
+              <Text>{MonthlyAnalisisForEntriesModel.COM_BRN_AR_NAME}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel15>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>MonthlyAnalisisForEntriesModel</DataSourceName>
+          <EvenStyle>Blue Steel_Data1_Even Style</EvenStyle>
+          <FilterMode>Or</FilterMode>
+          <Filters isList="true" count="0" />
+          <Name>DataMonthlyAnalisisForEntriesModel</Name>
+          <OddStyle>Blue Steel_Data1_Odd Style</OddStyle>
+          <Page isRef="15" />
+          <Parent isRef="15" />
+          <Sort isList="true" count="0" />
+        </DataMonthlyAnalisisForEntriesModel>
+        <FooterMonthlyAnalisisForEntriesModel Ref="51" type="FooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,4.4,10.22,0.2</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>FooterMonthlyAnalisisForEntriesModel</Name>
+          <Page isRef="15" />
+          <Parent isRef="15" />
+        </FooterMonthlyAnalisisForEntriesModel>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>6d00e1a15af5402788eef943b27bcf8c</Guid>
+      <Margins>0.39,0.39,0.39,0.39</Margins>
+      <Name>Page1</Name>
+      <Orientation>Landscape</Orientation>
+      <PageHeight>8.5</PageHeight>
+      <PageWidth>11</PageWidth>
+      <PaperSize>Letter</PaperSize>
+      <Report isRef="0" />
+    </Page1>
+  </Pages>
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>4/16/2020 12:02:30 AM</ReportChanged>
+  <ReportCreated>4/15/2020 11:10:35 PM</ReportCreated>
+  <ReportFile>C:\Users\modyf\source\repos\BinHamranAdminPanel3\BinHamranAdminPanel\Reports\MonthlyAnalisisForEntriesModel.mrt</ReportFile>
+  <ReportGuid>9aa1c3284f4e480bbb1fb544aa9a84dc</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Inches</ReportUnit>
+  <ReportVersion>2019.4.1.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="12">
+    <Blue_x0020_Steel_Report_Title1 Ref="52" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item52 Ref="53" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>ReportTitle</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item52>
+      </Conditions>
+      <Font>Arial,14,Bold</Font>
+      <Name>Blue Steel_Report_Title1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[79:129:189]</TextBrush>
+    </Blue_x0020_Steel_Report_Title1>
+    <Blue_x0020_Steel_Report_Title2 Ref="54" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item54 Ref="55" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>ReportTitle</Placement>
+          <PlacementNestedLevel>2</PlacementNestedLevel>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item54>
+      </Conditions>
+      <Font>Arial,10,Bold</Font>
+      <Name>Blue Steel_Report_Title2</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[79:129:189]</TextBrush>
+    </Blue_x0020_Steel_Report_Title2>
+    <Blue_x0020_Steel_Report_Summary Ref="56" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item56 Ref="57" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>ReportSummary</Placement>
+          <Type>ComponentType, Placement</Type>
+        </Item56>
+      </Conditions>
+      <Font>Arial,10,Bold</Font>
+      <Name>Blue Steel_Report_Summary</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[79:129:189]</TextBrush>
+    </Blue_x0020_Steel_Report_Summary>
+    <Blue_x0020_Steel_Page_Header Ref="58" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item58 Ref="59" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>PageHeader</Placement>
+          <Type>ComponentType, Placement</Type>
+        </Item58>
+      </Conditions>
+      <Font>Arial,10</Font>
+      <Name>Blue Steel_Page_Header</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>Black</TextBrush>
+    </Blue_x0020_Steel_Page_Header>
+    <Blue_x0020_Steel_Page_Footer Ref="60" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item60 Ref="61" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>PageFooter</Placement>
+          <Type>ComponentType, Placement</Type>
+        </Item60>
+      </Conditions>
+      <Font>Arial,10</Font>
+      <Name>Blue Steel_Page_Footer</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>Black</TextBrush>
+    </Blue_x0020_Steel_Page_Footer>
+    <Blue_x0020_Steel_Group_Header1 Ref="62" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Top, Bottom;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item62 Ref="63" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>GroupHeader</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item62>
+      </Conditions>
+      <Font>Arial,13,Bold</Font>
+      <Name>Blue Steel_Group_Header1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[79:129:189]</TextBrush>
+    </Blue_x0020_Steel_Group_Header1>
+    <Blue_x0020_Steel_Group_Footer1 Ref="64" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Top, Bottom;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item64 Ref="65" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>GroupFooter</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item64>
+      </Conditions>
+      <Font>Arial,9.75,Bold,Point,False,204</Font>
+      <Name>Blue Steel_Group_Footer1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[79:129:189]</TextBrush>
+    </Blue_x0020_Steel_Group_Footer1>
+    <Blue_x0020_Steel_Header1 Ref="66" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+      <Brush>[79:129:189]</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item66 Ref="67" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>Header</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item66>
+      </Conditions>
+      <Font>Arial,9.75,Bold,Point,False,204</Font>
+      <Name>Blue Steel_Header1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>White</TextBrush>
+    </Blue_x0020_Steel_Header1>
+    <Blue_x0020_Steel_Data1 Ref="68" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item68 Ref="69" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>Data</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item68>
+      </Conditions>
+      <Font>Arial,8</Font>
+      <Name>Blue Steel_Data1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[0:0:0]</TextBrush>
+    </Blue_x0020_Steel_Data1>
+    <Blue_x0020_Steel_Data1_Odd_x0020_Style Ref="70" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>[255:255:255]</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item70 Ref="71" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>DataOddStyle</Placement>
+          <Type>Placement, PlacementNestedLevel</Type>
+        </Item70>
+      </Conditions>
+      <Font>Arial,8</Font>
+      <Name>Blue Steel_Data1_Odd Style</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[0:0:0]</TextBrush>
+    </Blue_x0020_Steel_Data1_Odd_x0020_Style>
+    <Blue_x0020_Steel_Data1_Even_x0020_Style Ref="72" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>[216:216:216]</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item72 Ref="73" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>DataEvenStyle</Placement>
+          <Type>Placement, PlacementNestedLevel</Type>
+        </Item72>
+      </Conditions>
+      <Font>Arial,8</Font>
+      <Name>Blue Steel_Data1_Even Style</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[0:0:0]</TextBrush>
+    </Blue_x0020_Steel_Data1_Even_x0020_Style>
+    <Blue_x0020_Steel_Footer1 Ref="74" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black</Border>
+      <Brush>White</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item74 Ref="75" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>Footer</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item74>
+      </Conditions>
+      <Font>Arial,8.25,Bold,Point,False,204</Font>
+      <Name>Blue Steel_Footer1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>Black</TextBrush>
+    </Blue_x0020_Steel_Footer1>
+  </Styles>
+</StiSerializer>

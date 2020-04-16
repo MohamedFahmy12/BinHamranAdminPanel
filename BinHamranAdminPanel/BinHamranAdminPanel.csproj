@@ -7,6 +7,14 @@
   <ItemGroup>
     <Compile Remove="Migrations\20200407114606_InitialCreate.cs" />
     <Compile Remove="Migrations\20200407114606_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20200413102248_AddDbAndBranch.cs" />
+    <Compile Remove="Migrations\20200413102248_AddDbAndBranch.Designer.cs" />
+    <Compile Remove="Migrations\20200413102902_AlterDbAndBranch.cs" />
+    <Compile Remove="Migrations\20200413102902_AlterDbAndBranch.Designer.cs" />
+    <Compile Remove="Migrations\20200413104254_AddDbAndBranch.cs" />
+    <Compile Remove="Migrations\20200413104254_AddDbAndBranch.Designer.cs" />
+    <Compile Remove="Migrations\20200415184737_TryDBQUERY.cs" />
+    <Compile Remove="Migrations\20200415184737_TryDBQUERY.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,7 +30,12 @@
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.5.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
     <PackageReference Include="Stimulsoft.Reports.Web.NetCore" Version="2020.2.2.1" />
+    <PackageReference Include="System.Data.Entity.Repository" Version="2.0.0.1" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Reports\" />
   </ItemGroup>
 
 

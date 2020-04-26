@@ -26,6 +26,34 @@ namespace BinHamranAdminPanel.Controllers
             this.context = context;
         }
         [HttpGet]
+        [Route("GetDbNames")]
+        public List<DatabaseModel> GetDbNames()
+        {
+            var dbNames = context.DbNames.ToList();
+            var Dbs = new List<DatabaseModel>();
+            foreach (var item in dbNames)
+            {
+                var Db = new DatabaseModel();
+
+                  Db.DatabaseNameId = item.DatabaseNameId;
+                  Db.DbName = item.DbArabicName;
+                 Dbs.Add(Db);
+
+            }
+
+            //var Db = new DatabaseModel();
+            //var dbNames =  context.DbNames.ToList();
+            //foreach (var item in dbNames)
+            //{
+
+            //    Db.DatabaseNameId = item.DatabaseNameId;
+            //    Db.DbName = item.DbArabicName;
+            //    Dbs.Add(Db);
+            //};
+            return Dbs;
+
+        }
+        [HttpGet]
         [Route("GetCompanyBranches")]
         public IQueryable<BranchModel> GetCompanyBranches(string dbIds)
         {
@@ -52,15 +80,15 @@ namespace BinHamranAdminPanel.Controllers
         }
         [HttpGet]
         [Route("GetAccounts")]
-        public IQueryable<EntryModel> GetAccounts(string dbIds)
+        public IQueryable<AccountModel> GetAccounts(string dbIds)
         {
             var parameter = new SqlParameter
             {
                 ParameterName = "DatabaseID",
                 Value = dbIds
             };
-            var Entries = context.Entries.FromSqlRaw("EXEC ACCOUNTS @DatabaseID", parameter);
-            return Entries;
+            var Accounts = context.Accounts.FromSqlRaw("EXEC Get_ACCOUNTS @DatabaseID", parameter);
+            return Accounts;
         }
     }
 

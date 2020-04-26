@@ -17,7 +17,7 @@ namespace BinHamranAdminPanel.Models
         [Required]
         [Column(TypeName = "nvarchar(128)")]
         public string DbName { get; set; }
-        public int Index { get; set; }
+        
         public ICollection<Branch> Branches { get; set; }
 
     }

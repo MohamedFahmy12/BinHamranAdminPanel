@@ -1,0 +1,1959 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <MS_x0020_SQL Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>MS SQL</Alias>
+        <ConnectionStringEncrypted>9HTPC2II08hsW7X8dOzhXtHEyaHGStOB7FvoXE0FJS/D0s8JWwXizcdL+dzldPYvgm7hiU5fwtVhTE3cZyX2v+J4989GbXvNfHv9GGHksXvgavujS1n68eEFzVBzeG2L3GzRy0tcS5n6Qe2l6djgp9MQswjFaKs=</ConnectionStringEncrypted>
+        <Name>MS SQL</Name>
+      </MS_x0020_SQL>
+    </Databases>
+    <DataSources isList="true" count="1">
+      <LastDurationGoods Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>LastDurationGoods</Alias>
+        <Columns isList="true" count="24">
+          <value>ENTRY_GOLD24_Balance,System.Double</value>
+          <value>ENTRY_GOLD22_Balance,System.Double</value>
+          <value>ENTRY_GOLD21_Balance,System.Double</value>
+          <value>ENTRY_GOLD18_Balance,System.Double</value>
+          <value>ENTRY_GOLD24_DEBIT,System.Double</value>
+          <value>ENTRY_GOLD24_CREDIT,System.Double</value>
+          <value>ENTRY_GOLD22_DEBIT,System.Double</value>
+          <value>ENTRY_GOLD22_CREDIT,System.Double</value>
+          <value>ENTRY_GOLD21_DEBIT,System.Double</value>
+          <value>ENTRY_GOLD21_CREDIT,System.Double</value>
+          <value>ENTRY_GOLD18_DEBIT,System.Double</value>
+          <value>ENTRY_GOLD18_CREDIT,System.Double</value>
+          <value>COM_BRN_CODE,System.Int32</value>
+          <value>COM_BRN_AR_NAME,System.String</value>
+          <value>DatabaseName,System.String</value>
+          <value>DatabaseID,System.Int32</value>
+          <value>ENTRY_GOLD24_TOTALBALANCE,System.Double</value>
+          <value>ENTRY_GOLD22_TOTALBALANCE,System.Double</value>
+          <value>ENTRY_GOLD21_TOTALBALANCE,System.Double</value>
+          <value>ENTRY_GOLD18_TOTALBALANCE,System.Double</value>
+          <value>totalBalance,System.Double</value>
+          <value>TotalMFCredit,System.Double</value>
+          <value>GMPrice,System.Double</value>
+          <value>Totals,System.Double</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>9974c6dbc1f74edd85772ed991985c6c</Key>
+        <Name>LastDurationGoods</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="3">
+          <value>_x0040_STARTDATE,_x0022_2019-12-31_x0022_,15,50</value>
+          <value>_x0040_CompanyBranchID,_x0022_1_x002C_2_x002C_3_x002C_4_x002C_5_x002C_7_x002C_8_x0022_,12,50</value>
+          <value>_x0040_DatabaseID,_x0022_1_x0022_,12,50</value>
+        </Parameters>
+        <SqlCommand>EXEC  Rpt_LastDurationGoods
+@STARTDATE,
+@CompanyBranchID,
+@DatabaseID</SqlCommand>
+      </LastDurationGoods>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <Variables isList="true" count="1">
+      <value>,FromDate,FromDate,,System.DateTime,,False,False,False,False</value>
+    </Variables>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <Key>74fcc2d1086e4366b3021872711666f5</Key>
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="4" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="7">
+        <ReportTitle Ref="5" type="ReportTitleBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,34,1.4</ClientRectangle>
+          <Components isList="true" count="1">
+            <ReportTitleText Ref="6" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,33.99,1.4</ClientRectangle>
+              <ComponentStyle>Blue Steel_Report_Title1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>ReportTitleText</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>بضاعة آخر المده فى {Format("{0:MM.dd.yyyy}", FromDate)}</Text>
+              <TextBrush>[79:129:189]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </ReportTitleText>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>ReportTitle</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </ReportTitle>
+        <HeaderBand1 Ref="7" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,2.6,34,1</ClientRectangle>
+          <Components isList="true" count="10">
+            <Text1 Ref="8" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,2.2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>baf10e1b4ea5435a84a0561817cfb838</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>إجمالى قيمة البضاعه</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+            <Text2 Ref="9" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.2,0,2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>57c6eac3ec224434bd613f927c2a341e</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>أجرة التصنيع للفرع</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <Text3 Ref="10" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>4.2,0,2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>2a6e884624074e08a0b1e8342e1b948a</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>قيمة الذهب ريال</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
+            <Text4 Ref="11" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>6.2,0,2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>6324d803c68047cc8e038ddf815ecf98</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>سعر الكيلو ع24</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+            <Text5 Ref="12" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>8.2,0,2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>38ffa05252534639a1fcdd53bebdb27d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>إجمالى رصيد الذهب ع24</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text6 Ref="13" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>15.8,0,5.6,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>66317425bb994cbb9505d378602064df</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>الذهب المستحق للفرع</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+            <Text7 Ref="14" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>21.4,0,5.6,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>66324e2179a34983bc7fddd6ef1ebf38</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>الذهب المستحق على الفرع</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text7>
+            <Text8 Ref="15" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>27,0,5.6,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>04883c9d5a7a4d9481a19f8db46a780f</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>الذهب الموجود بالفرع</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+            <Text9 Ref="16" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>10.2,0,5.6,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>5da3ebb164874e7daee1a31a784e32f9</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>رصيد الذهب بالفرع</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text9>
+            <Text35 Ref="17" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>32.6,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>e88d439b4fa7473e9d0dbc37aa0fd8ec</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text35</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text35>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>HeaderBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <PrintIfEmpty>True</PrintIfEmpty>
+        </HeaderBand1>
+        <HeaderLastDurationGoods Ref="18" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,4.4,34,1</ClientRectangle>
+          <Components isList="true" count="18">
+            <HeaderTextLastDurationGoods18 Ref="19" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>27,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextLastDurationGoods18</Name>
+              <Page isRef="4" />
+              <Parent isRef="18" />
+              <Text>ع18</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextLastDurationGoods18>
+            <HeaderTextLastDurationGoods19 Ref="20" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>28.4,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextLastDurationGoods19</Name>
+              <Page isRef="4" />
+              <Parent isRef="18" />
+              <Text>ع21</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextLastDurationGoods19>
+            <HeaderTextLastDurationGoods20 Ref="21" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>29.8,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextLastDurationGoods20</Name>
+              <Page isRef="4" />
+              <Parent isRef="18" />
+              <Text>ع22</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextLastDurationGoods20>
+            <HeaderTextLastDurationGoods21 Ref="22" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>31.2,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextLastDurationGoods21</Name>
+              <Page isRef="4" />
+              <Parent isRef="18" />
+              <Text>ع24</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextLastDurationGoods21>
+            <HeaderTextLastDurationGoods22 Ref="23" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>32.6,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextLastDurationGoods22</Name>
+              <Page isRef="4" />
+              <Parent isRef="18" />
+              <Text>الفرع</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextLastDurationGoods22>
+            <Text10 Ref="24" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>21.4,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>c24eb42a0dbb45cbad0036acc4d930c6</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="4" />
+              <Parent isRef="18" />
+              <Text>ع18</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text10>
+            <Text11 Ref="25" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>22.8,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>85df5735ca04421e8604c47a3792af4f</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="4" />
+              <Parent isRef="18" />
+              <Text>ع21</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text11>
+            <Text12 Ref="26" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>24.2,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>07ce7c2727b445bbb489ac36001f7387</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="4" />
+              <Parent isRef="18" />
+              <Text>ع22</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text12>
+            <Text13 Ref="27" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>25.6,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>a4afb6f5eefb431689f11285229933b9</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="4" />
+              <Parent isRef="18" />
+              <Text>ع24</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text13>
+            <Text14 Ref="28" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>15.8,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>0e14e40425c94254bbf3d9cddbf689b0</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="4" />
+              <Parent isRef="18" />
+              <Text>ع18</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text14>
+            <Text15 Ref="29" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>17.2,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>6f18a9e8bc6b4649a359e0059f72805b</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="4" />
+              <Parent isRef="18" />
+              <Text>ع21</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text15>
+            <Text16 Ref="30" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>18.6,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>a962697dbef34db6b298f1ddb829badf</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="4" />
+              <Parent isRef="18" />
+              <Text>ع22</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text16>
+            <Text17 Ref="31" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>20,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>63f441d3097446dab24b6ffced6a707c</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text17</Name>
+              <Page isRef="4" />
+              <Parent isRef="18" />
+              <Text>ع24</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text17>
+            <Text18 Ref="32" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>10.2,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>5255d025d8754045bb01d2c8c151a3b7</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text18</Name>
+              <Page isRef="4" />
+              <Parent isRef="18" />
+              <Text>ع18</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text18>
+            <Text19 Ref="33" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>11.6,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>3cff5f3b1e8e4137b02c671b12b64fc4</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text19</Name>
+              <Page isRef="4" />
+              <Parent isRef="18" />
+              <Text>ع21</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text19>
+            <Text20 Ref="34" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>13,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>c0893f42c35c48499850ae7f036aa784</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="4" />
+              <Parent isRef="18" />
+              <Text>ع22</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text20>
+            <Text21 Ref="35" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>14.4,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>5a15f57fff384c3bbec60da55b5a01df</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="4" />
+              <Parent isRef="18" />
+              <Text>ع24</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text21>
+            <Text34 Ref="36" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,10.2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>ab340f52298948d89316bc7577467a49</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text34</Name>
+              <Page isRef="4" />
+              <Parent isRef="18" />
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text34>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>HeaderLastDurationGoods</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <PrintIfEmpty>True</PrintIfEmpty>
+        </HeaderLastDurationGoods>
+        <GroupHeaderBand1 Ref="37" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,6.2,34,0.8</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text58 Ref="38" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,33.99,0.8</ClientRectangle>
+              <ComponentStyle>Blue Steel_Report_Title1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>207f4dd354f04ae1b007ff07346fd684</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text58</Name>
+              <Page isRef="4" />
+              <Parent isRef="37" />
+              <Text>{LastDurationGoods.DatabaseName}</Text>
+              <TextBrush>[79:129:189]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text58>
+          </Components>
+          <Condition>{LastDurationGoods.DatabaseName}</Condition>
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </GroupHeaderBand1>
+        <DataLastDurationGoods Ref="39" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,7.8,34,1</ClientRectangle>
+          <Components isList="true" count="22">
+            <DataTextLastDurationGoods1 Ref="40" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,2.2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextLastDurationGoods1</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(LastDurationGoods.Totals,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextLastDurationGoods1>
+            <DataTextLastDurationGoods2 Ref="41" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.2,0,2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextLastDurationGoods2</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(LastDurationGoods.TotalMFCredit,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextLastDurationGoods2>
+            <DataTextLastDurationGoods3 Ref="42" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>4.2,0,2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextLastDurationGoods3</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(LastDurationGoods.totalBalance*LastDurationGoods.GMPrice,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextLastDurationGoods3>
+            <DataTextLastDurationGoods4 Ref="43" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>6.2,0,2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextLastDurationGoods4</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(LastDurationGoods.GMPrice*1000,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextLastDurationGoods4>
+            <DataTextLastDurationGoods5 Ref="44" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>8.2,0,2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextLastDurationGoods5</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(LastDurationGoods.totalBalance,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextLastDurationGoods5>
+            <DataTextLastDurationGoods18 Ref="45" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>27,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextLastDurationGoods18</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(LastDurationGoods.ENTRY_GOLD18_Balance,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextLastDurationGoods18>
+            <DataTextLastDurationGoods19 Ref="46" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>28.4,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextLastDurationGoods19</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(LastDurationGoods.ENTRY_GOLD21_Balance,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextLastDurationGoods19>
+            <DataTextLastDurationGoods20 Ref="47" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>29.8,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextLastDurationGoods20</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(LastDurationGoods.ENTRY_GOLD22_Balance,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextLastDurationGoods20>
+            <DataTextLastDurationGoods21 Ref="48" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>31.2,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextLastDurationGoods21</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(LastDurationGoods.ENTRY_GOLD24_Balance,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextLastDurationGoods21>
+            <DataTextLastDurationGoods22 Ref="49" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>32.6,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextLastDurationGoods22</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{LastDurationGoods.COM_BRN_AR_NAME}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextLastDurationGoods22>
+            <Text22 Ref="50" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>22.8,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>a5ec55f6c87b4dcfa27033c9dc6d9544</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text22</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(LastDurationGoods.ENTRY_GOLD21_CREDIT,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text22>
+            <Text23 Ref="51" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>24.2,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>666a5bceb1dc4acb915aaecc8c98c16c</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text23</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(LastDurationGoods.ENTRY_GOLD22_CREDIT,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text23>
+            <Text24 Ref="52" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>25.6,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>50b550ebca034bb88056ac73718dbd85</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text24</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(LastDurationGoods.ENTRY_GOLD24_CREDIT,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text24>
+            <Text25 Ref="53" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>21.4,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>1861b15332424147a248bb2d706bc9d7</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text25</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(LastDurationGoods.ENTRY_GOLD18_CREDIT,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text25>
+            <Text26 Ref="54" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>17.2,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>53dfb87c0113472781b440c6e06187fe</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text26</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(LastDurationGoods.ENTRY_GOLD21_DEBIT,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text26>
+            <Text27 Ref="55" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>18.6,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>423c7ee0a0dd421daed676524c78f804</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text27</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(LastDurationGoods.ENTRY_GOLD22_DEBIT,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text27>
+            <Text28 Ref="56" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>20,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>819aaf64e8cb4b1798abfeecee78fd22</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text28</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(LastDurationGoods.ENTRY_GOLD24_DEBIT,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text28>
+            <Text29 Ref="57" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>15.8,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>1f4ded55eb1040f1b577ca0aa016470a</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text29</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(LastDurationGoods.ENTRY_GOLD18_DEBIT,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text29>
+            <Text30 Ref="58" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>11.6,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>826641643d33490e88580bcf0bcbdbc0</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text30</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(LastDurationGoods.ENTRY_GOLD21_TOTALBALANCE,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text30>
+            <Text31 Ref="59" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>13,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>e554b0e768d049139666075c4a1dfd4e</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text31</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(LastDurationGoods.ENTRY_GOLD22_TOTALBALANCE,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text31>
+            <Text32 Ref="60" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>14.4,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>072bb68d0faf4723aad612e3f8b4e351</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text32</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(LastDurationGoods.ENTRY_GOLD24_TOTALBALANCE,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text32>
+            <Text33 Ref="61" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>10.2,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>91d908c910164c49ad9ca4de41883249</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text33</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(LastDurationGoods.ENTRY_GOLD18_TOTALBALANCE,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text33>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>LastDurationGoods</DataSourceName>
+          <EvenStyle>Blue Steel_Data1_Even Style</EvenStyle>
+          <FilterMode>Or</FilterMode>
+          <Filters isList="true" count="0" />
+          <Name>DataLastDurationGoods</Name>
+          <OddStyle>Blue Steel_Data1_Odd Style</OddStyle>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <PrintIfDetailEmpty>True</PrintIfDetailEmpty>
+          <Sort isList="true" count="0" />
+        </DataLastDurationGoods>
+        <GroupFooterBand1 Ref="62" type="GroupFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,9.6,34,1</ClientRectangle>
+          <Components isList="true" count="22">
+            <Text36 Ref="63" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>27,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>07a2090b6922475fbc77d27ba0496f01</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text36</Name>
+              <Page isRef="4" />
+              <Parent isRef="62" />
+              <Text>{Round(Sum(GroupHeaderBand1,LastDurationGoods.ENTRY_GOLD18_Balance),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text36>
+            <Text37 Ref="64" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>28.4,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>e024d1e095124e85becf557a097d2fc5</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text37</Name>
+              <Page isRef="4" />
+              <Parent isRef="62" />
+              <Text>{Round(Sum(GroupHeaderBand1,LastDurationGoods.ENTRY_GOLD21_Balance),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text37>
+            <Text38 Ref="65" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>29.8,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>46815cd5072f435795c79dbee11caa98</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text38</Name>
+              <Page isRef="4" />
+              <Parent isRef="62" />
+              <Text>{Round(Sum(GroupHeaderBand1,LastDurationGoods.ENTRY_GOLD22_Balance),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text38>
+            <Text39 Ref="66" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>31.2,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>9df489b0b2ea4b528921e37f3ea02ee8</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text39</Name>
+              <Page isRef="4" />
+              <Parent isRef="62" />
+              <Text>{Round(Sum(GroupHeaderBand1,LastDurationGoods.ENTRY_GOLD24_Balance),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text39>
+            <Text40 Ref="67" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>32.6,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>686fa30db1a0469296cabf4d1bb6b405</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text40</Name>
+              <Page isRef="4" />
+              <Parent isRef="62" />
+              <Text>الإجمالى</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text40>
+            <Text41 Ref="68" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>21.4,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>02ea94e5005447b6a3104976a29bcfa9</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text41</Name>
+              <Page isRef="4" />
+              <Parent isRef="62" />
+              <Text>{Round(Sum(GroupHeaderBand1,LastDurationGoods.ENTRY_GOLD18_CREDIT),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text41>
+            <Text42 Ref="69" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>22.8,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>85e0d571e6274fb2bbd36ef455bc5674</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text42</Name>
+              <Page isRef="4" />
+              <Parent isRef="62" />
+              <Text>{Round(Sum(GroupHeaderBand1,LastDurationGoods.ENTRY_GOLD21_CREDIT),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text42>
+            <Text43 Ref="70" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>24.2,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>e5434690ec164e66b78b50a1b391395d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text43</Name>
+              <Page isRef="4" />
+              <Parent isRef="62" />
+              <Text>{Round(Sum(GroupHeaderBand1,LastDurationGoods.ENTRY_GOLD22_CREDIT),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text43>
+            <Text44 Ref="71" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>25.6,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>e88e92ca79d940b68e9a46bf92eba723</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text44</Name>
+              <Page isRef="4" />
+              <Parent isRef="62" />
+              <Text>{Round(Sum(GroupHeaderBand1,LastDurationGoods.ENTRY_GOLD24_CREDIT),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text44>
+            <Text45 Ref="72" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>15.8,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>a9c1409724b14c3d8d8b4b27b078a2df</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text45</Name>
+              <Page isRef="4" />
+              <Parent isRef="62" />
+              <Text>{Round(Sum(GroupHeaderBand1,LastDurationGoods.ENTRY_GOLD18_DEBIT),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text45>
+            <Text46 Ref="73" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>17.2,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>0d8ba02b64d7401c98af63375d7cb9c2</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text46</Name>
+              <Page isRef="4" />
+              <Parent isRef="62" />
+              <Text>{Round(Sum(GroupHeaderBand1,LastDurationGoods.ENTRY_GOLD21_DEBIT),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text46>
+            <Text47 Ref="74" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>18.6,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>1b6e3627720246cbade9f4d516636612</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text47</Name>
+              <Page isRef="4" />
+              <Parent isRef="62" />
+              <Text>{Round(Sum(GroupHeaderBand1,LastDurationGoods.ENTRY_GOLD22_DEBIT),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text47>
+            <Text48 Ref="75" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>20,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>647bee5ca48c46438dfd019e37b745f9</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text48</Name>
+              <Page isRef="4" />
+              <Parent isRef="62" />
+              <Text>{Round(Sum(GroupHeaderBand1,LastDurationGoods.ENTRY_GOLD24_DEBIT),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text48>
+            <Text49 Ref="76" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>10.2,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>117deef6c8a64a11b6be04f788a1cd82</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text49</Name>
+              <Page isRef="4" />
+              <Parent isRef="62" />
+              <Text>{Round(Sum(GroupHeaderBand1,LastDurationGoods.ENTRY_GOLD18_TOTALBALANCE),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text49>
+            <Text50 Ref="77" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>11.6,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>323d2e3b3fe840eeb3e44cedfa1831f4</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text50</Name>
+              <Page isRef="4" />
+              <Parent isRef="62" />
+              <Text>{Round(Sum(GroupHeaderBand1,LastDurationGoods.ENTRY_GOLD21_TOTALBALANCE),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text50>
+            <Text51 Ref="78" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>13,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>05ec7dbed3d04e9fa3f5e30ca7a0c91d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text51</Name>
+              <Page isRef="4" />
+              <Parent isRef="62" />
+              <Text>{Round(Sum(GroupHeaderBand1,LastDurationGoods.ENTRY_GOLD22_TOTALBALANCE),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text51>
+            <Text52 Ref="79" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>14.4,0,1.4,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>2e30d06fce9349a58dfdfbe3b3c4584d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text52</Name>
+              <Page isRef="4" />
+              <Parent isRef="62" />
+              <Text>{Round(Sum(GroupHeaderBand1,LastDurationGoods.ENTRY_GOLD24_TOTALBALANCE),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text52>
+            <Text53 Ref="80" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,2.2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>fc970acc49d545aebcb34d5c133d539a</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text53</Name>
+              <Page isRef="4" />
+              <Parent isRef="62" />
+              <Text>{Round(Sum(GroupHeaderBand1,LastDurationGoods.Totals),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text53>
+            <Text54 Ref="81" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.2,0,2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>983777609e444d66bc9f6098f535d7be</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text54</Name>
+              <Page isRef="4" />
+              <Parent isRef="62" />
+              <Text>{Round(Sum(GroupHeaderBand1,LastDurationGoods.TotalMFCredit),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text54>
+            <Text55 Ref="82" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>4.2,0,2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>f149696062cb4a6b93c7b05551b9064d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text55</Name>
+              <Page isRef="4" />
+              <Parent isRef="62" />
+              <Text>{Round(Sum(GroupHeaderBand1,LastDurationGoods.totalBalance*LastDurationGoods.GMPrice),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text55>
+            <Text56 Ref="83" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>6.2,0,2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>40b4a0ab3627423ba8184026c0b66bcd</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text56</Name>
+              <Page isRef="4" />
+              <Parent isRef="62" />
+              <Text>{Round(LastDurationGoods.GMPrice*1000,2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text56>
+            <Text57 Ref="84" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>8.2,0,2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>ce39dec06d35478d8e20e5e9213e6234</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text57</Name>
+              <Page isRef="4" />
+              <Parent isRef="62" />
+              <Text>{Round(Sum(GroupHeaderBand1,LastDurationGoods.totalBalance),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text57>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>GroupFooterBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </GroupFooterBand1>
+        <FooterLastDurationGoods Ref="85" type="FooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,11.4,34,0.6</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>FooterLastDurationGoods</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </FooterLastDurationGoods>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>857cf49404ab42b1ab35c58c222e62bf</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <Orientation>Landscape</Orientation>
+      <PageHeight>21.59</PageHeight>
+      <PageWidth>36</PageWidth>
+      <Report isRef="0" />
+    </Page1>
+  </Pages>
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>5/6/2020 2:51:21 PM</ReportChanged>
+  <ReportCreated>5/6/2020 1:44:29 PM</ReportCreated>
+  <ReportFile>C:\Users\modyf\source\repos\BinHamranAdminPanel3\BinHamranAdminPanel\Reports\LastDurationGoods.mrt</ReportFile>
+  <ReportGuid>e43f2cb6134a4a4d991ea6e2a5a49bea</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2019.3.5.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="12">
+    <Blue_x0020_Steel_Report_Title1 Ref="86" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item86 Ref="87" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>ReportTitle</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item86>
+      </Conditions>
+      <Font>Arial,14,Bold</Font>
+      <Name>Blue Steel_Report_Title1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[79:129:189]</TextBrush>
+    </Blue_x0020_Steel_Report_Title1>
+    <Blue_x0020_Steel_Report_Title2 Ref="88" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item88 Ref="89" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>ReportTitle</Placement>
+          <PlacementNestedLevel>2</PlacementNestedLevel>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item88>
+      </Conditions>
+      <Font>Arial,10,Bold</Font>
+      <Name>Blue Steel_Report_Title2</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[79:129:189]</TextBrush>
+    </Blue_x0020_Steel_Report_Title2>
+    <Blue_x0020_Steel_Report_Summary Ref="90" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item90 Ref="91" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>ReportSummary</Placement>
+          <Type>ComponentType, Placement</Type>
+        </Item90>
+      </Conditions>
+      <Font>Arial,10,Bold</Font>
+      <Name>Blue Steel_Report_Summary</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[79:129:189]</TextBrush>
+    </Blue_x0020_Steel_Report_Summary>
+    <Blue_x0020_Steel_Page_Header Ref="92" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item92 Ref="93" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>PageHeader</Placement>
+          <Type>ComponentType, Placement</Type>
+        </Item92>
+      </Conditions>
+      <Font>Arial,10</Font>
+      <Name>Blue Steel_Page_Header</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>Black</TextBrush>
+    </Blue_x0020_Steel_Page_Header>
+    <Blue_x0020_Steel_Page_Footer Ref="94" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item94 Ref="95" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>PageFooter</Placement>
+          <Type>ComponentType, Placement</Type>
+        </Item94>
+      </Conditions>
+      <Font>Arial,10</Font>
+      <Name>Blue Steel_Page_Footer</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>Black</TextBrush>
+    </Blue_x0020_Steel_Page_Footer>
+    <Blue_x0020_Steel_Group_Header1 Ref="96" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Top, Bottom;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item96 Ref="97" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>GroupHeader</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item96>
+      </Conditions>
+      <Font>Arial,13,Bold</Font>
+      <Name>Blue Steel_Group_Header1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[79:129:189]</TextBrush>
+    </Blue_x0020_Steel_Group_Header1>
+    <Blue_x0020_Steel_Group_Footer1 Ref="98" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Top, Bottom;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item98 Ref="99" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>GroupFooter</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item98>
+      </Conditions>
+      <Font>Arial,9.75,Bold,Point,False,204</Font>
+      <Name>Blue Steel_Group_Footer1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[79:129:189]</TextBrush>
+    </Blue_x0020_Steel_Group_Footer1>
+    <Blue_x0020_Steel_Header1 Ref="100" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+      <Brush>[79:129:189]</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item100 Ref="101" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>Header</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item100>
+      </Conditions>
+      <Font>Arial,9.75,Bold,Point,False,204</Font>
+      <Name>Blue Steel_Header1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>White</TextBrush>
+    </Blue_x0020_Steel_Header1>
+    <Blue_x0020_Steel_Data1 Ref="102" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item102 Ref="103" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>Data</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item102>
+      </Conditions>
+      <Font>Arial,8</Font>
+      <Name>Blue Steel_Data1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[0:0:0]</TextBrush>
+    </Blue_x0020_Steel_Data1>
+    <Blue_x0020_Steel_Data1_Odd_x0020_Style Ref="104" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>[255:255:255]</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item104 Ref="105" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>DataOddStyle</Placement>
+          <Type>Placement, PlacementNestedLevel</Type>
+        </Item104>
+      </Conditions>
+      <Font>Arial,8</Font>
+      <Name>Blue Steel_Data1_Odd Style</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[0:0:0]</TextBrush>
+    </Blue_x0020_Steel_Data1_Odd_x0020_Style>
+    <Blue_x0020_Steel_Data1_Even_x0020_Style Ref="106" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>[216:216:216]</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item106 Ref="107" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>DataEvenStyle</Placement>
+          <Type>Placement, PlacementNestedLevel</Type>
+        </Item106>
+      </Conditions>
+      <Font>Arial,8</Font>
+      <Name>Blue Steel_Data1_Even Style</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[0:0:0]</TextBrush>
+    </Blue_x0020_Steel_Data1_Even_x0020_Style>
+    <Blue_x0020_Steel_Footer1 Ref="108" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black</Border>
+      <Brush>White</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item108 Ref="109" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>Footer</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item108>
+      </Conditions>
+      <Font>Arial,8.25,Bold,Point,False,204</Font>
+      <Name>Blue Steel_Footer1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>Black</TextBrush>
+    </Blue_x0020_Steel_Footer1>
+  </Styles>
+</StiSerializer>

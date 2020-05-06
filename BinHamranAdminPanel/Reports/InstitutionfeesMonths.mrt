@@ -1,0 +1,1342 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <MS_x0020_SQL Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>MS SQL</Alias>
+        <ConnectionStringEncrypted>9FTbC2JK8/l/Wui9eT2iXtFw+w3GVpKVRk3oHOkRKYvFeskJVkpaBXJG9fzDdOHr3xCriU5Mus3hFdFs9UTpu/Rg+81WTfPtfG3RZGOE53vCVtsCTVl6/GlG/exkiG0qi271LV1RSwHxHAkEeSXhL8Ngs4lMVA==</ConnectionStringEncrypted>
+        <Name>MS SQL</Name>
+      </MS_x0020_SQL>
+    </Databases>
+    <DataSources isList="true" count="1">
+      <InstitutionfeesMonths Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>InstitutionfeesMonths</Alias>
+        <Columns isList="true" count="15">
+          <value>ACC_AR_NAME,System.String</value>
+          <value>DatabaseName,System.String</value>
+          <value>January,System.Double</value>
+          <value>February,System.Double</value>
+          <value>March,System.Double</value>
+          <value>April,System.Double</value>
+          <value>May,System.Double</value>
+          <value>June,System.Double</value>
+          <value>July,System.Double</value>
+          <value>August,System.Double</value>
+          <value>September,System.Double</value>
+          <value>October,System.Double</value>
+          <value>November,System.Double</value>
+          <value>December,System.Double</value>
+          <value>Total,System.Double</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>536a4cde7aac497b93a3b266b768c9cc</Key>
+        <Name>InstitutionfeesMonths</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="5">
+          <value>_x0040_STARTDATE,,15,50</value>
+          <value>_x0040_ENDDATE,,15,50</value>
+          <value>_x0040_CompanyBranchID,,12,50</value>
+          <value>_x0040_Type,,16,0</value>
+          <value>_x0040_DatabaseID,,12,50</value>
+        </Parameters>
+        <SqlCommand>Exec Rpt_Institutionfees
+
+@STARTDATE,
+@ENDDATE,
+@CompanyBranchID,
+@Type,
+@DatabaseID</SqlCommand>
+      </InstitutionfeesMonths>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <Variables isList="true" count="2">
+      <value>,FromDate,FromDate,,System.DateTime,,False,False,False,False</value>
+      <value>,ToDate,ToDate,,System.DateTime,,False,False,False,False</value>
+    </Variables>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <Key>3b6a777325c7422d80a88c184c517d44</Key>
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="4" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="6">
+        <ReportTitle Ref="5" type="ReportTitleBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,27.7,1.4</ClientRectangle>
+          <Components isList="true" count="1">
+            <ReportTitleText Ref="6" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,27.79,1.4</ClientRectangle>
+              <ComponentStyle>Blue Steel_Report_Title1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>ReportTitleText</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>مصاريف المؤسسه المجمعه من {Format("{0:MM.dd.yyyy}", FromDate)} الى {Format("{0:MM.dd.yyyy}", ToDate)}</Text>
+              <TextBrush>[79:129:189]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </ReportTitleText>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>ReportTitle</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </ReportTitle>
+        <HeaderInstitutionfeesMonths Ref="7" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,2.6,27.7,1</ClientRectangle>
+          <Components isList="true" count="14">
+            <HeaderTextMonthlyAnalisisForEntriesModel2 Ref="8" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,1.8,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>098b4dcac31d40bdb6ded3ba7bf2a4d3</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel2</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>الاجمالى</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel2>
+            <HeaderTextMonthlyAnalisisForEntriesModel3 Ref="9" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>1.8,0,2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>6e316bc89f0d4916b4f6037578f100f2</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel3</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>ديسمبر</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel3>
+            <HeaderTextMonthlyAnalisisForEntriesModel4 Ref="10" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>3.8,0,1.8,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>d7f7839b74604ae3869b133e2ace30ed</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel4</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>نوفمبر</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel4>
+            <HeaderTextMonthlyAnalisisForEntriesModel5 Ref="11" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>5.6,0,2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>e672330670084fccb768e3ab45a3153c</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel5</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>أكتوبر</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel5>
+            <HeaderTextMonthlyAnalisisForEntriesModel6 Ref="12" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>7.6,0,2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>fd1dfba9fe284dd4aba06c17bfb211fe</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel6</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>سبتمبر</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel6>
+            <HeaderTextMonthlyAnalisisForEntriesModel7 Ref="13" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>9.6,0,1.8,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>f03d3928e86c4ee397c0717582f20989</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel7</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>اغسطس</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel7>
+            <HeaderTextMonthlyAnalisisForEntriesModel8 Ref="14" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>11.4,0,2.2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>b1676406bc404746b3a6196939890d1a</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel8</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>يوليو</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel8>
+            <HeaderTextMonthlyAnalisisForEntriesModel9 Ref="15" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>13.6,0,1.6,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>736348ffd1224d58a4b9cb3988d10871</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel9</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>يونيه</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel9>
+            <HeaderTextMonthlyAnalisisForEntriesModel10 Ref="16" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>15.2,0,2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>fb41b5e1870147efbe8f0bc8a8bafddd</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel10</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>مايو</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel10>
+            <HeaderTextMonthlyAnalisisForEntriesModel11 Ref="17" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>17.2,0,1.8,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>62df00a75c89451285772e3bdf67a89d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel11</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>ابريل</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel11>
+            <HeaderTextMonthlyAnalisisForEntriesModel12 Ref="18" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>19,0,2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>b5a663fbf8a8468e97b12cb6ca4a0934</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel12</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>مارس</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel12>
+            <HeaderTextMonthlyAnalisisForEntriesModel13 Ref="19" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>21,0,1.6,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>48a1fb56ebfe4b258384e59e86e1d25f</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel13</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>فبراير</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel13>
+            <HeaderTextMonthlyAnalisisForEntriesModel14 Ref="20" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>22.6,0,2.2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>ee049e84651a4d5d8e97190bd5fd1cc6</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel14</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>يناير</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel14>
+            <HeaderTextMonthlyAnalisisForEntriesModel15 Ref="21" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>24.8,0,2.8,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>7009a367bc3c4c389494cc5ae7920724</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextMonthlyAnalisisForEntriesModel15</Name>
+              <Page isRef="4" />
+              <Parent isRef="7" />
+              <Text>الحساب</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextMonthlyAnalisisForEntriesModel15>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>HeaderInstitutionfeesMonths</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <PrintIfEmpty>True</PrintIfEmpty>
+        </HeaderInstitutionfeesMonths>
+        <GroupHeaderBand1 Ref="22" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,4.4,27.7,1.4</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text1 Ref="23" type="Text" isKey="true">
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>23.6,0,4.19,1.4</ClientRectangle>
+              <ComponentStyle>Blue Steel_Report_Title1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>3640089174a64cf69f6f7c64cf8b37a2</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="4" />
+              <Parent isRef="22" />
+              <Text>{InstitutionfeesMonths.DatabaseName}</Text>
+              <TextBrush>[79:129:189]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+          </Components>
+          <Condition>{InstitutionfeesMonths.DatabaseName}</Condition>
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </GroupHeaderBand1>
+        <DataInstitutionfeesMonths Ref="24" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,6.6,27.7,1</ClientRectangle>
+          <Components isList="true" count="14">
+            <DataTextMonthlyAnalisisForEntriesModel2 Ref="25" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,1.8,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>37a989a797204cd8b4086bae4f0cd1a3</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel2</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{Round(InstitutionfeesMonths.Total,2)}
+</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel2>
+            <DataTextMonthlyAnalisisForEntriesModel3 Ref="26" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>1.8,0,2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>785fafcddfc84ec4ba63023118c32059</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel3</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{Round(InstitutionfeesMonths.December,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel3>
+            <DataTextMonthlyAnalisisForEntriesModel4 Ref="27" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>3.8,0,1.8,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>610a1169d6c24401abd9db4485d67358</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel4</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{Round(InstitutionfeesMonths.November,2)}
+</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel4>
+            <DataTextMonthlyAnalisisForEntriesModel5 Ref="28" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>5.6,0,2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>f114c3d00e3d41d39076e9fcbde90bc1</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel5</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{Round(InstitutionfeesMonths.October,2)}
+</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel5>
+            <DataTextMonthlyAnalisisForEntriesModel6 Ref="29" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>7.6,0,2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>ccd149b2e7a14483809ab782a028faca</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel6</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{Round(InstitutionfeesMonths.September,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel6>
+            <DataTextMonthlyAnalisisForEntriesModel7 Ref="30" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>9.6,0,1.8,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>3dea49a6fc2d4bad979c301ebc2b2eb2</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel7</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{Round(InstitutionfeesMonths.August,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel7>
+            <DataTextMonthlyAnalisisForEntriesModel8 Ref="31" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>11.4,0,2.2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>e1268fdaf3f94c648b4fa0c97bc284aa</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel8</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{Round(InstitutionfeesMonths.July,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel8>
+            <DataTextMonthlyAnalisisForEntriesModel9 Ref="32" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>13.6,0,1.6,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>108354824a9546a29cc49d0c78900a64</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel9</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{Round(InstitutionfeesMonths.June,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel9>
+            <DataTextMonthlyAnalisisForEntriesModel10 Ref="33" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>15.2,0,2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>64b266fcd04b4d6e90849c87a2aae052</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel10</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{Round(InstitutionfeesMonths.May,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel10>
+            <DataTextMonthlyAnalisisForEntriesModel11 Ref="34" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>17.2,0,1.8,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>7312bc162cc6415cad7c1b165c404687</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel11</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{Round(InstitutionfeesMonths.April,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel11>
+            <DataTextMonthlyAnalisisForEntriesModel12 Ref="35" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>19,0,2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>26cbe64d609840a6a3cbfddd6f3bcbe2</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel12</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{Round(InstitutionfeesMonths.March,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel12>
+            <DataTextMonthlyAnalisisForEntriesModel13 Ref="36" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>21,0,1.6,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>525cd101d96f420da09a05d2e42f1296</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel13</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{Round(InstitutionfeesMonths.February,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel13>
+            <DataTextMonthlyAnalisisForEntriesModel14 Ref="37" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>22.6,0,2.2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>18bd569b340f4fdc935d935ef5c46178</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel14</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{Round(InstitutionfeesMonths.January,2)}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel14>
+            <DataTextMonthlyAnalisisForEntriesModel15 Ref="38" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>24.8,0,2.8,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>e9f623997974424caba37def09449c30</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextMonthlyAnalisisForEntriesModel15</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{InstitutionfeesMonths.ACC_AR_NAME}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextMonthlyAnalisisForEntriesModel15>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>InstitutionfeesMonths</DataSourceName>
+          <EvenStyle>Blue Steel_Data1_Even Style</EvenStyle>
+          <FilterMode>Or</FilterMode>
+          <Filters isList="true" count="0" />
+          <Name>DataInstitutionfeesMonths</Name>
+          <OddStyle>Blue Steel_Data1_Odd Style</OddStyle>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <PrintIfDetailEmpty>True</PrintIfDetailEmpty>
+          <Sort isList="true" count="0" />
+        </DataInstitutionfeesMonths>
+        <GroupFooterBand1 Ref="39" type="GroupFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,8.4,27.7,1</ClientRectangle>
+          <Components isList="true" count="14">
+            <Text2 Ref="40" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,1.8,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>2d5ac7df06144b5d808bc1cfe69edb2d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(Sum(GroupHeaderBand1,InstitutionfeesMonths.Total),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <Text3 Ref="41" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>1.8,0,2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>0672345ba2bd4aa6b033969a18b6eb7c</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(Sum(GroupHeaderBand1,InstitutionfeesMonths.December),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
+            <Text4 Ref="42" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>3.8,0,1.8,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>eb8bc7236bd94e759ec61fa87d581105</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(Sum(GroupHeaderBand1,InstitutionfeesMonths.November),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+            <Text5 Ref="43" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>5.6,0,2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>fd901550722b425192bc85d105292af5</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(Sum(GroupHeaderBand1,InstitutionfeesMonths.October),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text6 Ref="44" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>7.6,0,2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>5b8594550b5b4624b2d007c8c8d8c884</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(Sum(GroupHeaderBand1,InstitutionfeesMonths.September),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+            <Text7 Ref="45" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>9.6,0,1.8,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>28292ff483d7465c9c28b10b98ab5c4b</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(Sum(GroupHeaderBand1,InstitutionfeesMonths.August),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text7>
+            <Text8 Ref="46" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>11.4,0,2.2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>a82f5122fd4f425597f07bdfc0513172</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(Sum(GroupHeaderBand1,InstitutionfeesMonths.July),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+            <Text9 Ref="47" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>13.6,0,1.6,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>d764a6f1aee34c96aa9c5980606ad0bb</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(Sum(GroupHeaderBand1,InstitutionfeesMonths.June),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text9>
+            <Text10 Ref="48" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>15.2,0,2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>f2e20ba1ccda4b12ae31e02c58567e1c</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(Sum(GroupHeaderBand1,InstitutionfeesMonths.May),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text10>
+            <Text11 Ref="49" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>17.2,0,1.8,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>0940afaf4bb84d84ab9ba107834af104</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(Sum(GroupHeaderBand1,InstitutionfeesMonths.April),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text11>
+            <Text12 Ref="50" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>19,0,2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>12e26cf9702f4507bfe39eb9512cfe48</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(Sum(GroupHeaderBand1,InstitutionfeesMonths.March),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text12>
+            <Text13 Ref="51" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>21,0,1.6,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>7c974d55f49f45049cf3e066571012a7</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(Sum(GroupHeaderBand1,InstitutionfeesMonths.February),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text13>
+            <Text14 Ref="52" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>22.6,0,2.2,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>65d6533c7b4e49e186a85870e1565ed3</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Round(Sum(GroupHeaderBand1,InstitutionfeesMonths.January),2)}</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text14>
+            <Text15 Ref="53" type="Text" isKey="true">
+              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+              <Brush>[79:129:189]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>24.8,0,2.8,1</ClientRectangle>
+              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Bold,Point,False,204</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>08dbb3a0e8474bbea18322682bae2cc1</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>الاجمالى</Text>
+              <TextBrush>White</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text15>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>GroupFooterBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </GroupFooterBand1>
+        <FooterInstitutionfeesMonths Ref="54" type="FooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,10.2,27.7,0.6</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>FooterInstitutionfeesMonths</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </FooterInstitutionfeesMonths>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>01ad99e651f449138c817481ba5ad1db</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <Orientation>Landscape</Orientation>
+      <PageHeight>21</PageHeight>
+      <PageWidth>29.7</PageWidth>
+      <PaperSize>A4</PaperSize>
+      <Report isRef="0" />
+    </Page1>
+  </Pages>
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>4/28/2020 2:47:09 PM</ReportChanged>
+  <ReportCreated>4/28/2020 2:16:58 PM</ReportCreated>
+  <ReportFile>D:\New project\BinHamranAdminPanel3\BinHamranAdminPanel\Reports\InstitutionfeesMonths.mrt</ReportFile>
+  <ReportGuid>ad12db1a0119436797e77e0574fce85b</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2019.3.5.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="12">
+    <Blue_x0020_Steel_Report_Title1 Ref="55" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item55 Ref="56" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>ReportTitle</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item55>
+      </Conditions>
+      <Font>Arial,14,Bold</Font>
+      <Name>Blue Steel_Report_Title1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[79:129:189]</TextBrush>
+    </Blue_x0020_Steel_Report_Title1>
+    <Blue_x0020_Steel_Report_Title2 Ref="57" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item57 Ref="58" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>ReportTitle</Placement>
+          <PlacementNestedLevel>2</PlacementNestedLevel>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item57>
+      </Conditions>
+      <Font>Arial,10,Bold</Font>
+      <Name>Blue Steel_Report_Title2</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[79:129:189]</TextBrush>
+    </Blue_x0020_Steel_Report_Title2>
+    <Blue_x0020_Steel_Report_Summary Ref="59" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item59 Ref="60" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>ReportSummary</Placement>
+          <Type>ComponentType, Placement</Type>
+        </Item59>
+      </Conditions>
+      <Font>Arial,10,Bold</Font>
+      <Name>Blue Steel_Report_Summary</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[79:129:189]</TextBrush>
+    </Blue_x0020_Steel_Report_Summary>
+    <Blue_x0020_Steel_Page_Header Ref="61" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item61 Ref="62" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>PageHeader</Placement>
+          <Type>ComponentType, Placement</Type>
+        </Item61>
+      </Conditions>
+      <Font>Arial,10</Font>
+      <Name>Blue Steel_Page_Header</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>Black</TextBrush>
+    </Blue_x0020_Steel_Page_Header>
+    <Blue_x0020_Steel_Page_Footer Ref="63" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item63 Ref="64" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>PageFooter</Placement>
+          <Type>ComponentType, Placement</Type>
+        </Item63>
+      </Conditions>
+      <Font>Arial,10</Font>
+      <Name>Blue Steel_Page_Footer</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>Black</TextBrush>
+    </Blue_x0020_Steel_Page_Footer>
+    <Blue_x0020_Steel_Group_Header1 Ref="65" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Top, Bottom;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item65 Ref="66" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>GroupHeader</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item65>
+      </Conditions>
+      <Font>Arial,13,Bold</Font>
+      <Name>Blue Steel_Group_Header1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[79:129:189]</TextBrush>
+    </Blue_x0020_Steel_Group_Header1>
+    <Blue_x0020_Steel_Group_Footer1 Ref="67" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Top, Bottom;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item67 Ref="68" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>GroupFooter</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item67>
+      </Conditions>
+      <Font>Arial,9.75,Bold,Point,False,204</Font>
+      <Name>Blue Steel_Group_Footer1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[79:129:189]</TextBrush>
+    </Blue_x0020_Steel_Group_Footer1>
+    <Blue_x0020_Steel_Header1 Ref="69" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+      <Brush>[79:129:189]</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item69 Ref="70" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>Header</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item69>
+      </Conditions>
+      <Font>Arial,9.75,Bold,Point,False,204</Font>
+      <Name>Blue Steel_Header1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>White</TextBrush>
+    </Blue_x0020_Steel_Header1>
+    <Blue_x0020_Steel_Data1 Ref="71" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item71 Ref="72" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>Data</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item71>
+      </Conditions>
+      <Font>Arial,8</Font>
+      <Name>Blue Steel_Data1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[0:0:0]</TextBrush>
+    </Blue_x0020_Steel_Data1>
+    <Blue_x0020_Steel_Data1_Odd_x0020_Style Ref="73" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>[255:255:255]</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item73 Ref="74" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>DataOddStyle</Placement>
+          <Type>Placement, PlacementNestedLevel</Type>
+        </Item73>
+      </Conditions>
+      <Font>Arial,8</Font>
+      <Name>Blue Steel_Data1_Odd Style</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[0:0:0]</TextBrush>
+    </Blue_x0020_Steel_Data1_Odd_x0020_Style>
+    <Blue_x0020_Steel_Data1_Even_x0020_Style Ref="75" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>[216:216:216]</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item75 Ref="76" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>DataEvenStyle</Placement>
+          <Type>Placement, PlacementNestedLevel</Type>
+        </Item75>
+      </Conditions>
+      <Font>Arial,8</Font>
+      <Name>Blue Steel_Data1_Even Style</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[0:0:0]</TextBrush>
+    </Blue_x0020_Steel_Data1_Even_x0020_Style>
+    <Blue_x0020_Steel_Footer1 Ref="77" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black</Border>
+      <Brush>White</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item77 Ref="78" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>Footer</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item77>
+      </Conditions>
+      <Font>Arial,8.25,Bold,Point,False,204</Font>
+      <Name>Blue Steel_Footer1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>Black</TextBrush>
+    </Blue_x0020_Steel_Footer1>
+  </Styles>
+</StiSerializer>

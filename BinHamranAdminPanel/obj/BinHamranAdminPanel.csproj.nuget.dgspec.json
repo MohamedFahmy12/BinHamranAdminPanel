@@ -79,7 +79,7 @@
             },
             "Stimulsoft.Reports.Web.NetCore": {
               "target": "Package",
-              "version": "[2020.2.2.1, )"
+              "version": "[2019.3.5, )"
             },
             "System.Data.Entity.Repository": {
               "target": "Package",

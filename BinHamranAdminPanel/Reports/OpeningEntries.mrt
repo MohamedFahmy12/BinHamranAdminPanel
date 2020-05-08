@@ -35,10 +35,10 @@
         <Name>MonthlyAnalisisForEntriesModel</Name>
         <NameInSource>MS SQL</NameInSource>
         <Parameters isList="true" count="4">
-          <value>_x0040_STARTDATE,_x0022_2019_x0022_,12,50</value>
-          <value>_x0040_CompanyBranchID_x0020_,_x0022_1_x002C_2_x002C_3_x002C_4_x002C_5_x002C_7_x002C_8_x0022_,12,50</value>
-          <value>_x0040_EntryID,_x0022_1_x002C_2_x002C_3_x002C_4_x002C_5_x002C_6_x002C_7_x002C_14_x002C_15_x002C_22_x002C_23_x002C_63_x002C_68_x002C_69_x002C_72_x002C_74_x002C_75_x002C_80_x002C_82_x002C_86_x002C_88_x002C_89_x002C_130_x0022_,12,50</value>
-          <value>_x0040_DatabaseID_x0020_,_x0022_1_x002C_2_x002C_3_x002C_4_x002C_5_x0022_,12,50</value>
+          <value>_x0040_STARTDATE,,12,50</value>
+          <value>_x0040_CompanyBranchID,,12,50</value>
+          <value>_x0040_EntryID,,12,50</value>
+          <value>_x0040_DatabaseID,,12,50</value>
         </Parameters>
         <SqlCommand>EXEC Rpt_MonthlyAnalisisForEntries
 @STARTDATE,
@@ -64,9 +64,9 @@
         <Name>OpeningEntries</Name>
         <NameInSource>MS SQL</NameInSource>
         <Parameters isList="true" count="3">
-          <value>_x0040_STARTDATE,_x0022_2019_x0022_,12,50</value>
-          <value>CompanyBranchID,_x0022_1_x002C_2_x002C_3_x002C_4_x002C_5_x002C_7_x002C_8_x0022_,12,50</value>
-          <value>_x0040_DatabaseID,_x0022_1_x0022_,12,50</value>
+          <value>_x0040_STARTDATE,,12,50</value>
+          <value>_x0040_CompanyBranchID,,12,50</value>
+          <value>_x0040_DatabaseID,,12,50</value>
         </Parameters>
         <SqlCommand>EXEC Rpt_OpiningEntry
 @STARTDATE,
@@ -286,7 +286,7 @@
               <Name>DataTextOpeningEntries6</Name>
               <Page isRef="5" />
               <Parent isRef="17" />
-              <Text>{Round(OpeningEntries.ENTRY_DEBIT,2)}</Text>
+              <Text>{Round(OpeningEntries.ENTRY_CREDIT,2)}</Text>
               <TextBrush>[0:0:0]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <TextQuality>Wysiwyg</TextQuality>
@@ -464,10 +464,10 @@
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>4/22/2020 11:06:14 PM</ReportChanged>
+  <ReportChanged>5/7/2020 12:32:27 PM</ReportChanged>
   <ReportCreated>4/22/2020 10:31:57 PM</ReportCreated>
-  <ReportFile>C:\Users\modyf\source\repos\BinHamranAdminPanel3\BinHamranAdminPanel\Reports\OpeningEntries.mrt</ReportFile>
-  <ReportGuid>2da9defd8cf24fd9bdf72088e8349923</ReportGuid>
+  <ReportFile>D:\New project\BinHamranAdminPanel3\BinHamranAdminPanel\Reports\OpeningEntries.mrt</ReportFile>
+  <ReportGuid>9e2daf11a413497385b06caf80aae9b2</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2019.3.5.0</ReportVersion>

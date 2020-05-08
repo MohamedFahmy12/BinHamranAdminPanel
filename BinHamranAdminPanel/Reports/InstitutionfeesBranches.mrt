@@ -443,10 +443,10 @@
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>4/28/2020 2:39:51 PM</ReportChanged>
+  <ReportChanged>5/7/2020 12:41:54 PM</ReportChanged>
   <ReportCreated>4/28/2020 2:07:47 PM</ReportCreated>
   <ReportFile>D:\New project\BinHamranAdminPanel3\BinHamranAdminPanel\Reports\InstitutionfeesBranches.mrt</ReportFile>
-  <ReportGuid>c5c2b74a1d3d4874b4abd11ec8677b78</ReportGuid>
+  <ReportGuid>0ecc76a09db04a1b891b6fb43084e72e</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2019.3.5.0</ReportVersion>

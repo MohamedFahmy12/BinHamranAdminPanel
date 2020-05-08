@@ -74,7 +74,7 @@
               <Name>ReportTitleText</Name>
               <Page isRef="4" />
               <Parent isRef="5" />
-              <Text>{ACC_NAME} المجمعه للمؤسسه قى {Format("{0:MM.dd.yyyy}", Date)}</Text>
+              <Text>{ACC_NAME} المجمعه للمؤسسه فى {Format("{0:MM.dd.yyyy}", Date)}</Text>
               <TextBrush>[79:129:189]</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
@@ -381,10 +381,10 @@
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>4/26/2020 12:48:01 PM</ReportChanged>
+  <ReportChanged>5/7/2020 12:36:31 PM</ReportChanged>
   <ReportCreated>4/26/2020 10:44:54 AM</ReportCreated>
-  <ReportFile>C:\Users\modyf\source\repos\BinHamranAdminPanel3\BinHamranAdminPanel\Reports\AccountTotalBalance.mrt</ReportFile>
-  <ReportGuid>e0216e4be25340e4b25174ce18b7f1f6</ReportGuid>
+  <ReportFile>D:\New project\BinHamranAdminPanel3\BinHamranAdminPanel\Reports\AccountTotalBalance.mrt</ReportFile>
+  <ReportGuid>42548595dedb4669b4bd8408ac499d8b</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2019.3.5.0</ReportVersion>

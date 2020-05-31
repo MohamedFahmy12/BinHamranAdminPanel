@@ -52,11 +52,12 @@ namespace BinHamranAdminPanel
       // Add service and create Policy with options
       services.AddCors(options =>
       {
-        options.AddPolicy("CorsPolicy",
-            builder => builder.WithOrigins(Configuration["ApplicationSettings:Client_URL"].ToString())
-            .AllowAnyMethod()
-            .AllowAnyHeader()
-            .AllowCredentials());
+          options.AddPolicy("CorsPolicy",
+              builder => builder.WithOrigins(Configuration["ApplicationSettings:Client_URL"].ToString())
+              .AllowAnyMethod()
+              .AllowAnyHeader()
+              .AllowCredentials());
+
       });
       var key = Encoding.UTF8.GetBytes(Configuration["ApplicationSettings:JWT_Secret"].ToString());
       services.AddAuthentication(x =>

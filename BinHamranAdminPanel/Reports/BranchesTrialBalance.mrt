@@ -1,793 +1,915 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<StiSerializer version="1.02" type="Net" application="StiReport">
-  <Dictionary Ref="1" type="Dictionary" isKey="true">
-    <BusinessObjects isList="true" count="0" />
-    <Databases isList="true" count="1">
-      <MS_x0020_SQL Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
-        <Alias>MS SQL</Alias>
-        <ConnectionStringEncrypted>9FTbC2JK8/l/Wui9eT2iXtFw+w3GVpKVRk3oHOkRKYvFeskJVkpaBXJG9fzDdOHr3xCriU5Mus3hFdFs9UTpu/Rg+81WTfPtfG3RZGOE53vCVtsCTVl6/GlG/exkiG0qi271LV1RSwHxHAkEeSXhL8Ngs4lMVA==</ConnectionStringEncrypted>
-        <Name>MS SQL</Name>
-      </MS_x0020_SQL>
-    </Databases>
-    <DataSources isList="true" count="1">
-      <BranchesTrialBalance Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
-        <Alias>BranchesTrialBalance</Alias>
-        <Columns isList="true" count="6">
-          <value>entry_debit,System.Double</value>
-          <value>entry_credit,System.Double</value>
-          <value>Balance,System.Double</value>
-          <value>ACC_AR_NAME,System.String</value>
-          <value>DatabaseName,System.String</value>
-          <value>COM_BRN_AR_NAME,System.String</value>
-        </Columns>
-        <CommandTimeout>30</CommandTimeout>
-        <Dictionary isRef="1" />
-        <Key>5c75f94f914a43e394973cbf54723871</Key>
-        <Name>BranchesTrialBalance</Name>
-        <NameInSource>MS SQL</NameInSource>
-        <Parameters isList="true" count="3">
-          <value>_x0040_STARTDATE,,15,50</value>
-          <value>_x0040_DatabaseID,,12,50</value>
-          <value>_x0040_CompanyBranchID,,12,50</value>
-        </Parameters>
-        <SqlCommand>EXEC Rpt_BranchesTrialBalance
-@STARTDATE,
-@DatabaseID,
-@CompanyBranchID</SqlCommand>
-      </BranchesTrialBalance>
-    </DataSources>
-    <Relations isList="true" count="0" />
-    <Report isRef="0" />
-    <Resources isList="true" count="0" />
-    <Variables isList="true" count="1">
-      <value>,FromDate,FromDate,,System.DateTime,,False,False,False,False</value>
-    </Variables>
-  </Dictionary>
-  <EngineVersion>EngineV2</EngineVersion>
-  <GlobalizationStrings isList="true" count="0" />
-  <Key>999f10ddb53042098db19ea273ac775c</Key>
-  <MetaTags isList="true" count="0" />
-  <Pages isList="true" count="1">
-    <Page1 Ref="4" type="Page" isKey="true">
-      <Border>None;Black;2;Solid;False;4;Black</Border>
-      <Brush>Transparent</Brush>
-      <Components isList="true" count="8">
-        <ReportTitle Ref="5" type="ReportTitleBand" isKey="true">
-          <Brush>Transparent</Brush>
-          <ClientRectangle>0,0.4,19.59,1.4</ClientRectangle>
-          <Components isList="true" count="1">
-            <ReportTitleText Ref="6" type="Text" isKey="true">
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <ClientRectangle>0,0,19.59,1.4</ClientRectangle>
-              <ComponentStyle>Blue Steel_Report_Title1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,14,Bold</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>ReportTitleText</Name>
-              <Page isRef="4" />
-              <Parent isRef="5" />
-              <Text>ميزان المراجعه للفروع فى {Format("{0:MM.dd.yyyy}", FromDate)}</Text>
-              <TextBrush>[79:129:189]</TextBrush>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </ReportTitleText>
-          </Components>
-          <Conditions isList="true" count="0" />
-          <Name>ReportTitle</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-        </ReportTitle>
-        <HeaderBranchesTrialBalance Ref="7" type="HeaderBand" isKey="true">
-          <Brush>Transparent</Brush>
-          <ClientRectangle>0,2.6,19.59,1</ClientRectangle>
-          <Components isList="true" count="4">
-            <HeaderTextAccountTotalBalance6 Ref="8" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>4.6,0,5,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>c7f639cdade44077877ce298b9859438</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>HeaderTextAccountTotalBalance6</Name>
-              <Page isRef="4" />
-              <Parent isRef="7" />
-              <Text>الدائن</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </HeaderTextAccountTotalBalance6>
-            <HeaderTextAccountTotalBalance7 Ref="9" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>9.6,0,5,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>408646dac385466fbfa1a4dbb360dfeb</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>HeaderTextAccountTotalBalance7</Name>
-              <Page isRef="4" />
-              <Parent isRef="7" />
-              <Text>المدين</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </HeaderTextAccountTotalBalance7>
-            <HeaderTextAccountTotalBalance8 Ref="10" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>14.6,0,5,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>70118b068c55425e9525ddda4c3b8963</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>HeaderTextAccountTotalBalance8</Name>
-              <Page isRef="4" />
-              <Parent isRef="7" />
-              <Text>الحســــــاب</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </HeaderTextAccountTotalBalance8>
-            <Text1 Ref="11" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>0,0,4.6,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>e72eb9f479584fda8f0fdab671f73452</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text1</Name>
-              <Page isRef="4" />
-              <Parent isRef="7" />
-              <Text>الرصيد</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text1>
-          </Components>
-          <Conditions isList="true" count="0" />
-          <Name>HeaderBranchesTrialBalance</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-          <PrintIfEmpty>True</PrintIfEmpty>
-        </HeaderBranchesTrialBalance>
-        <GroupHeaderBand2 Ref="12" type="GroupHeaderBand" isKey="true">
-          <Brush>Transparent</Brush>
-          <ClientRectangle>0,4.4,19.59,0.8</ClientRectangle>
-          <Components isList="true" count="1">
-            <Text11 Ref="13" type="Text" isKey="true">
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <ClientRectangle>13.8,0,5.79,0.8</ClientRectangle>
-              <ComponentStyle>Blue Steel_Report_Title1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,14,Bold</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>72a342401d984767b7032dc992d0e273</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text11</Name>
-              <Page isRef="4" />
-              <Parent isRef="12" />
-              <Text>{BranchesTrialBalance.DatabaseName}</Text>
-              <TextBrush>[79:129:189]</TextBrush>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text11>
-          </Components>
-          <Condition>{BranchesTrialBalance.DatabaseName}</Condition>
-          <Conditions isList="true" count="0" />
-          <Name>GroupHeaderBand2</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-        </GroupHeaderBand2>
-        <GroupHeaderBand1 Ref="14" type="GroupHeaderBand" isKey="true">
-          <Brush>Transparent</Brush>
-          <ClientRectangle>0,6,19.59,0.8</ClientRectangle>
-          <Components isList="true" count="1">
-            <Text12 Ref="15" type="Text" isKey="true">
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <ClientRectangle>6.8,0,5.79,0.8</ClientRectangle>
-              <ComponentStyle>Blue Steel_Report_Title1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,14,Bold</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>654145c1ee344ee9bc31d5388616c160</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text12</Name>
-              <Page isRef="4" />
-              <Parent isRef="14" />
-              <Text>{BranchesTrialBalance.COM_BRN_AR_NAME}</Text>
-              <TextBrush>[79:129:189]</TextBrush>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text12>
-          </Components>
-          <Condition>{BranchesTrialBalance.COM_BRN_AR_NAME}</Condition>
-          <Conditions isList="true" count="0" />
-          <Name>GroupHeaderBand1</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-        </GroupHeaderBand1>
-        <DataBranchesTrialBalance Ref="16" type="DataBand" isKey="true">
-          <Brush>Transparent</Brush>
-          <BusinessObjectGuid isNull="true" />
-          <ClientRectangle>0,7.6,19.59,1</ClientRectangle>
-          <Components isList="true" count="4">
-            <DataTextAccountTotalBalance6 Ref="17" type="Text" isKey="true">
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>4.6,0,5,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>ed7529e861c4496b803b0d219b2fa7f4</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>DataTextAccountTotalBalance6</Name>
-              <Page isRef="4" />
-              <Parent isRef="16" />
-              <Text>{Round(BranchesTrialBalance.entry_credit,2)}</Text>
-              <TextBrush>[0:0:0]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <TextQuality>Wysiwyg</TextQuality>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </DataTextAccountTotalBalance6>
-            <DataTextAccountTotalBalance7 Ref="18" type="Text" isKey="true">
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>9.6,0,5,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>d9dd17dd962b46808c532dbe04475660</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>DataTextAccountTotalBalance7</Name>
-              <Page isRef="4" />
-              <Parent isRef="16" />
-              <Text>{Round(BranchesTrialBalance.entry_debit,2)}</Text>
-              <TextBrush>[0:0:0]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <TextQuality>Wysiwyg</TextQuality>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </DataTextAccountTotalBalance7>
-            <DataTextAccountTotalBalance8 Ref="19" type="Text" isKey="true">
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>14.6,0,5,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>54c16a7099f24d9588914f78fd91b85c</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>DataTextAccountTotalBalance8</Name>
-              <Page isRef="4" />
-              <Parent isRef="16" />
-              <Text>{BranchesTrialBalance.ACC_AR_NAME}</Text>
-              <TextBrush>[0:0:0]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <TextQuality>Wysiwyg</TextQuality>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </DataTextAccountTotalBalance8>
-            <Text2 Ref="20" type="Text" isKey="true">
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>0,0,4.6,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>7b4bb6e6c9c74ad89dbf16efb99195d9</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text2</Name>
-              <Page isRef="4" />
-              <Parent isRef="16" />
-              <Text>{Round(BranchesTrialBalance.Balance,2)}</Text>
-              <TextBrush>[0:0:0]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <TextQuality>Wysiwyg</TextQuality>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text2>
-          </Components>
-          <Conditions isList="true" count="0" />
-          <DataSourceName>BranchesTrialBalance</DataSourceName>
-          <EvenStyle>Blue Steel_Data1_Even Style</EvenStyle>
-          <FilterMode>Or</FilterMode>
-          <Filters isList="true" count="0" />
-          <Name>DataBranchesTrialBalance</Name>
-          <OddStyle>Blue Steel_Data1_Odd Style</OddStyle>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-          <PrintIfDetailEmpty>True</PrintIfDetailEmpty>
-          <Sort isList="true" count="0" />
-        </DataBranchesTrialBalance>
-        <GroupFooterBand1 Ref="21" type="GroupFooterBand" isKey="true">
-          <Brush>Transparent</Brush>
-          <ClientRectangle>0,9.4,19.59,0.8</ClientRectangle>
-          <Components isList="true" count="4">
-            <Text3 Ref="22" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>4.6,0,5,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>49aa97e3c9944ad8a8696310e13a064c</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text3</Name>
-              <Page isRef="4" />
-              <Parent isRef="21" />
-              <Text>{Round(Sum(GroupHeaderBand1,BranchesTrialBalance.entry_credit),2)}</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text3>
-            <Text4 Ref="23" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>9.6,0,5,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>246d841362c94e0a9f2a003501dddbd0</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text4</Name>
-              <Page isRef="4" />
-              <Parent isRef="21" />
-              <Text>{Round(Sum(GroupHeaderBand1,BranchesTrialBalance.entry_debit),2)}</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text4>
-            <Text5 Ref="24" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>14.6,0,5,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>ee30cfe52a7a4396b4c41bb6d02833c0</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text5</Name>
-              <Page isRef="4" />
-              <Parent isRef="21" />
-              <Text>إجمالى {BranchesTrialBalance.COM_BRN_AR_NAME}</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text5>
-            <Text6 Ref="25" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>0,0,4.6,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>6cf73b9d13364a2e90df744ee4b92cb1</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text6</Name>
-              <Page isRef="4" />
-              <Parent isRef="21" />
-              <Text>{Round(Sum(GroupHeaderBand1,BranchesTrialBalance.Balance),2)}</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text6>
-          </Components>
-          <Conditions isList="true" count="0" />
-          <Name>GroupFooterBand1</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-        </GroupFooterBand1>
-        <GroupFooterBand2 Ref="26" type="GroupFooterBand" isKey="true">
-          <Brush>Transparent</Brush>
-          <ClientRectangle>0,11,19.59,0.8</ClientRectangle>
-          <Components isList="true" count="4">
-            <Text7 Ref="27" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>4.6,0,5,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>8d6b17f7d7804b558ef55853ca8ce98a</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text7</Name>
-              <Page isRef="4" />
-              <Parent isRef="26" />
-              <Text>{Round(Sum(GroupHeaderBand2,BranchesTrialBalance.entry_credit),2)}</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text7>
-            <Text8 Ref="28" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>9.6,0,5,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>930f53ff2c8947ed8e9c7c91a748c417</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text8</Name>
-              <Page isRef="4" />
-              <Parent isRef="26" />
-              <Text>{Round(Sum(GroupHeaderBand2,BranchesTrialBalance.entry_debit),2)}</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text8>
-            <Text9 Ref="29" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>14.6,0,5,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>d632c4452405402eb195162806c87fb3</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text9</Name>
-              <Page isRef="4" />
-              <Parent isRef="26" />
-              <Text>إجمالى {BranchesTrialBalance.DatabaseName}</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text9>
-            <Text10 Ref="30" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>0,0,4.6,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>938db90df0214fb3b4d317ad67126c40</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text10</Name>
-              <Page isRef="4" />
-              <Parent isRef="26" />
-              <Text>{Round(Sum(GroupHeaderBand2,BranchesTrialBalance.Balance),2)}</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text10>
-          </Components>
-          <Conditions isList="true" count="0" />
-          <Name>GroupFooterBand2</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-        </GroupFooterBand2>
-        <FooterBranchesTrialBalance Ref="31" type="FooterBand" isKey="true">
-          <Brush>Transparent</Brush>
-          <ClientRectangle>0,12.6,19.59,0.6</ClientRectangle>
-          <Components isList="true" count="0" />
-          <Conditions isList="true" count="0" />
-          <Name>FooterBranchesTrialBalance</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-        </FooterBranchesTrialBalance>
-      </Components>
-      <Conditions isList="true" count="0" />
-      <Guid>e152e387f2494b86a40b125c797ed5be</Guid>
-      <Margins>1,1,1,1</Margins>
-      <Name>Page1</Name>
-      <PageHeight>27.94</PageHeight>
-      <PageWidth>21.59</PageWidth>
-      <PaperSize>Letter</PaperSize>
-      <Report isRef="0" />
-    </Page1>
-  </Pages>
-  <ReferencedAssemblies isList="true" count="8">
-    <value>System.Dll</value>
-    <value>System.Drawing.Dll</value>
-    <value>System.Windows.Forms.Dll</value>
-    <value>System.Data.Dll</value>
-    <value>System.Xml.Dll</value>
-    <value>Stimulsoft.Controls.Dll</value>
-    <value>Stimulsoft.Base.Dll</value>
-    <value>Stimulsoft.Report.Dll</value>
-  </ReferencedAssemblies>
-  <ReportAlias>Report</ReportAlias>
-  <ReportChanged>4/29/2020 3:25:43 PM</ReportChanged>
-  <ReportCreated>4/29/2020 3:18:49 PM</ReportCreated>
-  <ReportFile>D:\New project\BinHamranAdminPanel3\BinHamranAdminPanel\Reports\BranchesTrialBalance.mrt</ReportFile>
-  <ReportGuid>ed914836b8d447279b1a67aa0403fb3f</ReportGuid>
-  <ReportName>Report</ReportName>
-  <ReportUnit>Centimeters</ReportUnit>
-  <ReportVersion>2019.3.5.0</ReportVersion>
-  <Script>using System;
-using System.Drawing;
-using System.Windows.Forms;
-using System.Data;
-using Stimulsoft.Controls;
-using Stimulsoft.Base.Drawing;
-using Stimulsoft.Report;
-using Stimulsoft.Report.Dialogs;
-using Stimulsoft.Report.Components;
-
-namespace Reports
 {
-    public class Report : Stimulsoft.Report.StiReport
-    {
-        public Report()        {
-            this.InitializeComponent();
+  "ReportGuid": "ed914836b8d447279b1a67aa0403fb3f",
+  "ReportName": "Report",
+  "ReportAlias": "Report",
+  "ReportFile": "BranchesTrialBalance.mrt",
+  "ReportCreated": "/Date(-7200000+0200)/",
+  "ReportChanged": "/Date(-7200000+0200)/",
+  "EngineVersion": "EngineV2",
+  "CalculationMode": "Interpretation",
+  "ReportUnit": "Centimeters",
+  "PreviewSettings": 268435455,
+  "Styles": {
+    "0": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "Placement": "ReportTitle",
+          "ComponentType": "Text, Primitive, Image"
         }
-
-        #region StiReport Designer generated code - do not modify
-		#endregion StiReport Designer generated code - do not modify
+      },
+      "Name": "Blue Steel_Report_Title1",
+      "Font": ";14;Bold;",
+      "Border": ";0,0,39;;;;;;solid:Black",
+      "Brush": "solid:",
+      "TextBrush": "solid:79,129,189",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "1": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "OperationPlacementNestedLevel": "GreaterThanOrEqualTo",
+          "Placement": "ReportTitle",
+          "PlacementNestedLevel": 2,
+          "ComponentType": "Text, Primitive, Image"
+        }
+      },
+      "Name": "Blue Steel_Report_Title2",
+      "Font": ";10;Bold;",
+      "Border": ";0,0,39;;;;;;solid:Black",
+      "Brush": "solid:",
+      "TextBrush": "solid:79,129,189",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "2": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement",
+          "Placement": "ReportSummary",
+          "ComponentType": "Text, Primitive, Image"
+        }
+      },
+      "Name": "Blue Steel_Report_Summary",
+      "Font": ";10;Bold;",
+      "Border": ";0,0,39;;;;;;solid:Black",
+      "Brush": "solid:",
+      "TextBrush": "solid:79,129,189",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "3": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement",
+          "Placement": "PageHeader",
+          "ComponentType": "Text, Primitive, Image"
+        }
+      },
+      "Name": "Blue Steel_Page_Header",
+      "Font": ";10;;",
+      "Border": ";0,0,39;;;;;;solid:Black",
+      "Brush": "solid:",
+      "TextBrush": "solid:Black",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "4": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement",
+          "Placement": "PageFooter",
+          "ComponentType": "Text, Primitive, Image"
+        }
+      },
+      "Name": "Blue Steel_Page_Footer",
+      "Font": ";10;;",
+      "Border": ";0,0,39;;;;;;solid:Black",
+      "Brush": "solid:",
+      "TextBrush": "solid:Black",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "5": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "OperationPlacementNestedLevel": "GreaterThanOrEqualTo",
+          "Placement": "GroupHeader",
+          "ComponentType": "Text, Primitive, Image"
+        }
+      },
+      "Name": "Blue Steel_Group_Header1",
+      "Font": ";13;Bold;",
+      "Border": "Top, Bottom;0,0,39;;;;;;solid:Black",
+      "Brush": "solid:",
+      "TextBrush": "solid:79,129,189",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "6": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "Placement": "GroupFooter",
+          "ComponentType": "Text, Primitive, Image"
+        }
+      },
+      "Name": "Blue Steel_Group_Footer1",
+      "Font": ";9.75;Bold;",
+      "Border": "Top, Bottom;0,0,39;;;;;;solid:Black",
+      "Brush": "solid:",
+      "TextBrush": "solid:79,129,189",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "7": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "OperationPlacementNestedLevel": "GreaterThanOrEqualTo",
+          "Placement": "Header",
+          "ComponentType": "Text, Primitive, Image"
+        }
+      },
+      "Name": "Blue Steel_Header1",
+      "Font": ";9.75;Bold;",
+      "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+      "Brush": "solid:79,129,189",
+      "TextBrush": "solid:White",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "8": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "OperationPlacementNestedLevel": "GreaterThanOrEqualTo",
+          "Placement": "Data",
+          "ComponentType": "Text, Primitive, Image, CheckBox"
+        }
+      },
+      "Name": "Blue Steel_Data1",
+      "Border": ";0,0,39;;;;;;solid:Black",
+      "Brush": "solid:",
+      "TextBrush": "solid:0,0,0",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "9": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "Placement, PlacementNestedLevel",
+          "OperationPlacementNestedLevel": "GreaterThanOrEqualTo",
+          "Placement": "DataOddStyle"
+        }
+      },
+      "Name": "Blue Steel_Data1_Odd Style",
+      "Border": ";0,0,39;;;;;;solid:Black",
+      "Brush": "solid:255,255,255",
+      "TextBrush": "solid:0,0,0",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "10": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "Placement, PlacementNestedLevel",
+          "OperationPlacementNestedLevel": "GreaterThanOrEqualTo",
+          "Placement": "DataEvenStyle"
+        }
+      },
+      "Name": "Blue Steel_Data1_Even Style",
+      "Border": ";0,0,39;;;;;;solid:Black",
+      "Brush": "solid:216,216,216",
+      "TextBrush": "solid:0,0,0",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "11": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "Placement": "Footer",
+          "ComponentType": "Text, Primitive, Image"
+        }
+      },
+      "Name": "Blue Steel_Footer1",
+      "Font": ";8.25;Bold;",
+      "Border": "Top, Bottom;0,0,39;2;;;;;solid:Black",
+      "Brush": "solid:White",
+      "TextBrush": "solid:Black",
+      "NegativeTextBrush": "solid:Red"
     }
+  },
+  "Dictionary": {
+    "Variables": {
+      "0": {
+        "Name": "FromDate",
+        "Alias": "FromDate",
+        "Type": "System.DateTime"
+      }
+    },
+    "DataSources": {
+      "0": {
+        "Ident": "StiSqlSource",
+        "Name": "BranchesTrialBalance",
+        "Alias": "BranchesTrialBalance",
+        "Key": "5c75f94f914a43e394973cbf54723871",
+        "Columns": {
+          "0": {
+            "Name": "entry_debit",
+            "Index": -1,
+            "NameInSource": "entry_debit",
+            "Alias": "entry_debit",
+            "Type": "System.Double"
+          },
+          "1": {
+            "Name": "entry_credit",
+            "Index": -1,
+            "NameInSource": "entry_credit",
+            "Alias": "entry_credit",
+            "Type": "System.Double"
+          },
+          "2": {
+            "Name": "Balance",
+            "Index": -1,
+            "NameInSource": "Balance",
+            "Alias": "Balance",
+            "Type": "System.Double"
+          },
+          "3": {
+            "Name": "ACC_AR_NAME",
+            "Index": -1,
+            "NameInSource": "ACC_AR_NAME",
+            "Alias": "ACC_AR_NAME",
+            "Type": "System.String"
+          },
+          "4": {
+            "Name": "DatabaseName",
+            "Index": -1,
+            "NameInSource": "DatabaseName",
+            "Alias": "DatabaseName",
+            "Type": "System.String"
+          },
+          "5": {
+            "Name": "COM_BRN_AR_NAME",
+            "Index": -1,
+            "NameInSource": "COM_BRN_AR_NAME",
+            "Alias": "COM_BRN_AR_NAME",
+            "Type": "System.String"
+          }
+        },
+        "NameInSource": "MS SQL",
+        "SqlCommand": "EXEC Rpt_BranchesTrialBalance\r\n@STARTDATE,\r\n@DatabaseID,\r\n@CompanyBranchID",
+        "Parameters": {
+          "0": {
+            "Name": "@STARTDATE",
+            "Type": 15,
+            "Size": 50
+          },
+          "1": {
+            "Name": "@DatabaseID",
+            "Type": 12,
+            "Size": 50
+          },
+          "2": {
+            "Name": "@CompanyBranchID",
+            "Type": 12,
+            "Size": 50
+          }
+        }
+      }
+    },
+    "Databases": {
+      "0": {
+        "Ident": "StiSqlDatabase",
+        "Name": "MS SQL",
+        "Alias": "MS SQL",
+        "ConnectionStringEncrypted": "9FTbC2JK8/l/Wui9eT2iXtFw+w3GVpKVRk3oHOkRKYvFeskJVkpaBXJG9fzDdOHr3xCriU5Mus3hFdFs9UTpu/Rg+81WTfPtfG3RZGOE53vCVtsCTVl6/GlG/exkiG0qi271LV1RSwHxHAkEeSXhL8Ngs4lMVA=="
+      }
+    }
+  },
+  "Pages": {
+    "0": {
+      "Ident": "StiPage",
+      "Name": "Page1",
+      "Guid": "e152e387f2494b86a40b125c797ed5be",
+      "Interaction": {
+        "Ident": "StiInteraction"
+      },
+      "Border": ";;2;;;;;solid:Black",
+      "Brush": "solid:",
+      "Components": {
+        "0": {
+          "Ident": "StiReportTitleBand",
+          "Name": "ReportTitle",
+          "ClientRectangle": "0,0.4,19.59,1.4",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "ReportTitleText",
+              "Guid": "0786bb592498b55807f80b685fea9eb6",
+              "GrowToHeight": true,
+              "ClientRectangle": "0,0,19.59,1.4",
+              "ComponentStyle": "Blue Steel_Report_Title1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "ميزان المراجعه للفروع فى {Format(\"{0:dd-MM-yyyy}\", FromDate)}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";14;Bold;",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:79,129,189",
+              "Type": "Expression"
+            }
+          }
+        },
+        "1": {
+          "Ident": "StiHeaderBand",
+          "Name": "HeaderBranchesTrialBalance",
+          "ClientRectangle": "0,2.6,19.59,1",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "HeaderTextAccountTotalBalance6",
+              "Guid": "c7f639cdade44077877ce298b9859438",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "4.6,0,5,1",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "الدائن"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "1": {
+              "Ident": "StiText",
+              "Name": "HeaderTextAccountTotalBalance7",
+              "Guid": "408646dac385466fbfa1a4dbb360dfeb",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "9.6,0,5,1",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "المدين"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "2": {
+              "Ident": "StiText",
+              "Name": "HeaderTextAccountTotalBalance8",
+              "Guid": "70118b068c55425e9525ddda4c3b8963",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "14.6,0,5,1",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "الحســــــاب"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "3": {
+              "Ident": "StiText",
+              "Name": "Text1",
+              "Guid": "e72eb9f479584fda8f0fdab671f73452",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "0,0,4.6,1",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "الرصيد"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            }
+          },
+          "PrintIfEmpty": true
+        },
+        "2": {
+          "Ident": "StiGroupHeaderBand",
+          "Name": "GroupHeaderBand2",
+          "ClientRectangle": "0,4.4,19.59,0.8",
+          "Interaction": {
+            "Ident": "StiBandInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "Text11",
+              "Guid": "72a342401d984767b7032dc992d0e273",
+              "GrowToHeight": true,
+              "ClientRectangle": "13.8,0,5.79,0.8",
+              "ComponentStyle": "Blue Steel_Report_Title1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{BranchesTrialBalance.DatabaseName}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";14;Bold;",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:79,129,189",
+              "Type": "Expression"
+            }
+          },
+          "Condition": {
+            "Value": "{BranchesTrialBalance.DatabaseName}"
+          }
+        },
+        "3": {
+          "Ident": "StiGroupHeaderBand",
+          "Name": "GroupHeaderBand1",
+          "ClientRectangle": "0,6,19.59,0.8",
+          "Interaction": {
+            "Ident": "StiBandInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "Text12",
+              "Guid": "654145c1ee344ee9bc31d5388616c160",
+              "GrowToHeight": true,
+              "ClientRectangle": "6.8,0,5.79,0.8",
+              "ComponentStyle": "Blue Steel_Report_Title1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{BranchesTrialBalance.COM_BRN_AR_NAME}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";14;Bold;",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:79,129,189",
+              "Type": "Expression"
+            }
+          },
+          "Condition": {
+            "Value": "{BranchesTrialBalance.COM_BRN_AR_NAME}"
+          }
+        },
+        "4": {
+          "Ident": "StiDataBand",
+          "Name": "DataBranchesTrialBalance",
+          "ClientRectangle": "0,7.6,19.59,1",
+          "Interaction": {
+            "Ident": "StiBandInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "DataTextAccountTotalBalance6",
+              "Guid": "ed7529e861c4496b803b0d219b2fa7f4",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "4.6,0,5,1",
+              "ComponentStyle": "Blue Steel_Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(BranchesTrialBalance.entry_credit,2)}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Type": "Expression"
+            },
+            "1": {
+              "Ident": "StiText",
+              "Name": "DataTextAccountTotalBalance7",
+              "Guid": "d9dd17dd962b46808c532dbe04475660",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "9.6,0,5,1",
+              "ComponentStyle": "Blue Steel_Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(BranchesTrialBalance.entry_debit,2)}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Type": "Expression"
+            },
+            "2": {
+              "Ident": "StiText",
+              "Name": "DataTextAccountTotalBalance8",
+              "Guid": "54c16a7099f24d9588914f78fd91b85c",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "14.6,0,5,1",
+              "ComponentStyle": "Blue Steel_Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{BranchesTrialBalance.ACC_AR_NAME}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Type": "Expression"
+            },
+            "3": {
+              "Ident": "StiText",
+              "Name": "Text2",
+              "Guid": "7b4bb6e6c9c74ad89dbf16efb99195d9",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "0,0,4.6,1",
+              "ComponentStyle": "Blue Steel_Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(BranchesTrialBalance.Balance,2)}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Type": "Expression"
+            }
+          },
+          "PrintIfDetailEmpty": true,
+          "DataSourceName": "BranchesTrialBalance",
+          "FilterMode": "Or",
+          "EvenStyle": "Blue Steel_Data1_Even Style",
+          "OddStyle": "Blue Steel_Data1_Odd Style"
+        },
+        "5": {
+          "Ident": "StiGroupFooterBand",
+          "Name": "GroupFooterBand1",
+          "ClientRectangle": "0,9.4,19.59,0.8",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "Text3",
+              "Guid": "49aa97e3c9944ad8a8696310e13a064c",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "4.6,0,5,1",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(Sum(GroupHeaderBand1,BranchesTrialBalance.entry_credit),2)}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "1": {
+              "Ident": "StiText",
+              "Name": "Text4",
+              "Guid": "246d841362c94e0a9f2a003501dddbd0",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "9.6,0,5,1",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(Sum(GroupHeaderBand1,BranchesTrialBalance.entry_debit),2)}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "2": {
+              "Ident": "StiText",
+              "Name": "Text5",
+              "Guid": "ee30cfe52a7a4396b4c41bb6d02833c0",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "14.6,0,5,1",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "إجمالى {BranchesTrialBalance.COM_BRN_AR_NAME}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "3": {
+              "Ident": "StiText",
+              "Name": "Text6",
+              "Guid": "6cf73b9d13364a2e90df744ee4b92cb1",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "0,0,4.6,1",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(Sum(GroupHeaderBand1,BranchesTrialBalance.Balance),2)}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            }
+          }
+        },
+        "6": {
+          "Ident": "StiGroupFooterBand",
+          "Name": "GroupFooterBand2",
+          "ClientRectangle": "0,11,19.59,0.8",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "Text7",
+              "Guid": "8d6b17f7d7804b558ef55853ca8ce98a",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "4.6,0,5,1",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(Sum(GroupHeaderBand2,BranchesTrialBalance.entry_credit),2)}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "1": {
+              "Ident": "StiText",
+              "Name": "Text8",
+              "Guid": "930f53ff2c8947ed8e9c7c91a748c417",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "9.6,0,5,1",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(Sum(GroupHeaderBand2,BranchesTrialBalance.entry_debit),2)}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "2": {
+              "Ident": "StiText",
+              "Name": "Text9",
+              "Guid": "d632c4452405402eb195162806c87fb3",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "14.6,0,5,1",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "إجمالى {BranchesTrialBalance.DatabaseName}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "3": {
+              "Ident": "StiText",
+              "Name": "Text10",
+              "Guid": "938db90df0214fb3b4d317ad67126c40",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "0,0,4.6,1",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(Sum(GroupHeaderBand2,BranchesTrialBalance.Balance),2)}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            }
+          }
+        },
+        "7": {
+          "Ident": "StiFooterBand",
+          "Name": "FooterBranchesTrialBalance",
+          "ClientRectangle": "0,12.6,19.59,0.6",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:"
+        }
+      },
+      "PaperSize": "Letter",
+      "PageWidth": 21.59,
+      "PageHeight": 27.94,
+      "Watermark": {
+        "TextBrush": "solid:50,0,0,0"
+      },
+      "Margins": {
+        "Left": 1,
+        "Right": 1,
+        "Top": 1,
+        "Bottom": 1
+      }
+    }
+  }
 }
-</Script>
-  <ScriptLanguage>CSharp</ScriptLanguage>
-  <Styles isList="true" count="12">
-    <Blue_x0020_Steel_Report_Title1 Ref="32" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>Transparent</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item32 Ref="33" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image</ComponentType>
-          <Placement>ReportTitle</Placement>
-          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item32>
-      </Conditions>
-      <Font>Arial,14,Bold</Font>
-      <Name>Blue Steel_Report_Title1</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>[79:129:189]</TextBrush>
-    </Blue_x0020_Steel_Report_Title1>
-    <Blue_x0020_Steel_Report_Title2 Ref="34" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>Transparent</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item34 Ref="35" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image</ComponentType>
-          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
-          <Placement>ReportTitle</Placement>
-          <PlacementNestedLevel>2</PlacementNestedLevel>
-          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item34>
-      </Conditions>
-      <Font>Arial,10,Bold</Font>
-      <Name>Blue Steel_Report_Title2</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>[79:129:189]</TextBrush>
-    </Blue_x0020_Steel_Report_Title2>
-    <Blue_x0020_Steel_Report_Summary Ref="36" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>Transparent</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item36 Ref="37" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image</ComponentType>
-          <Placement>ReportSummary</Placement>
-          <Type>ComponentType, Placement</Type>
-        </Item36>
-      </Conditions>
-      <Font>Arial,10,Bold</Font>
-      <Name>Blue Steel_Report_Summary</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>[79:129:189]</TextBrush>
-    </Blue_x0020_Steel_Report_Summary>
-    <Blue_x0020_Steel_Page_Header Ref="38" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>Transparent</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item38 Ref="39" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image</ComponentType>
-          <Placement>PageHeader</Placement>
-          <Type>ComponentType, Placement</Type>
-        </Item38>
-      </Conditions>
-      <Font>Arial,10</Font>
-      <Name>Blue Steel_Page_Header</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>Black</TextBrush>
-    </Blue_x0020_Steel_Page_Header>
-    <Blue_x0020_Steel_Page_Footer Ref="40" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>Transparent</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item40 Ref="41" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image</ComponentType>
-          <Placement>PageFooter</Placement>
-          <Type>ComponentType, Placement</Type>
-        </Item40>
-      </Conditions>
-      <Font>Arial,10</Font>
-      <Name>Blue Steel_Page_Footer</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>Black</TextBrush>
-    </Blue_x0020_Steel_Page_Footer>
-    <Blue_x0020_Steel_Group_Header1 Ref="42" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>Top, Bottom;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>Transparent</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item42 Ref="43" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image</ComponentType>
-          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
-          <Placement>GroupHeader</Placement>
-          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item42>
-      </Conditions>
-      <Font>Arial,13,Bold</Font>
-      <Name>Blue Steel_Group_Header1</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>[79:129:189]</TextBrush>
-    </Blue_x0020_Steel_Group_Header1>
-    <Blue_x0020_Steel_Group_Footer1 Ref="44" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>Top, Bottom;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>Transparent</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item44 Ref="45" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image</ComponentType>
-          <Placement>GroupFooter</Placement>
-          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item44>
-      </Conditions>
-      <Font>Arial,9.75,Bold,Point,False,204</Font>
-      <Name>Blue Steel_Group_Footer1</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>[79:129:189]</TextBrush>
-    </Blue_x0020_Steel_Group_Footer1>
-    <Blue_x0020_Steel_Header1 Ref="46" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-      <Brush>[79:129:189]</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item46 Ref="47" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image</ComponentType>
-          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
-          <Placement>Header</Placement>
-          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item46>
-      </Conditions>
-      <Font>Arial,9.75,Bold,Point,False,204</Font>
-      <Name>Blue Steel_Header1</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>White</TextBrush>
-    </Blue_x0020_Steel_Header1>
-    <Blue_x0020_Steel_Data1 Ref="48" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>Transparent</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item48 Ref="49" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
-          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
-          <Placement>Data</Placement>
-          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item48>
-      </Conditions>
-      <Font>Arial,8</Font>
-      <Name>Blue Steel_Data1</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>[0:0:0]</TextBrush>
-    </Blue_x0020_Steel_Data1>
-    <Blue_x0020_Steel_Data1_Odd_x0020_Style Ref="50" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>[255:255:255]</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item50 Ref="51" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
-          <Placement>DataOddStyle</Placement>
-          <Type>Placement, PlacementNestedLevel</Type>
-        </Item50>
-      </Conditions>
-      <Font>Arial,8</Font>
-      <Name>Blue Steel_Data1_Odd Style</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>[0:0:0]</TextBrush>
-    </Blue_x0020_Steel_Data1_Odd_x0020_Style>
-    <Blue_x0020_Steel_Data1_Even_x0020_Style Ref="52" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>[216:216:216]</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item52 Ref="53" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
-          <Placement>DataEvenStyle</Placement>
-          <Type>Placement, PlacementNestedLevel</Type>
-        </Item52>
-      </Conditions>
-      <Font>Arial,8</Font>
-      <Name>Blue Steel_Data1_Even Style</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>[0:0:0]</TextBrush>
-    </Blue_x0020_Steel_Data1_Even_x0020_Style>
-    <Blue_x0020_Steel_Footer1 Ref="54" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black</Border>
-      <Brush>White</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item54 Ref="55" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image</ComponentType>
-          <Placement>Footer</Placement>
-          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item54>
-      </Conditions>
-      <Font>Arial,8.25,Bold,Point,False,204</Font>
-      <Name>Blue Steel_Footer1</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>Black</TextBrush>
-    </Blue_x0020_Steel_Footer1>
-  </Styles>
-</StiSerializer>

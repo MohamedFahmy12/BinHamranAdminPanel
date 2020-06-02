@@ -1,1057 +1,1264 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<StiSerializer version="1.02" type="Net" application="StiReport">
-  <Dictionary Ref="1" type="Dictionary" isKey="true">
-    <BusinessObjects isList="true" count="0" />
-    <Databases isList="true" count="1">
-      <MS_x0020_SQL Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
-        <Alias>MS SQL</Alias>
-        <ConnectionStringEncrypted>9HTPC2II08hsW7X8dOzhXtHEyaHGStOB7FvoXE0FJS/D0s8JWwXizcdL+dzldPYvgm7hiU5fwtVhTE3cZyX2v+J4989GbXvNfHv9GGHksXvgavujS1n68eEFzVBzeG2L3GzRy0tcS5n6Qe2l6djgp9MQswjFaKs=</ConnectionStringEncrypted>
-        <Name>MS SQL</Name>
-      </MS_x0020_SQL>
-    </Databases>
-    <DataSources isList="true" count="1">
-      <MonthlyAnalisisForEntriesModel Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
-        <Alias>MonthlyAnalisisForEntriesModel</Alias>
-        <Columns isList="true" count="15">
-          <value>COM_BRN_CODE,System.Int32</value>
-          <value>COM_BRN_AR_NAME,System.String</value>
-          <value>DatabaseName,System.String</value>
-          <value>January,System.Double</value>
-          <value>February,System.Double</value>
-          <value>March,System.Double</value>
-          <value>April,System.Double</value>
-          <value>May,System.Double</value>
-          <value>June,System.Double</value>
-          <value>July,System.Double</value>
-          <value>August,System.Double</value>
-          <value>September,System.Double</value>
-          <value>October,System.Double</value>
-          <value>November,System.Double</value>
-          <value>December,System.Double</value>
-        </Columns>
-        <CommandTimeout>30</CommandTimeout>
-        <Dictionary isRef="1" />
-        <Key>d57a9b05313a43409ef5f9e3b083f92e</Key>
-        <Name>MonthlyAnalisisForEntriesModel</Name>
-        <NameInSource>MS SQL</NameInSource>
-        <Parameters isList="true" count="4">
-          <value>_x0040_STARTDATE,,12,50</value>
-          <value>_x0040_CompanyBranchID,,12,50</value>
-          <value>_x0040_EntryID,,12,50</value>
-          <value>_x0040_DatabaseID,,12,50</value>
-        </Parameters>
-        <SqlCommand>EXEC Rpt_MonthlyAnalisisForEntries
-@STARTDATE,
-@CompanyBranchID 
- ,@EntryID
- ,@DatabaseID </SqlCommand>
-      </MonthlyAnalisisForEntriesModel>
-    </DataSources>
-    <Relations isList="true" count="0" />
-    <Report isRef="0" />
-    <Resources isList="true" count="0" />
-    <Variables isList="true" count="1">
-      <value>,param_1,param_1,,System.String,,False,False,False,False</value>
-    </Variables>
-  </Dictionary>
-  <EngineVersion>EngineV2</EngineVersion>
-  <GlobalizationStrings isList="true" count="0" />
-  <Key>14e929a9c5854c9f9bb3960ee1fadb64</Key>
-  <MetaTags isList="true" count="0" />
-  <Pages isList="true" count="1">
-    <Page1 Ref="4" type="Page" isKey="true">
-      <Border>None;Black;2;Solid;False;4;Black</Border>
-      <Brush>Transparent</Brush>
-      <Components isList="true" count="6">
-        <ReportTitle Ref="5" type="ReportTitleBand" isKey="true">
-          <Brush>Transparent</Brush>
-          <ClientRectangle>0,0.4,25.94,1.6</ClientRectangle>
-          <Components isList="true" count="0" />
-          <Conditions isList="true" count="0" />
-          <Name>ReportTitle</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-        </ReportTitle>
-        <HeaderBand1 Ref="6" type="HeaderBand" isKey="true">
-          <Brush>Transparent</Brush>
-          <ClientRectangle>0,2.8,25.94,1.4</ClientRectangle>
-          <Components isList="true" count="2">
-            <ReportTitleText Ref="7" type="Text" isKey="true">
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <ClientRectangle>11.4,0,6.63,1.27</ClientRectangle>
-              <ComponentStyle>Blue Steel_Report_Title1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,14,Bold</Font>
-              <Guid>a0729c38d08744e1b31825ecb521b29b</Guid>
-              <Margins>0,0,0,0</Margins>
-              <Name>ReportTitleText</Name>
-              <Page isRef="4" />
-              <Parent isRef="6" />
-              <Text>التحليل الشهري لأنواع السندات لسنة </Text>
-              <TextBrush>[79:129:189]</TextBrush>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </ReportTitleText>
-            <Text2 Ref="8" type="Text" isKey="true">
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <ClientRectangle>9.2,0,2.23,1.27</ClientRectangle>
-              <ComponentStyle>Blue Steel_Report_Title1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,14,Bold</Font>
-              <Guid>2503d2a651e74887947f0545b510e14a</Guid>
-              <HorAlignment>Right</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text2</Name>
-              <Page isRef="4" />
-              <Parent isRef="6" />
-              <Text>{param_1}</Text>
-              <TextBrush>[79:129:189]</TextBrush>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text2>
-          </Components>
-          <Conditions isList="true" count="0" />
-          <Name>HeaderBand1</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-          <PrintIfEmpty>True</PrintIfEmpty>
-        </HeaderBand1>
-        <GroupHeaderBand1 Ref="9" type="GroupHeaderBand" isKey="true">
-          <Brush>Transparent</Brush>
-          <ClientRectangle>0,5,25.94,0.8</ClientRectangle>
-          <Components isList="true" count="1">
-            <Text1 Ref="10" type="Text" isKey="true">
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <ClientRectangle>18.6,0,7.37,0.76</ClientRectangle>
-              <ComponentStyle>Blue Steel_Report_Title1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,14,Bold</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>674ec604c09c465ba23f1957b491614c</Guid>
-              <HorAlignment>Right</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text1</Name>
-              <Page isRef="4" />
-              <Parent isRef="9" />
-              <Text>{MonthlyAnalisisForEntriesModel.DatabaseName}</Text>
-              <TextBrush>[79:129:189]</TextBrush>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text1>
-          </Components>
-          <Conditions isList="true" count="0" />
-          <Name>GroupHeaderBand1</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-        </GroupHeaderBand1>
-        <HeaderMonthlyAnalisisForEntriesModel Ref="11" type="HeaderBand" isKey="true">
-          <Brush>Transparent</Brush>
-          <ClientRectangle>0,6.6,25.94,0.8</ClientRectangle>
-          <Components isList="true" count="14">
-            <HeaderTextMonthlyAnalisisForEntriesModel2 Ref="12" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>0,0,1.8,0.8</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>e6cdc6b8352c4dbb8e1ef1532f31080b</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>HeaderTextMonthlyAnalisisForEntriesModel2</Name>
-              <Page isRef="4" />
-              <Parent isRef="11" />
-              <Text>الاجمالى</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </HeaderTextMonthlyAnalisisForEntriesModel2>
-            <HeaderTextMonthlyAnalisisForEntriesModel3 Ref="13" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>1.8,0,2,0.8</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>5777d96ad12e4df9818e2b73e5796f71</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>HeaderTextMonthlyAnalisisForEntriesModel3</Name>
-              <Page isRef="4" />
-              <Parent isRef="11" />
-              <Text>ديسمبر</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </HeaderTextMonthlyAnalisisForEntriesModel3>
-            <HeaderTextMonthlyAnalisisForEntriesModel4 Ref="14" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>3.8,0,1.6,0.8</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>6e3297e701ab4e2aa7037bae2431b402</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>HeaderTextMonthlyAnalisisForEntriesModel4</Name>
-              <Page isRef="4" />
-              <Parent isRef="11" />
-              <Text>نوفمبر</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </HeaderTextMonthlyAnalisisForEntriesModel4>
-            <HeaderTextMonthlyAnalisisForEntriesModel5 Ref="15" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>5.4,0,2,0.8</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>39568181de3e4431afa91378f6ee2431</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>HeaderTextMonthlyAnalisisForEntriesModel5</Name>
-              <Page isRef="4" />
-              <Parent isRef="11" />
-              <Text>أكتوبر</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </HeaderTextMonthlyAnalisisForEntriesModel5>
-            <HeaderTextMonthlyAnalisisForEntriesModel6 Ref="16" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>7.4,0,2,0.8</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>40c06fb652ec49a9bab7188acfde8a04</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>HeaderTextMonthlyAnalisisForEntriesModel6</Name>
-              <Page isRef="4" />
-              <Parent isRef="11" />
-              <Text>سبتمبر</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </HeaderTextMonthlyAnalisisForEntriesModel6>
-            <HeaderTextMonthlyAnalisisForEntriesModel7 Ref="17" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>9.4,0,1.8,0.8</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>6d8474bdf2c345d9871d952fa28ccdd2</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>HeaderTextMonthlyAnalisisForEntriesModel7</Name>
-              <Page isRef="4" />
-              <Parent isRef="11" />
-              <Text>اغسطس</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </HeaderTextMonthlyAnalisisForEntriesModel7>
-            <HeaderTextMonthlyAnalisisForEntriesModel8 Ref="18" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>11.2,0,2,0.8</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>4d41b3262bae4a829e4a6d7146a66eef</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>HeaderTextMonthlyAnalisisForEntriesModel8</Name>
-              <Page isRef="4" />
-              <Parent isRef="11" />
-              <Text>يوليو</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </HeaderTextMonthlyAnalisisForEntriesModel8>
-            <HeaderTextMonthlyAnalisisForEntriesModel9 Ref="19" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>13.2,0,1.6,0.8</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>428b6256e41e49e298f135b7a9aa250a</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>HeaderTextMonthlyAnalisisForEntriesModel9</Name>
-              <Page isRef="4" />
-              <Parent isRef="11" />
-              <Text>يونيه</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </HeaderTextMonthlyAnalisisForEntriesModel9>
-            <HeaderTextMonthlyAnalisisForEntriesModel10 Ref="20" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>14.8,0,2,0.8</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>99801035ea2b489fab35a761075182c9</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>HeaderTextMonthlyAnalisisForEntriesModel10</Name>
-              <Page isRef="4" />
-              <Parent isRef="11" />
-              <Text>مايو</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </HeaderTextMonthlyAnalisisForEntriesModel10>
-            <HeaderTextMonthlyAnalisisForEntriesModel11 Ref="21" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>16.8,0,1.8,0.8</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>68382e22b83f4aacbeab0f86950cc999</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>HeaderTextMonthlyAnalisisForEntriesModel11</Name>
-              <Page isRef="4" />
-              <Parent isRef="11" />
-              <Text>ابريل</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </HeaderTextMonthlyAnalisisForEntriesModel11>
-            <HeaderTextMonthlyAnalisisForEntriesModel12 Ref="22" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>18.6,0,2,0.8</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>2bcc782078e745c8b6953f10f508f9a7</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>HeaderTextMonthlyAnalisisForEntriesModel12</Name>
-              <Page isRef="4" />
-              <Parent isRef="11" />
-              <Text>مارس</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </HeaderTextMonthlyAnalisisForEntriesModel12>
-            <HeaderTextMonthlyAnalisisForEntriesModel13 Ref="23" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>20.6,0,1.4,0.8</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>715c3a47ffc5402fa82e808abd65a59b</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>HeaderTextMonthlyAnalisisForEntriesModel13</Name>
-              <Page isRef="4" />
-              <Parent isRef="11" />
-              <Text>فبراير</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </HeaderTextMonthlyAnalisisForEntriesModel13>
-            <HeaderTextMonthlyAnalisisForEntriesModel14 Ref="24" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>22,0,2.2,0.8</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>f6f74308f23240be9811f0d7a15725c2</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>HeaderTextMonthlyAnalisisForEntriesModel14</Name>
-              <Page isRef="4" />
-              <Parent isRef="11" />
-              <Text>يناير</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </HeaderTextMonthlyAnalisisForEntriesModel14>
-            <HeaderTextMonthlyAnalisisForEntriesModel15 Ref="25" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>24.2,0,1.8,0.8</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>f52db9ed95f04145b6a5003220aaba82</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>HeaderTextMonthlyAnalisisForEntriesModel15</Name>
-              <Page isRef="4" />
-              <Parent isRef="11" />
-              <Text>الفرع</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </HeaderTextMonthlyAnalisisForEntriesModel15>
-          </Components>
-          <Conditions isList="true" count="0" />
-          <Name>HeaderMonthlyAnalisisForEntriesModel</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-          <PrintIfEmpty>True</PrintIfEmpty>
-        </HeaderMonthlyAnalisisForEntriesModel>
-        <DataMonthlyAnalisisForEntriesModel Ref="26" type="DataBand" isKey="true">
-          <Brush>Transparent</Brush>
-          <BusinessObjectGuid isNull="true" />
-          <ClientRectangle>0,8.2,25.94,0.8</ClientRectangle>
-          <Components isList="true" count="14">
-            <DataTextMonthlyAnalisisForEntriesModel2 Ref="27" type="Text" isKey="true">
-              <AutoWidth>True</AutoWidth>
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>0,0,1.78,0.76</ClientRectangle>
-              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>db280ad2568f40aca0f14849eda23f32</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>DataTextMonthlyAnalisisForEntriesModel2</Name>
-              <Page isRef="4" />
-              <Parent isRef="26" />
-              <Text>{Round(MonthlyAnalisisForEntriesModel.January +MonthlyAnalisisForEntriesModel.February + MonthlyAnalisisForEntriesModel.March+MonthlyAnalisisForEntriesModel.April+MonthlyAnalisisForEntriesModel.May+MonthlyAnalisisForEntriesModel.June+MonthlyAnalisisForEntriesModel.July+MonthlyAnalisisForEntriesModel.August+MonthlyAnalisisForEntriesModel.September+MonthlyAnalisisForEntriesModel.October+MonthlyAnalisisForEntriesModel.November+MonthlyAnalisisForEntriesModel.December,2)}</Text>
-              <TextBrush>[0:0:0]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <TextQuality>Wysiwyg</TextQuality>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </DataTextMonthlyAnalisisForEntriesModel2>
-            <DataTextMonthlyAnalisisForEntriesModel3 Ref="28" type="Text" isKey="true">
-              <AutoWidth>True</AutoWidth>
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>1.78,0,2.03,0.76</ClientRectangle>
-              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>bd6407338c5843b1a3d7a4bae7991347</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>DataTextMonthlyAnalisisForEntriesModel3</Name>
-              <Page isRef="4" />
-              <Parent isRef="26" />
-              <Text>{Round(MonthlyAnalisisForEntriesModel.December,2)}</Text>
-              <TextBrush>[0:0:0]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <TextQuality>Wysiwyg</TextQuality>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </DataTextMonthlyAnalisisForEntriesModel3>
-            <DataTextMonthlyAnalisisForEntriesModel4 Ref="29" type="Text" isKey="true">
-              <AutoWidth>True</AutoWidth>
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>3.81,0,1.52,0.76</ClientRectangle>
-              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>eef646f33dd64a478de52f55d1e9ab4a</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>DataTextMonthlyAnalisisForEntriesModel4</Name>
-              <Page isRef="4" />
-              <Parent isRef="26" />
-              <Text>{Round(MonthlyAnalisisForEntriesModel.November,2)}</Text>
-              <TextBrush>[0:0:0]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <TextQuality>Wysiwyg</TextQuality>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </DataTextMonthlyAnalisisForEntriesModel4>
-            <DataTextMonthlyAnalisisForEntriesModel5 Ref="30" type="Text" isKey="true">
-              <AutoWidth>True</AutoWidth>
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>5.33,0,2.04,0.76</ClientRectangle>
-              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>2f4c4873446f4f4b94ee6e1047517320</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>DataTextMonthlyAnalisisForEntriesModel5</Name>
-              <Page isRef="4" />
-              <Parent isRef="26" />
-              <Text>{Round(MonthlyAnalisisForEntriesModel.October,2)}</Text>
-              <TextBrush>[0:0:0]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <TextQuality>Wysiwyg</TextQuality>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </DataTextMonthlyAnalisisForEntriesModel5>
-            <DataTextMonthlyAnalisisForEntriesModel6 Ref="31" type="Text" isKey="true">
-              <AutoWidth>True</AutoWidth>
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>7.37,0,2.03,0.76</ClientRectangle>
-              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>71f7d826904e4166902526ab33ee0951</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>DataTextMonthlyAnalisisForEntriesModel6</Name>
-              <Page isRef="4" />
-              <Parent isRef="26" />
-              <Text>{Round(MonthlyAnalisisForEntriesModel.September,2)}</Text>
-              <TextBrush>[0:0:0]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <TextQuality>Wysiwyg</TextQuality>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </DataTextMonthlyAnalisisForEntriesModel6>
-            <DataTextMonthlyAnalisisForEntriesModel7 Ref="32" type="Text" isKey="true">
-              <AutoWidth>True</AutoWidth>
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>9.4,0,1.78,0.76</ClientRectangle>
-              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>5877ee19e55a49d3be985b5bcc188bcf</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>DataTextMonthlyAnalisisForEntriesModel7</Name>
-              <Page isRef="4" />
-              <Parent isRef="26" />
-              <Text>{Round(MonthlyAnalisisForEntriesModel.August,2)}</Text>
-              <TextBrush>[0:0:0]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <TextQuality>Wysiwyg</TextQuality>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </DataTextMonthlyAnalisisForEntriesModel7>
-            <DataTextMonthlyAnalisisForEntriesModel8 Ref="33" type="Text" isKey="true">
-              <AutoWidth>True</AutoWidth>
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>11.18,0,2.03,0.76</ClientRectangle>
-              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>dad7c79d6464424d80929d4e930dad1e</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>DataTextMonthlyAnalisisForEntriesModel8</Name>
-              <Page isRef="4" />
-              <Parent isRef="26" />
-              <Text>{Round(MonthlyAnalisisForEntriesModel.July,2)}</Text>
-              <TextBrush>[0:0:0]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <TextQuality>Wysiwyg</TextQuality>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </DataTextMonthlyAnalisisForEntriesModel8>
-            <DataTextMonthlyAnalisisForEntriesModel9 Ref="34" type="Text" isKey="true">
-              <AutoWidth>True</AutoWidth>
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>13.21,0,1.52,0.76</ClientRectangle>
-              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>79c69b11f84e4c808cc3168db99d7820</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>DataTextMonthlyAnalisisForEntriesModel9</Name>
-              <Page isRef="4" />
-              <Parent isRef="26" />
-              <Text>{Round(MonthlyAnalisisForEntriesModel.June,2)}</Text>
-              <TextBrush>[0:0:0]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <TextQuality>Wysiwyg</TextQuality>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </DataTextMonthlyAnalisisForEntriesModel9>
-            <DataTextMonthlyAnalisisForEntriesModel10 Ref="35" type="Text" isKey="true">
-              <AutoWidth>True</AutoWidth>
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>14.73,0,2.03,0.76</ClientRectangle>
-              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>9f83c6d2048d45faaab2600ea99757b6</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>DataTextMonthlyAnalisisForEntriesModel10</Name>
-              <Page isRef="4" />
-              <Parent isRef="26" />
-              <Text>{Round(MonthlyAnalisisForEntriesModel.May,2)}</Text>
-              <TextBrush>[0:0:0]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <TextQuality>Wysiwyg</TextQuality>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </DataTextMonthlyAnalisisForEntriesModel10>
-            <DataTextMonthlyAnalisisForEntriesModel11 Ref="36" type="Text" isKey="true">
-              <AutoWidth>True</AutoWidth>
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>16.76,0,1.78,0.76</ClientRectangle>
-              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>866eec92a20043c2b37ef6d869025bc1</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>DataTextMonthlyAnalisisForEntriesModel11</Name>
-              <Page isRef="4" />
-              <Parent isRef="26" />
-              <Text>{Round(MonthlyAnalisisForEntriesModel.April,2)}</Text>
-              <TextBrush>[0:0:0]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <TextQuality>Wysiwyg</TextQuality>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </DataTextMonthlyAnalisisForEntriesModel11>
-            <DataTextMonthlyAnalisisForEntriesModel12 Ref="37" type="Text" isKey="true">
-              <AutoWidth>True</AutoWidth>
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>18.54,0,2.03,0.76</ClientRectangle>
-              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>77f747570c64490f8c06c047e1f8f8fa</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>DataTextMonthlyAnalisisForEntriesModel12</Name>
-              <Page isRef="4" />
-              <Parent isRef="26" />
-              <Text>{Round(MonthlyAnalisisForEntriesModel.March,2)}</Text>
-              <TextBrush>[0:0:0]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <TextQuality>Wysiwyg</TextQuality>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </DataTextMonthlyAnalisisForEntriesModel12>
-            <DataTextMonthlyAnalisisForEntriesModel13 Ref="38" type="Text" isKey="true">
-              <AutoWidth>True</AutoWidth>
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>20.57,0,1.53,0.76</ClientRectangle>
-              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>7283bf03c13848feaa27624e0d296950</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>DataTextMonthlyAnalisisForEntriesModel13</Name>
-              <Page isRef="4" />
-              <Parent isRef="26" />
-              <Text>{Round(MonthlyAnalisisForEntriesModel.February,2)}</Text>
-              <TextBrush>[0:0:0]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <TextQuality>Wysiwyg</TextQuality>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </DataTextMonthlyAnalisisForEntriesModel13>
-            <DataTextMonthlyAnalisisForEntriesModel14 Ref="39" type="Text" isKey="true">
-              <AutoWidth>True</AutoWidth>
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>22.1,0,2.03,0.76</ClientRectangle>
-              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>bf08137d8f094f7cb5d5e8efd20ce586</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>DataTextMonthlyAnalisisForEntriesModel14</Name>
-              <Page isRef="4" />
-              <Parent isRef="26" />
-              <Text>{Round(MonthlyAnalisisForEntriesModel.January,2)}</Text>
-              <TextBrush>[0:0:0]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <TextQuality>Wysiwyg</TextQuality>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </DataTextMonthlyAnalisisForEntriesModel14>
-            <DataTextMonthlyAnalisisForEntriesModel15 Ref="40" type="Text" isKey="true">
-              <AutoWidth>True</AutoWidth>
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>24.13,0,1.78,0.76</ClientRectangle>
-              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>8cc51903de2347dcb01086b735457993</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>DataTextMonthlyAnalisisForEntriesModel15</Name>
-              <Page isRef="4" />
-              <Parent isRef="26" />
-              <Text>{MonthlyAnalisisForEntriesModel.COM_BRN_AR_NAME}</Text>
-              <TextBrush>[0:0:0]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <TextQuality>Wysiwyg</TextQuality>
-              <Type>DataColumn</Type>
-              <VertAlignment>Center</VertAlignment>
-            </DataTextMonthlyAnalisisForEntriesModel15>
-          </Components>
-          <Conditions isList="true" count="0" />
-          <DataSourceName>MonthlyAnalisisForEntriesModel</DataSourceName>
-          <EvenStyle>Blue Steel_Data1_Even Style</EvenStyle>
-          <FilterMode>Or</FilterMode>
-          <Filters isList="true" count="0" />
-          <Name>DataMonthlyAnalisisForEntriesModel</Name>
-          <OddStyle>Blue Steel_Data1_Odd Style</OddStyle>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-          <PrintIfDetailEmpty>True</PrintIfDetailEmpty>
-          <Sort isList="true" count="0" />
-        </DataMonthlyAnalisisForEntriesModel>
-        <FooterMonthlyAnalisisForEntriesModel Ref="41" type="FooterBand" isKey="true">
-          <Brush>Transparent</Brush>
-          <ClientRectangle>0,9.8,25.94,0.6</ClientRectangle>
-          <Components isList="true" count="0" />
-          <Conditions isList="true" count="0" />
-          <Name>FooterMonthlyAnalisisForEntriesModel</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-        </FooterMonthlyAnalisisForEntriesModel>
-      </Components>
-      <Conditions isList="true" count="0" />
-      <Guid>f35eee82c5dd4b818bb3ac798388f5a4</Guid>
-      <Margins>1,1,1,1</Margins>
-      <Name>Page1</Name>
-      <Orientation>Landscape</Orientation>
-      <PageHeight>21.59</PageHeight>
-      <PageWidth>27.94</PageWidth>
-      <PaperSize>Letter</PaperSize>
-      <Report isRef="0" />
-    </Page1>
-  </Pages>
-  <ReferencedAssemblies isList="true" count="8">
-    <value>System.Dll</value>
-    <value>System.Drawing.Dll</value>
-    <value>System.Windows.Forms.Dll</value>
-    <value>System.Data.Dll</value>
-    <value>System.Xml.Dll</value>
-    <value>Stimulsoft.Controls.Dll</value>
-    <value>Stimulsoft.Base.Dll</value>
-    <value>Stimulsoft.Report.Dll</value>
-  </ReferencedAssemblies>
-  <ReportAlias>Report</ReportAlias>
-  <ReportChanged>5/7/2020 12:13:12 PM</ReportChanged>
-  <ReportCreated>4/21/2020 5:30:33 PM</ReportCreated>
-  <ReportFile>D:\New project\BinHamranAdminPanel3\BinHamranAdminPanel\Reports\MonthlyAnalisisForEntriesModel.mrt</ReportFile>
-  <ReportGuid>4e51c43b885f4bd386a8b20bb8100446</ReportGuid>
-  <ReportName>Report</ReportName>
-  <ReportUnit>Centimeters</ReportUnit>
-  <ReportVersion>2019.3.5.0</ReportVersion>
-  <Script>using System;
-using System.Drawing;
-using System.Windows.Forms;
-using System.Data;
-using Stimulsoft.Controls;
-using Stimulsoft.Base.Drawing;
-using Stimulsoft.Report;
-using Stimulsoft.Report.Dialogs;
-using Stimulsoft.Report.Components;
-
-namespace Reports
 {
-    public class Report : Stimulsoft.Report.StiReport
-    {
-        public Report()        {
-            this.InitializeComponent();
+  "ReportGuid": "4e51c43b885f4bd386a8b20bb8100446",
+  "ReportName": "Report",
+  "ReportAlias": "Report",
+  "ReportFile": "MonthlyAnalisisForEntriesModel.mrt",
+  "ReportCreated": "/Date(-7200000+0200)/",
+  "ReportChanged": "/Date(-7200000+0200)/",
+  "EngineVersion": "EngineV2",
+  "CalculationMode": "Interpretation",
+  "ReportUnit": "Centimeters",
+  "PreviewSettings": 268435455,
+  "Styles": {
+    "0": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "Placement": "ReportTitle",
+          "ComponentType": "Text, Primitive, Image"
         }
-
-        #region StiReport Designer generated code - do not modify
-		#endregion StiReport Designer generated code - do not modify
+      },
+      "Name": "Blue Steel_Report_Title1",
+      "Font": ";14;Bold;",
+      "Border": ";0,0,39;;;;;;solid:Black",
+      "Brush": "solid:",
+      "TextBrush": "solid:79,129,189",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "1": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "OperationPlacementNestedLevel": "GreaterThanOrEqualTo",
+          "Placement": "ReportTitle",
+          "PlacementNestedLevel": 2,
+          "ComponentType": "Text, Primitive, Image"
+        }
+      },
+      "Name": "Blue Steel_Report_Title2",
+      "Font": ";10;Bold;",
+      "Border": ";0,0,39;;;;;;solid:Black",
+      "Brush": "solid:",
+      "TextBrush": "solid:79,129,189",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "2": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement",
+          "Placement": "ReportSummary",
+          "ComponentType": "Text, Primitive, Image"
+        }
+      },
+      "Name": "Blue Steel_Report_Summary",
+      "Font": ";10;Bold;",
+      "Border": ";0,0,39;;;;;;solid:Black",
+      "Brush": "solid:",
+      "TextBrush": "solid:79,129,189",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "3": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement",
+          "Placement": "PageHeader",
+          "ComponentType": "Text, Primitive, Image"
+        }
+      },
+      "Name": "Blue Steel_Page_Header",
+      "Font": ";10;;",
+      "Border": ";0,0,39;;;;;;solid:Black",
+      "Brush": "solid:",
+      "TextBrush": "solid:Black",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "4": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement",
+          "Placement": "PageFooter",
+          "ComponentType": "Text, Primitive, Image"
+        }
+      },
+      "Name": "Blue Steel_Page_Footer",
+      "Font": ";10;;",
+      "Border": ";0,0,39;;;;;;solid:Black",
+      "Brush": "solid:",
+      "TextBrush": "solid:Black",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "5": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "OperationPlacementNestedLevel": "GreaterThanOrEqualTo",
+          "Placement": "GroupHeader",
+          "ComponentType": "Text, Primitive, Image"
+        }
+      },
+      "Name": "Blue Steel_Group_Header1",
+      "Font": ";13;Bold;",
+      "Border": "Top, Bottom;0,0,39;;;;;;solid:Black",
+      "Brush": "solid:",
+      "TextBrush": "solid:79,129,189",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "6": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "Placement": "GroupFooter",
+          "ComponentType": "Text, Primitive, Image"
+        }
+      },
+      "Name": "Blue Steel_Group_Footer1",
+      "Font": ";9.75;Bold;",
+      "Border": "Top, Bottom;0,0,39;;;;;;solid:Black",
+      "Brush": "solid:",
+      "TextBrush": "solid:79,129,189",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "7": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "OperationPlacementNestedLevel": "GreaterThanOrEqualTo",
+          "Placement": "Header",
+          "ComponentType": "Text, Primitive, Image"
+        }
+      },
+      "Name": "Blue Steel_Header1",
+      "Font": ";9.75;Bold;",
+      "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+      "Brush": "solid:79,129,189",
+      "TextBrush": "solid:White",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "8": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "OperationPlacementNestedLevel": "GreaterThanOrEqualTo",
+          "Placement": "Data",
+          "ComponentType": "Text, Primitive, Image, CheckBox"
+        }
+      },
+      "Name": "Blue Steel_Data1",
+      "Border": ";0,0,39;;;;;;solid:Black",
+      "Brush": "solid:",
+      "TextBrush": "solid:0,0,0",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "9": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "Placement, PlacementNestedLevel",
+          "OperationPlacementNestedLevel": "GreaterThanOrEqualTo",
+          "Placement": "DataOddStyle"
+        }
+      },
+      "Name": "Blue Steel_Data1_Odd Style",
+      "Border": ";0,0,39;;;;;;solid:Black",
+      "Brush": "solid:255,255,255",
+      "TextBrush": "solid:0,0,0",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "10": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "Placement, PlacementNestedLevel",
+          "OperationPlacementNestedLevel": "GreaterThanOrEqualTo",
+          "Placement": "DataEvenStyle"
+        }
+      },
+      "Name": "Blue Steel_Data1_Even Style",
+      "Border": ";0,0,39;;;;;;solid:Black",
+      "Brush": "solid:216,216,216",
+      "TextBrush": "solid:0,0,0",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "11": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "Placement": "Footer",
+          "ComponentType": "Text, Primitive, Image"
+        }
+      },
+      "Name": "Blue Steel_Footer1",
+      "Font": ";8.25;Bold;",
+      "Border": "Top, Bottom;0,0,39;2;;;;;solid:Black",
+      "Brush": "solid:White",
+      "TextBrush": "solid:Black",
+      "NegativeTextBrush": "solid:Red"
     }
+  },
+  "Dictionary": {
+    "Variables": {
+      "0": {
+        "Name": "param_1",
+        "Alias": "param_1",
+        "Type": "System.String"
+      }
+    },
+    "DataSources": {
+      "0": {
+        "Ident": "StiSqlSource",
+        "Name": "MonthlyAnalisisForEntriesModel",
+        "Alias": "MonthlyAnalisisForEntriesModel",
+        "Key": "d57a9b05313a43409ef5f9e3b083f92e",
+        "Columns": {
+          "0": {
+            "Name": "COM_BRN_CODE",
+            "Index": -1,
+            "NameInSource": "COM_BRN_CODE",
+            "Alias": "COM_BRN_CODE",
+            "Type": "System.Int32"
+          },
+          "1": {
+            "Name": "COM_BRN_AR_NAME",
+            "Index": -1,
+            "NameInSource": "COM_BRN_AR_NAME",
+            "Alias": "COM_BRN_AR_NAME",
+            "Type": "System.String"
+          },
+          "2": {
+            "Name": "DatabaseName",
+            "Index": -1,
+            "NameInSource": "DatabaseName",
+            "Alias": "DatabaseName",
+            "Type": "System.String"
+          },
+          "3": {
+            "Name": "January",
+            "Index": -1,
+            "NameInSource": "January",
+            "Alias": "January",
+            "Type": "System.Double"
+          },
+          "4": {
+            "Name": "February",
+            "Index": -1,
+            "NameInSource": "February",
+            "Alias": "February",
+            "Type": "System.Double"
+          },
+          "5": {
+            "Name": "March",
+            "Index": -1,
+            "NameInSource": "March",
+            "Alias": "March",
+            "Type": "System.Double"
+          },
+          "6": {
+            "Name": "April",
+            "Index": -1,
+            "NameInSource": "April",
+            "Alias": "April",
+            "Type": "System.Double"
+          },
+          "7": {
+            "Name": "May",
+            "Index": -1,
+            "NameInSource": "May",
+            "Alias": "May",
+            "Type": "System.Double"
+          },
+          "8": {
+            "Name": "June",
+            "Index": -1,
+            "NameInSource": "June",
+            "Alias": "June",
+            "Type": "System.Double"
+          },
+          "9": {
+            "Name": "July",
+            "Index": -1,
+            "NameInSource": "July",
+            "Alias": "July",
+            "Type": "System.Double"
+          },
+          "10": {
+            "Name": "August",
+            "Index": -1,
+            "NameInSource": "August",
+            "Alias": "August",
+            "Type": "System.Double"
+          },
+          "11": {
+            "Name": "September",
+            "Index": -1,
+            "NameInSource": "September",
+            "Alias": "September",
+            "Type": "System.Double"
+          },
+          "12": {
+            "Name": "October",
+            "Index": -1,
+            "NameInSource": "October",
+            "Alias": "October",
+            "Type": "System.Double"
+          },
+          "13": {
+            "Name": "November",
+            "Index": -1,
+            "NameInSource": "November",
+            "Alias": "November",
+            "Type": "System.Double"
+          },
+          "14": {
+            "Name": "December",
+            "Index": -1,
+            "NameInSource": "December",
+            "Alias": "December",
+            "Type": "System.Double"
+          }
+        },
+        "NameInSource": "MS SQL",
+        "SqlCommand": "EXEC Rpt_MonthlyAnalisisForEntries\r\n@STARTDATE,\r\n@CompanyBranchID \r\n ,@EntryID\r\n ,@DatabaseID ",
+        "Parameters": {
+          "0": {
+            "Name": "@STARTDATE",
+            "Type": 12,
+            "Size": 50
+          },
+          "1": {
+            "Name": "@CompanyBranchID",
+            "Type": 12,
+            "Size": 50
+          },
+          "2": {
+            "Name": "@EntryID",
+            "Type": 12,
+            "Size": 50
+          },
+          "3": {
+            "Name": "@DatabaseID",
+            "Type": 12,
+            "Size": 50
+          }
+        }
+      }
+    },
+    "Databases": {
+      "0": {
+        "Ident": "StiSqlDatabase",
+        "Name": "MS SQL",
+        "Alias": "MS SQL",
+        "ConnectionStringEncrypted": "9HTPC2II08hsW7X8dOzhXtHEyaHGStOB7FvoXE0FJS/D0s8JWwXizcdL+dzldPYvgm7hiU5fwtVhTE3cZyX2v+J4989GbXvNfHv9GGHksXvgavujS1n68eEFzVBzeG2L3GzRy0tcS5n6Qe2l6djgp9MQswjFaKs="
+      }
+    }
+  },
+  "Pages": {
+    "0": {
+      "Ident": "StiPage",
+      "Name": "Page1",
+      "Guid": "f35eee82c5dd4b818bb3ac798388f5a4",
+      "Interaction": {
+        "Ident": "StiInteraction"
+      },
+      "Border": ";;2;;;;;solid:Black",
+      "Brush": "solid:",
+      "Components": {
+        "0": {
+          "Ident": "StiReportTitleBand",
+          "Name": "ReportTitle",
+          "ClientRectangle": "0,0.4,25.94,1.6",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:"
+        },
+        "1": {
+          "Ident": "StiHeaderBand",
+          "Name": "HeaderBand1",
+          "ClientRectangle": "0,2.8,25.94,1.4",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "ReportTitleText",
+              "Guid": "a0729c38d08744e1b31825ecb521b29b",
+              "ClientRectangle": "11.4,0,6.63,1.27",
+              "ComponentStyle": "Blue Steel_Report_Title1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "التحليل الشهري لأنواع السندات لسنة "
+              },
+              "VertAlignment": "Center",
+              "Font": ";14;Bold;",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:79,129,189",
+              "Type": "Expression"
+            },
+            "1": {
+              "Ident": "StiText",
+              "Name": "Text2",
+              "Guid": "2503d2a651e74887947f0545b510e14a",
+              "ClientRectangle": "9.2,0,2.23,1.27",
+              "ComponentStyle": "Blue Steel_Report_Title1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{param_1}"
+              },
+              "HorAlignment": "Right",
+              "VertAlignment": "Center",
+              "Font": ";14;Bold;",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:79,129,189",
+              "Type": "Expression"
+            }
+          },
+          "PrintIfEmpty": true
+        },
+        "2": {
+          "Ident": "StiGroupHeaderBand",
+          "Name": "GroupHeaderBand1",
+          "ClientRectangle": "0,5,25.94,0.8",
+          "Interaction": {
+            "Ident": "StiBandInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "Text1",
+              "Guid": "674ec604c09c465ba23f1957b491614c",
+              "GrowToHeight": true,
+              "ClientRectangle": "18.6,0,7.37,0.76",
+              "ComponentStyle": "Blue Steel_Report_Title1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{MonthlyAnalisisForEntriesModel.DatabaseName}"
+              },
+              "HorAlignment": "Right",
+              "VertAlignment": "Center",
+              "Font": ";14;Bold;",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:79,129,189",
+              "Type": "Expression"
+            }
+          }
+        },
+        "3": {
+          "Ident": "StiHeaderBand",
+          "Name": "HeaderMonthlyAnalisisForEntriesModel",
+          "ClientRectangle": "0,6.6,25.94,0.8",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "HeaderTextMonthlyAnalisisForEntriesModel2",
+              "Guid": "e6cdc6b8352c4dbb8e1ef1532f31080b",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "0,0,1.8,0.8",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "الاجمالى"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "1": {
+              "Ident": "StiText",
+              "Name": "HeaderTextMonthlyAnalisisForEntriesModel3",
+              "Guid": "5777d96ad12e4df9818e2b73e5796f71",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "1.8,0,2,0.8",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "ديسمبر"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "2": {
+              "Ident": "StiText",
+              "Name": "HeaderTextMonthlyAnalisisForEntriesModel4",
+              "Guid": "6e3297e701ab4e2aa7037bae2431b402",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "3.8,0,1.6,0.8",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "نوفمبر"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "3": {
+              "Ident": "StiText",
+              "Name": "HeaderTextMonthlyAnalisisForEntriesModel5",
+              "Guid": "39568181de3e4431afa91378f6ee2431",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "5.4,0,2,0.8",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "أكتوبر"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "4": {
+              "Ident": "StiText",
+              "Name": "HeaderTextMonthlyAnalisisForEntriesModel6",
+              "Guid": "40c06fb652ec49a9bab7188acfde8a04",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "7.4,0,2,0.8",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "سبتمبر"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "5": {
+              "Ident": "StiText",
+              "Name": "HeaderTextMonthlyAnalisisForEntriesModel7",
+              "Guid": "6d8474bdf2c345d9871d952fa28ccdd2",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "9.4,0,1.8,0.8",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "اغسطس"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "6": {
+              "Ident": "StiText",
+              "Name": "HeaderTextMonthlyAnalisisForEntriesModel8",
+              "Guid": "4d41b3262bae4a829e4a6d7146a66eef",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "11.2,0,2,0.8",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "يوليو"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "7": {
+              "Ident": "StiText",
+              "Name": "HeaderTextMonthlyAnalisisForEntriesModel9",
+              "Guid": "428b6256e41e49e298f135b7a9aa250a",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "13.2,0,1.6,0.8",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "يونيه"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "8": {
+              "Ident": "StiText",
+              "Name": "HeaderTextMonthlyAnalisisForEntriesModel10",
+              "Guid": "99801035ea2b489fab35a761075182c9",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "14.8,0,2,0.8",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "مايو"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "9": {
+              "Ident": "StiText",
+              "Name": "HeaderTextMonthlyAnalisisForEntriesModel11",
+              "Guid": "68382e22b83f4aacbeab0f86950cc999",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "16.8,0,1.8,0.8",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "ابريل"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "10": {
+              "Ident": "StiText",
+              "Name": "HeaderTextMonthlyAnalisisForEntriesModel12",
+              "Guid": "2bcc782078e745c8b6953f10f508f9a7",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "18.6,0,2,0.8",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "مارس"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "11": {
+              "Ident": "StiText",
+              "Name": "HeaderTextMonthlyAnalisisForEntriesModel13",
+              "Guid": "715c3a47ffc5402fa82e808abd65a59b",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "20.6,0,1.4,0.8",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "فبراير"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "12": {
+              "Ident": "StiText",
+              "Name": "HeaderTextMonthlyAnalisisForEntriesModel14",
+              "Guid": "f6f74308f23240be9811f0d7a15725c2",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "22,0,2.2,0.8",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "يناير"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "13": {
+              "Ident": "StiText",
+              "Name": "HeaderTextMonthlyAnalisisForEntriesModel15",
+              "Guid": "f52db9ed95f04145b6a5003220aaba82",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "24.2,0,1.8,0.8",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "الفرع"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            }
+          },
+          "PrintIfEmpty": true
+        },
+        "4": {
+          "Ident": "StiDataBand",
+          "Name": "DataMonthlyAnalisisForEntriesModel",
+          "ClientRectangle": "0,8.2,25.94,0.8",
+          "Interaction": {
+            "Ident": "StiBandInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "DataTextMonthlyAnalisisForEntriesModel2",
+              "Guid": "db280ad2568f40aca0f14849eda23f32",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "0,0,1.78,0.76",
+              "ComponentStyle": "Blue Steel_Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(MonthlyAnalisisForEntriesModel.January +MonthlyAnalisisForEntriesModel.February + MonthlyAnalisisForEntriesModel.March+MonthlyAnalisisForEntriesModel.April+MonthlyAnalisisForEntriesModel.May+MonthlyAnalisisForEntriesModel.June+MonthlyAnalisisForEntriesModel.July+MonthlyAnalisisForEntriesModel.August+MonthlyAnalisisForEntriesModel.September+MonthlyAnalisisForEntriesModel.October+MonthlyAnalisisForEntriesModel.November+MonthlyAnalisisForEntriesModel.December,2)}"
+              },
+              "AutoWidth": true,
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Type": "Expression"
+            },
+            "1": {
+              "Ident": "StiText",
+              "Name": "DataTextMonthlyAnalisisForEntriesModel3",
+              "Guid": "bd6407338c5843b1a3d7a4bae7991347",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "1.78,0,2.03,0.76",
+              "ComponentStyle": "Blue Steel_Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(MonthlyAnalisisForEntriesModel.December,2)}"
+              },
+              "AutoWidth": true,
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Type": "Expression"
+            },
+            "2": {
+              "Ident": "StiText",
+              "Name": "DataTextMonthlyAnalisisForEntriesModel4",
+              "Guid": "eef646f33dd64a478de52f55d1e9ab4a",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "3.81,0,1.52,0.76",
+              "ComponentStyle": "Blue Steel_Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(MonthlyAnalisisForEntriesModel.November,2)}"
+              },
+              "AutoWidth": true,
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Type": "Expression"
+            },
+            "3": {
+              "Ident": "StiText",
+              "Name": "DataTextMonthlyAnalisisForEntriesModel5",
+              "Guid": "2f4c4873446f4f4b94ee6e1047517320",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "5.33,0,2.04,0.76",
+              "ComponentStyle": "Blue Steel_Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(MonthlyAnalisisForEntriesModel.October,2)}"
+              },
+              "AutoWidth": true,
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Type": "Expression"
+            },
+            "4": {
+              "Ident": "StiText",
+              "Name": "DataTextMonthlyAnalisisForEntriesModel6",
+              "Guid": "71f7d826904e4166902526ab33ee0951",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "7.37,0,2.03,0.76",
+              "ComponentStyle": "Blue Steel_Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(MonthlyAnalisisForEntriesModel.September,2)}"
+              },
+              "AutoWidth": true,
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Type": "Expression"
+            },
+            "5": {
+              "Ident": "StiText",
+              "Name": "DataTextMonthlyAnalisisForEntriesModel7",
+              "Guid": "5877ee19e55a49d3be985b5bcc188bcf",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "9.4,0,1.78,0.76",
+              "ComponentStyle": "Blue Steel_Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(MonthlyAnalisisForEntriesModel.August,2)}"
+              },
+              "AutoWidth": true,
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Type": "Expression"
+            },
+            "6": {
+              "Ident": "StiText",
+              "Name": "DataTextMonthlyAnalisisForEntriesModel8",
+              "Guid": "dad7c79d6464424d80929d4e930dad1e",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "11.18,0,2.03,0.76",
+              "ComponentStyle": "Blue Steel_Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(MonthlyAnalisisForEntriesModel.July,2)}"
+              },
+              "AutoWidth": true,
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Type": "Expression"
+            },
+            "7": {
+              "Ident": "StiText",
+              "Name": "DataTextMonthlyAnalisisForEntriesModel9",
+              "Guid": "79c69b11f84e4c808cc3168db99d7820",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "13.21,0,1.52,0.76",
+              "ComponentStyle": "Blue Steel_Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(MonthlyAnalisisForEntriesModel.June,2)}"
+              },
+              "AutoWidth": true,
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Type": "Expression"
+            },
+            "8": {
+              "Ident": "StiText",
+              "Name": "DataTextMonthlyAnalisisForEntriesModel10",
+              "Guid": "9f83c6d2048d45faaab2600ea99757b6",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "14.73,0,2.03,0.76",
+              "ComponentStyle": "Blue Steel_Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(MonthlyAnalisisForEntriesModel.May,2)}"
+              },
+              "AutoWidth": true,
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Type": "Expression"
+            },
+            "9": {
+              "Ident": "StiText",
+              "Name": "DataTextMonthlyAnalisisForEntriesModel11",
+              "Guid": "866eec92a20043c2b37ef6d869025bc1",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "16.76,0,1.78,0.76",
+              "ComponentStyle": "Blue Steel_Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(MonthlyAnalisisForEntriesModel.April,2)}"
+              },
+              "AutoWidth": true,
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Type": "Expression"
+            },
+            "10": {
+              "Ident": "StiText",
+              "Name": "DataTextMonthlyAnalisisForEntriesModel12",
+              "Guid": "77f747570c64490f8c06c047e1f8f8fa",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "18.54,0,2.03,0.76",
+              "ComponentStyle": "Blue Steel_Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(MonthlyAnalisisForEntriesModel.March,2)}"
+              },
+              "AutoWidth": true,
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Type": "Expression"
+            },
+            "11": {
+              "Ident": "StiText",
+              "Name": "DataTextMonthlyAnalisisForEntriesModel13",
+              "Guid": "7283bf03c13848feaa27624e0d296950",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "20.57,0,1.53,0.76",
+              "ComponentStyle": "Blue Steel_Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(MonthlyAnalisisForEntriesModel.February,2)}"
+              },
+              "AutoWidth": true,
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Type": "Expression"
+            },
+            "12": {
+              "Ident": "StiText",
+              "Name": "DataTextMonthlyAnalisisForEntriesModel14",
+              "Guid": "bf08137d8f094f7cb5d5e8efd20ce586",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "22.1,0,2.03,0.76",
+              "ComponentStyle": "Blue Steel_Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(MonthlyAnalisisForEntriesModel.January,2)}"
+              },
+              "AutoWidth": true,
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Type": "Expression"
+            },
+            "13": {
+              "Ident": "StiText",
+              "Name": "DataTextMonthlyAnalisisForEntriesModel15",
+              "Guid": "8cc51903de2347dcb01086b735457993",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "24.13,0,1.78,0.76",
+              "ComponentStyle": "Blue Steel_Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{MonthlyAnalisisForEntriesModel.COM_BRN_AR_NAME}"
+              },
+              "AutoWidth": true,
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Type": "DataColumn"
+            }
+          },
+          "PrintIfDetailEmpty": true,
+          "DataSourceName": "MonthlyAnalisisForEntriesModel",
+          "FilterMode": "Or",
+          "EvenStyle": "Blue Steel_Data1_Even Style",
+          "OddStyle": "Blue Steel_Data1_Odd Style"
+        },
+        "5": {
+          "Ident": "StiFooterBand",
+          "Name": "FooterMonthlyAnalisisForEntriesModel",
+          "ClientRectangle": "0,9.8,25.94,0.6",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:"
+        }
+      },
+      "PaperSize": "Letter",
+      "Orientation": "Landscape",
+      "PageWidth": 27.94,
+      "PageHeight": 21.59,
+      "Watermark": {
+        "TextBrush": "solid:50,0,0,0"
+      },
+      "Margins": {
+        "Left": 1,
+        "Right": 1,
+        "Top": 1,
+        "Bottom": 1
+      }
+    }
+  }
 }
-</Script>
-  <ScriptLanguage>CSharp</ScriptLanguage>
-  <Styles isList="true" count="12">
-    <Blue_x0020_Steel_Report_Title1 Ref="42" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>Transparent</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item42 Ref="43" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image</ComponentType>
-          <Placement>ReportTitle</Placement>
-          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item42>
-      </Conditions>
-      <Font>Arial,14,Bold</Font>
-      <Name>Blue Steel_Report_Title1</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>[79:129:189]</TextBrush>
-    </Blue_x0020_Steel_Report_Title1>
-    <Blue_x0020_Steel_Report_Title2 Ref="44" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>Transparent</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item44 Ref="45" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image</ComponentType>
-          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
-          <Placement>ReportTitle</Placement>
-          <PlacementNestedLevel>2</PlacementNestedLevel>
-          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item44>
-      </Conditions>
-      <Font>Arial,10,Bold</Font>
-      <Name>Blue Steel_Report_Title2</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>[79:129:189]</TextBrush>
-    </Blue_x0020_Steel_Report_Title2>
-    <Blue_x0020_Steel_Report_Summary Ref="46" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>Transparent</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item46 Ref="47" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image</ComponentType>
-          <Placement>ReportSummary</Placement>
-          <Type>ComponentType, Placement</Type>
-        </Item46>
-      </Conditions>
-      <Font>Arial,10,Bold</Font>
-      <Name>Blue Steel_Report_Summary</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>[79:129:189]</TextBrush>
-    </Blue_x0020_Steel_Report_Summary>
-    <Blue_x0020_Steel_Page_Header Ref="48" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>Transparent</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item48 Ref="49" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image</ComponentType>
-          <Placement>PageHeader</Placement>
-          <Type>ComponentType, Placement</Type>
-        </Item48>
-      </Conditions>
-      <Font>Arial,10</Font>
-      <Name>Blue Steel_Page_Header</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>Black</TextBrush>
-    </Blue_x0020_Steel_Page_Header>
-    <Blue_x0020_Steel_Page_Footer Ref="50" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>Transparent</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item50 Ref="51" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image</ComponentType>
-          <Placement>PageFooter</Placement>
-          <Type>ComponentType, Placement</Type>
-        </Item50>
-      </Conditions>
-      <Font>Arial,10</Font>
-      <Name>Blue Steel_Page_Footer</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>Black</TextBrush>
-    </Blue_x0020_Steel_Page_Footer>
-    <Blue_x0020_Steel_Group_Header1 Ref="52" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>Top, Bottom;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>Transparent</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item52 Ref="53" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image</ComponentType>
-          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
-          <Placement>GroupHeader</Placement>
-          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item52>
-      </Conditions>
-      <Font>Arial,13,Bold</Font>
-      <Name>Blue Steel_Group_Header1</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>[79:129:189]</TextBrush>
-    </Blue_x0020_Steel_Group_Header1>
-    <Blue_x0020_Steel_Group_Footer1 Ref="54" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>Top, Bottom;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>Transparent</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item54 Ref="55" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image</ComponentType>
-          <Placement>GroupFooter</Placement>
-          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item54>
-      </Conditions>
-      <Font>Arial,9.75,Bold,Point,False,204</Font>
-      <Name>Blue Steel_Group_Footer1</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>[79:129:189]</TextBrush>
-    </Blue_x0020_Steel_Group_Footer1>
-    <Blue_x0020_Steel_Header1 Ref="56" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-      <Brush>[79:129:189]</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item56 Ref="57" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image</ComponentType>
-          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
-          <Placement>Header</Placement>
-          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item56>
-      </Conditions>
-      <Font>Arial,9.75,Bold,Point,False,204</Font>
-      <Name>Blue Steel_Header1</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>White</TextBrush>
-    </Blue_x0020_Steel_Header1>
-    <Blue_x0020_Steel_Data1 Ref="58" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>Transparent</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item58 Ref="59" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
-          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
-          <Placement>Data</Placement>
-          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item58>
-      </Conditions>
-      <Font>Arial,8</Font>
-      <Name>Blue Steel_Data1</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>[0:0:0]</TextBrush>
-    </Blue_x0020_Steel_Data1>
-    <Blue_x0020_Steel_Data1_Odd_x0020_Style Ref="60" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>[255:255:255]</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item60 Ref="61" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
-          <Placement>DataOddStyle</Placement>
-          <Type>Placement, PlacementNestedLevel</Type>
-        </Item60>
-      </Conditions>
-      <Font>Arial,8</Font>
-      <Name>Blue Steel_Data1_Odd Style</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>[0:0:0]</TextBrush>
-    </Blue_x0020_Steel_Data1_Odd_x0020_Style>
-    <Blue_x0020_Steel_Data1_Even_x0020_Style Ref="62" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>[216:216:216]</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item62 Ref="63" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
-          <Placement>DataEvenStyle</Placement>
-          <Type>Placement, PlacementNestedLevel</Type>
-        </Item62>
-      </Conditions>
-      <Font>Arial,8</Font>
-      <Name>Blue Steel_Data1_Even Style</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>[0:0:0]</TextBrush>
-    </Blue_x0020_Steel_Data1_Even_x0020_Style>
-    <Blue_x0020_Steel_Footer1 Ref="64" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black</Border>
-      <Brush>White</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item64 Ref="65" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image</ComponentType>
-          <Placement>Footer</Placement>
-          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item64>
-      </Conditions>
-      <Font>Arial,8.25,Bold,Point,False,204</Font>
-      <Name>Blue Steel_Footer1</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>Black</TextBrush>
-    </Blue_x0020_Steel_Footer1>
-  </Styles>
-</StiSerializer>

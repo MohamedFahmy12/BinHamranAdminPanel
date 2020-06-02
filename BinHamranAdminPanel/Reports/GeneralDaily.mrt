@@ -1,715 +1,840 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<StiSerializer version="1.02" type="Net" application="StiReport">
-  <Dictionary Ref="1" type="Dictionary" isKey="true">
-    <BusinessObjects isList="true" count="0" />
-    <Databases isList="true" count="1">
-      <MS_x0020_SQL Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
-        <Alias>MS SQL</Alias>
-        <ConnectionStringEncrypted>9HTPC2II08hsW7X8dOzhXtHEyaHGStOB7FvoXE0FJS/D0s8JWwXizcdL+dzldPYvgm7hiU5fwtVhTE3cZyX2v+J4989GbXvNfHv9GGHksXvgavujS1n68eEFzVBzeG2L3GzRy0tcS5n6Qe2l6djgp9MQswjFaKs=</ConnectionStringEncrypted>
-        <Name>MS SQL</Name>
-      </MS_x0020_SQL>
-    </Databases>
-    <DataSources isList="true" count="1">
-      <GeneralDaily Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
-        <Alias>GeneralDaily</Alias>
-        <Columns isList="true" count="6">
-          <value>entry_credit,System.Double</value>
-          <value>entry_debit,System.Double</value>
-          <value>SETTING_AR_NAME,System.String</value>
-          <value>COM_BRN_AR_NAME,System.String</value>
-          <value>ACC_AR_NAME,System.String</value>
-          <value>DatabaseName,System.String</value>
-        </Columns>
-        <CommandTimeout>30</CommandTimeout>
-        <Dictionary isRef="1" />
-        <Key>b7cadbe0e51e416e958fe77f593288a0</Key>
-        <Name>GeneralDaily</Name>
-        <NameInSource>MS SQL</NameInSource>
-        <Parameters isList="true" count="4">
-          <value>_x0040_STARTDATE,_x0022_2019-01-01_x0022_,15,50</value>
-          <value>_x0040_ENDDATE,_x0022_2019-12-31_x0022_,15,50</value>
-          <value>_x0040_CompanyBranchID,_x0022_1_x002C_2_x002C_3_x002C_4_x002C_5_x002C_7_x002C_8_x0022_,12,50</value>
-          <value>_x0040_DatabaseID,_x0022_1_x002C_2_x002C_3_x002C_4_x002C_5_x0022_,12,50</value>
-        </Parameters>
-        <SqlCommand>EXEC Rpt_GeneralDaily
-@STARTDATE,
-@ENDDATE,
-@CompanyBranchID,
-
-@DatabaseID
-</SqlCommand>
-      </GeneralDaily>
-    </DataSources>
-    <Relations isList="true" count="0" />
-    <Report isRef="0" />
-    <Resources isList="true" count="0" />
-    <Variables isList="true" count="2">
-      <value>,FromDate,FromDate,,System.DateTime,,False,False,False,False</value>
-      <value>,ToDate,ToDate,,System.DateTime,,False,False,False,False</value>
-    </Variables>
-  </Dictionary>
-  <EngineVersion>EngineV2</EngineVersion>
-  <GlobalizationStrings isList="true" count="0" />
-  <Key>fdf5be07a1744d1ea16d7313eaf7eabd</Key>
-  <MetaTags isList="true" count="0" />
-  <Pages isList="true" count="1">
-    <Page1 Ref="4" type="Page" isKey="true">
-      <Border>None;Black;2;Solid;False;4;Black</Border>
-      <Brush>Transparent</Brush>
-      <Components isList="true" count="9">
-        <ReportTitle Ref="5" type="ReportTitleBand" isKey="true">
-          <Brush>Transparent</Brush>
-          <ClientRectangle>0,0.4,19.59,1.4</ClientRectangle>
-          <Components isList="true" count="1">
-            <ReportTitleText Ref="6" type="Text" isKey="true">
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <ClientRectangle>0,0,19.59,1.4</ClientRectangle>
-              <ComponentStyle>Blue Steel_Report_Title1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,14,Bold</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>ReportTitleText</Name>
-              <Page isRef="4" />
-              <Parent isRef="5" />
-              <Text>اليوميه العامه من  {Format("{0:MM.dd.yyyy}", FromDate)} الى {Format("{0:MM.dd.yyyy}", ToDate)}</Text>
-              <TextBrush>[79:129:189]</TextBrush>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </ReportTitleText>
-          </Components>
-          <Conditions isList="true" count="0" />
-          <Name>ReportTitle</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-        </ReportTitle>
-        <HeaderGeneralDaily Ref="7" type="HeaderBand" isKey="true">
-          <Brush>Transparent</Brush>
-          <ClientRectangle>0,2.6,19.59,1</ClientRectangle>
-          <Components isList="true" count="3">
-            <HeaderTextGeneralDaily4 Ref="8" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>0,0,6.2,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>HeaderTextGeneralDaily4</Name>
-              <Page isRef="4" />
-              <Parent isRef="7" />
-              <Text>الدائن</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </HeaderTextGeneralDaily4>
-            <HeaderTextGeneralDaily5 Ref="9" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>6.2,0,6.4,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>HeaderTextGeneralDaily5</Name>
-              <Page isRef="4" />
-              <Parent isRef="7" />
-              <Text>المدين</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </HeaderTextGeneralDaily5>
-            <HeaderTextGeneralDaily6 Ref="10" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>12.6,0,7,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>HeaderTextGeneralDaily6</Name>
-              <Page isRef="4" />
-              <Parent isRef="7" />
-              <Text>الحساب</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </HeaderTextGeneralDaily6>
-          </Components>
-          <Conditions isList="true" count="0" />
-          <Name>HeaderGeneralDaily</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-        </HeaderGeneralDaily>
-        <GroupHeaderBand2 Ref="11" type="GroupHeaderBand" isKey="true">
-          <Brush>Transparent</Brush>
-          <ClientRectangle>0,4.4,19.59,0</ClientRectangle>
-          <Components isList="true" count="0" />
-          <Condition>{GeneralDaily.DatabaseName}</Condition>
-          <Conditions isList="true" count="0" />
-          <Name>GroupHeaderBand2</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-        </GroupHeaderBand2>
-        <GroupHeaderBand3 Ref="12" type="GroupHeaderBand" isKey="true">
-          <Brush>Transparent</Brush>
-          <ClientRectangle>0,5.2,19.59,0.8</ClientRectangle>
-          <Components isList="true" count="1">
-            <Text1 Ref="13" type="Text" isKey="true">
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <ClientRectangle>12.8,0,6.79,0.8</ClientRectangle>
-              <ComponentStyle>Blue Steel_Report_Title1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,14,Bold</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>a0ca9de5c44947108c08adc1b06c9000</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text1</Name>
-              <Page isRef="4" />
-              <Parent isRef="12" />
-              <Text>{GeneralDaily.COM_BRN_AR_NAME}</Text>
-              <TextBrush>[79:129:189]</TextBrush>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text1>
-          </Components>
-          <Condition>{GeneralDaily.COM_BRN_AR_NAME}</Condition>
-          <Conditions isList="true" count="0" />
-          <Name>GroupHeaderBand3</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-        </GroupHeaderBand3>
-        <GroupHeaderBand1 Ref="14" type="GroupHeaderBand" isKey="true">
-          <Brush>Transparent</Brush>
-          <ClientRectangle>0,6.8,19.59,0.8</ClientRectangle>
-          <Components isList="true" count="1">
-            <Text2 Ref="15" type="Text" isKey="true">
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <ClientRectangle>6.2,0,6.39,0.8</ClientRectangle>
-              <ComponentStyle>Blue Steel_Report_Title1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,14,Bold</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>7bb4094566834c36be4ee3bff8096992</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text2</Name>
-              <Page isRef="4" />
-              <Parent isRef="14" />
-              <Text>{GeneralDaily.SETTING_AR_NAME}</Text>
-              <TextBrush>[79:129:189]</TextBrush>
-              <Type>DataColumn</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text2>
-          </Components>
-          <Condition>{GeneralDaily.SETTING_AR_NAME}</Condition>
-          <Conditions isList="true" count="0" />
-          <Name>GroupHeaderBand1</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-        </GroupHeaderBand1>
-        <DataGeneralDaily Ref="16" type="DataBand" isKey="true">
-          <Brush>Transparent</Brush>
-          <BusinessObjectGuid isNull="true" />
-          <ClientRectangle>0,8.4,19.59,1</ClientRectangle>
-          <Components isList="true" count="3">
-            <DataTextGeneralDaily4 Ref="17" type="Text" isKey="true">
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>0,0,6.2,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>DataTextGeneralDaily4</Name>
-              <Page isRef="4" />
-              <Parent isRef="16" />
-              <Text>{Round(GeneralDaily.entry_credit,2)}</Text>
-              <TextBrush>[0:0:0]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <TextQuality>Wysiwyg</TextQuality>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </DataTextGeneralDaily4>
-            <DataTextGeneralDaily5 Ref="18" type="Text" isKey="true">
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>6.2,0,6.4,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>DataTextGeneralDaily5</Name>
-              <Page isRef="4" />
-              <Parent isRef="16" />
-              <Text>{Round(GeneralDaily.entry_debit,2)}</Text>
-              <TextBrush>[0:0:0]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <TextQuality>Wysiwyg</TextQuality>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </DataTextGeneralDaily5>
-            <DataTextGeneralDaily6 Ref="19" type="Text" isKey="true">
-              <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>12.6,0,7,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Data1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>DataTextGeneralDaily6</Name>
-              <Page isRef="4" />
-              <Parent isRef="16" />
-              <Text>{GeneralDaily.ACC_AR_NAME}</Text>
-              <TextBrush>[0:0:0]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <TextQuality>Wysiwyg</TextQuality>
-              <Type>DataColumn</Type>
-              <VertAlignment>Center</VertAlignment>
-            </DataTextGeneralDaily6>
-          </Components>
-          <Conditions isList="true" count="0" />
-          <DataSourceName>GeneralDaily</DataSourceName>
-          <EvenStyle>Blue Steel_Data1_Even Style</EvenStyle>
-          <FilterMode>Or</FilterMode>
-          <Filters isList="true" count="0" />
-          <Name>DataGeneralDaily</Name>
-          <OddStyle>Blue Steel_Data1_Odd Style</OddStyle>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-          <Sort isList="true" count="0" />
-        </DataGeneralDaily>
-        <GroupFooterBand1 Ref="20" type="GroupFooterBand" isKey="true">
-          <Brush>Transparent</Brush>
-          <ClientRectangle>0,10.2,19.59,0.8</ClientRectangle>
-          <Components isList="true" count="3">
-            <Text3 Ref="21" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>0,0,6.2,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>b3c14ac505af49e689bd08fcea9c2f34</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text3</Name>
-              <Page isRef="4" />
-              <Parent isRef="20" />
-              <Text>{Round(Sum(GroupHeaderBand1,GeneralDaily.entry_credit),2)}</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text3>
-            <Text4 Ref="22" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>6.2,0,6.4,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>eafdd58543cd4fdb8a43b9fc1196445c</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text4</Name>
-              <Page isRef="4" />
-              <Parent isRef="20" />
-              <Text>{Round(Sum(GroupHeaderBand1,GeneralDaily.entry_debit),2)}</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text4>
-            <Text5 Ref="23" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>12.6,0,7,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>f2ad627529e64c93badb3e8d6fe2039b</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text5</Name>
-              <Page isRef="4" />
-              <Parent isRef="20" />
-              <Text>إجمالى {GeneralDaily.SETTING_AR_NAME}</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text5>
-          </Components>
-          <Conditions isList="true" count="0" />
-          <Name>GroupFooterBand1</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-        </GroupFooterBand1>
-        <GroupFooterBand2 Ref="24" type="GroupFooterBand" isKey="true">
-          <Brush>Transparent</Brush>
-          <ClientRectangle>0,11.8,19.59,0.8</ClientRectangle>
-          <Components isList="true" count="3">
-            <Text6 Ref="25" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>0,0,6.2,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>14880b4f344441e3978b28c8f64c319d</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text6</Name>
-              <Page isRef="4" />
-              <Parent isRef="24" />
-              <Text>{Round(Sum(GroupHeaderBand3,GeneralDaily.entry_credit),2)}</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text6>
-            <Text7 Ref="26" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>6.2,0,6.4,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>24d28b46ad6e4312bfd157c18dd203e7</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text7</Name>
-              <Page isRef="4" />
-              <Parent isRef="24" />
-              <Text>{Round(Sum(GroupHeaderBand3,GeneralDaily.entry_debit),2)}</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text7>
-            <Text8 Ref="27" type="Text" isKey="true">
-              <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-              <Brush>[79:129:189]</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>12.6,0,7,1</ClientRectangle>
-              <ComponentStyle>Blue Steel_Header1</ComponentStyle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9.75,Bold,Point,False,204</Font>
-              <GrowToHeight>True</GrowToHeight>
-              <Guid>47cd2d78b7e241e99f7b750cf53f8bef</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text8</Name>
-              <Page isRef="4" />
-              <Parent isRef="24" />
-              <Text>إجمالى  {GeneralDaily.COM_BRN_AR_NAME}</Text>
-              <TextBrush>White</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text8>
-          </Components>
-          <Conditions isList="true" count="0" />
-          <Name>GroupFooterBand2</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-        </GroupFooterBand2>
-        <FooterGeneralDaily Ref="28" type="FooterBand" isKey="true">
-          <Brush>Transparent</Brush>
-          <ClientRectangle>0,13.4,19.59,0.6</ClientRectangle>
-          <Components isList="true" count="0" />
-          <Conditions isList="true" count="0" />
-          <Name>FooterGeneralDaily</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-        </FooterGeneralDaily>
-      </Components>
-      <Conditions isList="true" count="0" />
-      <Guid>98ce26bce10640b4b0cda0fc80d730e0</Guid>
-      <Margins>1,1,1,1</Margins>
-      <Name>Page1</Name>
-      <PageHeight>27.94</PageHeight>
-      <PageWidth>21.59</PageWidth>
-      <PaperSize>Letter</PaperSize>
-      <Report isRef="0" />
-    </Page1>
-  </Pages>
-  <ReferencedAssemblies isList="true" count="8">
-    <value>System.Dll</value>
-    <value>System.Drawing.Dll</value>
-    <value>System.Windows.Forms.Dll</value>
-    <value>System.Data.Dll</value>
-    <value>System.Xml.Dll</value>
-    <value>Stimulsoft.Controls.Dll</value>
-    <value>Stimulsoft.Base.Dll</value>
-    <value>Stimulsoft.Report.Dll</value>
-  </ReferencedAssemblies>
-  <ReportAlias>Report</ReportAlias>
-  <ReportChanged>4/27/2020 6:08:21 PM</ReportChanged>
-  <ReportCreated>4/27/2020 4:03:09 PM</ReportCreated>
-  <ReportFile>C:\Users\modyf\source\repos\BinHamranAdminPanel3\BinHamranAdminPanel\Reports\GeneralDaily.mrt</ReportFile>
-  <ReportGuid>adcc102d16ad4535beeb4f55e12df113</ReportGuid>
-  <ReportName>Report</ReportName>
-  <ReportUnit>Centimeters</ReportUnit>
-  <ReportVersion>2019.3.5.0</ReportVersion>
-  <Script>using System;
-using System.Drawing;
-using System.Windows.Forms;
-using System.Data;
-using Stimulsoft.Controls;
-using Stimulsoft.Base.Drawing;
-using Stimulsoft.Report;
-using Stimulsoft.Report.Dialogs;
-using Stimulsoft.Report.Components;
-
-namespace Reports
 {
-    public class Report : Stimulsoft.Report.StiReport
-    {
-        public Report()        {
-            this.InitializeComponent();
+  "ReportGuid": "adcc102d16ad4535beeb4f55e12df113",
+  "ReportName": "Report",
+  "ReportAlias": "Report",
+  "ReportFile": "GeneralDaily.mrt",
+  "ReportCreated": "/Date(-14400000+0200)/",
+  "ReportChanged": "/Date(-14400000+0200)/",
+  "EngineVersion": "EngineV2",
+  "CalculationMode": "Interpretation",
+  "ReportUnit": "Centimeters",
+  "PreviewSettings": 268435455,
+  "Styles": {
+    "0": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "Placement": "ReportTitle",
+          "ComponentType": "Text, Primitive, Image"
         }
-
-        #region StiReport Designer generated code - do not modify
-		#endregion StiReport Designer generated code - do not modify
+      },
+      "Name": "Blue Steel_Report_Title1",
+      "Font": ";14;Bold;",
+      "Border": ";0,0,39;;;;;;solid:Black",
+      "Brush": "solid:",
+      "TextBrush": "solid:79,129,189",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "1": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "OperationPlacementNestedLevel": "GreaterThanOrEqualTo",
+          "Placement": "ReportTitle",
+          "PlacementNestedLevel": 2,
+          "ComponentType": "Text, Primitive, Image"
+        }
+      },
+      "Name": "Blue Steel_Report_Title2",
+      "Font": ";10;Bold;",
+      "Border": ";0,0,39;;;;;;solid:Black",
+      "Brush": "solid:",
+      "TextBrush": "solid:79,129,189",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "2": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement",
+          "Placement": "ReportSummary",
+          "ComponentType": "Text, Primitive, Image"
+        }
+      },
+      "Name": "Blue Steel_Report_Summary",
+      "Font": ";10;Bold;",
+      "Border": ";0,0,39;;;;;;solid:Black",
+      "Brush": "solid:",
+      "TextBrush": "solid:79,129,189",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "3": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement",
+          "Placement": "PageHeader",
+          "ComponentType": "Text, Primitive, Image"
+        }
+      },
+      "Name": "Blue Steel_Page_Header",
+      "Font": ";10;;",
+      "Border": ";0,0,39;;;;;;solid:Black",
+      "Brush": "solid:",
+      "TextBrush": "solid:Black",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "4": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement",
+          "Placement": "PageFooter",
+          "ComponentType": "Text, Primitive, Image"
+        }
+      },
+      "Name": "Blue Steel_Page_Footer",
+      "Font": ";10;;",
+      "Border": ";0,0,39;;;;;;solid:Black",
+      "Brush": "solid:",
+      "TextBrush": "solid:Black",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "5": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "OperationPlacementNestedLevel": "GreaterThanOrEqualTo",
+          "Placement": "GroupHeader",
+          "ComponentType": "Text, Primitive, Image"
+        }
+      },
+      "Name": "Blue Steel_Group_Header1",
+      "Font": ";13;Bold;",
+      "Border": "Top, Bottom;0,0,39;;;;;;solid:Black",
+      "Brush": "solid:",
+      "TextBrush": "solid:79,129,189",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "6": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "Placement": "GroupFooter",
+          "ComponentType": "Text, Primitive, Image"
+        }
+      },
+      "Name": "Blue Steel_Group_Footer1",
+      "Font": ";9.75;Bold;",
+      "Border": "Top, Bottom;0,0,39;;;;;;solid:Black",
+      "Brush": "solid:",
+      "TextBrush": "solid:79,129,189",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "7": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "OperationPlacementNestedLevel": "GreaterThanOrEqualTo",
+          "Placement": "Header",
+          "ComponentType": "Text, Primitive, Image"
+        }
+      },
+      "Name": "Blue Steel_Header1",
+      "Font": ";9.75;Bold;",
+      "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+      "Brush": "solid:79,129,189",
+      "TextBrush": "solid:White",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "8": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "OperationPlacementNestedLevel": "GreaterThanOrEqualTo",
+          "Placement": "Data",
+          "ComponentType": "Text, Primitive, Image, CheckBox"
+        }
+      },
+      "Name": "Blue Steel_Data1",
+      "Border": ";0,0,39;;;;;;solid:Black",
+      "Brush": "solid:",
+      "TextBrush": "solid:0,0,0",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "9": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "Placement, PlacementNestedLevel",
+          "OperationPlacementNestedLevel": "GreaterThanOrEqualTo",
+          "Placement": "DataOddStyle"
+        }
+      },
+      "Name": "Blue Steel_Data1_Odd Style",
+      "Border": ";0,0,39;;;;;;solid:Black",
+      "Brush": "solid:255,255,255",
+      "TextBrush": "solid:0,0,0",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "10": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "Placement, PlacementNestedLevel",
+          "OperationPlacementNestedLevel": "GreaterThanOrEqualTo",
+          "Placement": "DataEvenStyle"
+        }
+      },
+      "Name": "Blue Steel_Data1_Even Style",
+      "Border": ";0,0,39;;;;;;solid:Black",
+      "Brush": "solid:216,216,216",
+      "TextBrush": "solid:0,0,0",
+      "NegativeTextBrush": "solid:Red"
+    },
+    "11": {
+      "Ident": "StiStyle",
+      "CollectionName": "Blue Steel",
+      "Conditions": {
+        "0": {
+          "Ident": "StiStyleCondition",
+          "Type": "ComponentType, Placement, PlacementNestedLevel",
+          "Placement": "Footer",
+          "ComponentType": "Text, Primitive, Image"
+        }
+      },
+      "Name": "Blue Steel_Footer1",
+      "Font": ";8.25;Bold;",
+      "Border": "Top, Bottom;0,0,39;2;;;;;solid:Black",
+      "Brush": "solid:White",
+      "TextBrush": "solid:Black",
+      "NegativeTextBrush": "solid:Red"
     }
+  },
+  "Dictionary": {
+    "Variables": {
+      "0": {
+        "Name": "FromDate",
+        "Alias": "FromDate",
+        "Type": "System.DateTime"
+      },
+      "1": {
+        "Name": "ToDate",
+        "Alias": "ToDate",
+        "Type": "System.DateTime"
+      }
+    },
+    "DataSources": {
+      "0": {
+        "Ident": "StiSqlSource",
+        "Name": "GeneralDaily",
+        "Alias": "GeneralDaily",
+        "Key": "b7cadbe0e51e416e958fe77f593288a0",
+        "Columns": {
+          "0": {
+            "Name": "entry_credit",
+            "Index": -1,
+            "NameInSource": "entry_credit",
+            "Alias": "entry_credit",
+            "Type": "System.Double"
+          },
+          "1": {
+            "Name": "entry_debit",
+            "Index": -1,
+            "NameInSource": "entry_debit",
+            "Alias": "entry_debit",
+            "Type": "System.Double"
+          },
+          "2": {
+            "Name": "SETTING_AR_NAME",
+            "Index": -1,
+            "NameInSource": "SETTING_AR_NAME",
+            "Alias": "SETTING_AR_NAME",
+            "Type": "System.String"
+          },
+          "3": {
+            "Name": "COM_BRN_AR_NAME",
+            "Index": -1,
+            "NameInSource": "COM_BRN_AR_NAME",
+            "Alias": "COM_BRN_AR_NAME",
+            "Type": "System.String"
+          },
+          "4": {
+            "Name": "ACC_AR_NAME",
+            "Index": -1,
+            "NameInSource": "ACC_AR_NAME",
+            "Alias": "ACC_AR_NAME",
+            "Type": "System.String"
+          },
+          "5": {
+            "Name": "DatabaseName",
+            "Index": -1,
+            "NameInSource": "DatabaseName",
+            "Alias": "DatabaseName",
+            "Type": "System.String"
+          }
+        },
+        "NameInSource": "MS SQL",
+        "SqlCommand": "EXEC Rpt_GeneralDaily\r\n@STARTDATE,\r\n@ENDDATE,\r\n@CompanyBranchID,\r\n\r\n@DatabaseID\r\n",
+        "Parameters": {
+          "0": {
+            "Name": "@STARTDATE",
+            "Expression": "\"2019-01-01\"",
+            "Type": 15,
+            "Size": 50
+          },
+          "1": {
+            "Name": "@ENDDATE",
+            "Expression": "\"2019-12-31\"",
+            "Type": 15,
+            "Size": 50
+          },
+          "2": {
+            "Name": "@CompanyBranchID",
+            "Expression": "\"1,2,3,4,5,7,8\"",
+            "Type": 12,
+            "Size": 50
+          },
+          "3": {
+            "Name": "@DatabaseID",
+            "Expression": "\"1,2,3,4,5\"",
+            "Type": 12,
+            "Size": 50
+          }
+        }
+      }
+    },
+    "Databases": {
+      "0": {
+        "Ident": "StiSqlDatabase",
+        "Name": "MS SQL",
+        "Alias": "MS SQL",
+        "ConnectionStringEncrypted": "9HTPC2II08hsW7X8dOzhXtHEyaHGStOB7FvoXE0FJS/D0s8JWwXizcdL+dzldPYvgm7hiU5fwtVhTE3cZyX2v+J4989GbXvNfHv9GGHksXvgavujS1n68eEFzVBzeG2L3GzRy0tcS5n6Qe2l6djgp9MQswjFaKs="
+      }
+    }
+  },
+  "Pages": {
+    "0": {
+      "Ident": "StiPage",
+      "Name": "Page1",
+      "Guid": "98ce26bce10640b4b0cda0fc80d730e0",
+      "Interaction": {
+        "Ident": "StiInteraction"
+      },
+      "Border": ";;2;;;;;solid:Black",
+      "Brush": "solid:",
+      "Components": {
+        "0": {
+          "Ident": "StiReportTitleBand",
+          "Name": "ReportTitle",
+          "ClientRectangle": "0,0.4,19.59,1.4",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "ReportTitleText",
+              "Guid": "756a7f28d7092ab4db1b614af3d9c7f4",
+              "GrowToHeight": true,
+              "ClientRectangle": "0,0,19.59,1.4",
+              "ComponentStyle": "Blue Steel_Report_Title1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "اليوميه العامه من  {Format(\"{0:MM.dd.yyyy}\", FromDate)} الى {Format(\"{0:MM.dd.yyyy}\", ToDate)}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";14;Bold;",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:79,129,189",
+              "Type": "Expression"
+            }
+          }
+        },
+        "1": {
+          "Ident": "StiHeaderBand",
+          "Name": "HeaderGeneralDaily",
+          "ClientRectangle": "0,2.6,19.59,1",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "HeaderTextGeneralDaily4",
+              "Guid": "59e233bf45a984c986264e7e1364b4a7",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "0,0,6.2,1",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "الدائن"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "1": {
+              "Ident": "StiText",
+              "Name": "HeaderTextGeneralDaily5",
+              "Guid": "8992addfa1dfd050fced95ae56a41c78",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "6.2,0,6.4,1",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "المدين"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "2": {
+              "Ident": "StiText",
+              "Name": "HeaderTextGeneralDaily6",
+              "Guid": "9454ab6c430b667de7183a27c3e55d52",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "12.6,0,7,1",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "الحساب"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            }
+          }
+        },
+        "2": {
+          "Ident": "StiGroupHeaderBand",
+          "Name": "GroupHeaderBand2",
+          "ClientRectangle": "0,4.4,19.59,0",
+          "Interaction": {
+            "Ident": "StiBandInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Condition": {
+            "Value": "{GeneralDaily.DatabaseName}"
+          }
+        },
+        "3": {
+          "Ident": "StiGroupHeaderBand",
+          "Name": "GroupHeaderBand3",
+          "ClientRectangle": "0,5.2,19.59,0.8",
+          "Interaction": {
+            "Ident": "StiBandInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "Text1",
+              "Guid": "a0ca9de5c44947108c08adc1b06c9000",
+              "GrowToHeight": true,
+              "ClientRectangle": "12.8,0,6.79,0.8",
+              "ComponentStyle": "Blue Steel_Report_Title1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{GeneralDaily.COM_BRN_AR_NAME}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";14;Bold;",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:79,129,189",
+              "Type": "Expression"
+            }
+          },
+          "Condition": {
+            "Value": "{GeneralDaily.COM_BRN_AR_NAME}"
+          }
+        },
+        "4": {
+          "Ident": "StiGroupHeaderBand",
+          "Name": "GroupHeaderBand1",
+          "ClientRectangle": "0,6.8,19.59,0.8",
+          "Interaction": {
+            "Ident": "StiBandInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "Text2",
+              "Guid": "7bb4094566834c36be4ee3bff8096992",
+              "GrowToHeight": true,
+              "ClientRectangle": "6.2,0,6.39,0.8",
+              "ComponentStyle": "Blue Steel_Report_Title1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{GeneralDaily.SETTING_AR_NAME}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";14;Bold;",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:79,129,189",
+              "Type": "DataColumn"
+            }
+          },
+          "Condition": {
+            "Value": "{GeneralDaily.SETTING_AR_NAME}"
+          }
+        },
+        "5": {
+          "Ident": "StiDataBand",
+          "Name": "DataGeneralDaily",
+          "ClientRectangle": "0,8.4,19.59,1",
+          "Interaction": {
+            "Ident": "StiBandInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "DataTextGeneralDaily4",
+              "Guid": "d3e5af91220406a61da20c45e1b0af6f",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "0,0,6.2,1",
+              "ComponentStyle": "Blue Steel_Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(GeneralDaily.entry_credit,2)}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Type": "Expression"
+            },
+            "1": {
+              "Ident": "StiText",
+              "Name": "DataTextGeneralDaily5",
+              "Guid": "153bbdecee29a386903dec2f25cda1db",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "6.2,0,6.4,1",
+              "ComponentStyle": "Blue Steel_Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(GeneralDaily.entry_debit,2)}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Type": "Expression"
+            },
+            "2": {
+              "Ident": "StiText",
+              "Name": "DataTextGeneralDaily6",
+              "Guid": "bc8631d403f736f6bcba07eca4c4ad03",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "12.6,0,7,1",
+              "ComponentStyle": "Blue Steel_Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{GeneralDaily.ACC_AR_NAME}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": ";0,0,39;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "TextQuality": "Wysiwyg",
+              "Type": "DataColumn"
+            }
+          },
+          "DataSourceName": "GeneralDaily",
+          "FilterMode": "Or",
+          "EvenStyle": "Blue Steel_Data1_Even Style",
+          "OddStyle": "Blue Steel_Data1_Odd Style"
+        },
+        "6": {
+          "Ident": "StiGroupFooterBand",
+          "Name": "GroupFooterBand1",
+          "ClientRectangle": "0,10.2,19.59,0.8",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "Text3",
+              "Guid": "b3c14ac505af49e689bd08fcea9c2f34",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "0,0,6.2,1",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(Sum(GroupHeaderBand1,GeneralDaily.entry_credit),2)}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "1": {
+              "Ident": "StiText",
+              "Name": "Text4",
+              "Guid": "eafdd58543cd4fdb8a43b9fc1196445c",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "6.2,0,6.4,1",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(Sum(GroupHeaderBand1,GeneralDaily.entry_debit),2)}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "2": {
+              "Ident": "StiText",
+              "Name": "Text5",
+              "Guid": "f2ad627529e64c93badb3e8d6fe2039b",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "12.6,0,7,1",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "إجمالى {GeneralDaily.SETTING_AR_NAME}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            }
+          }
+        },
+        "7": {
+          "Ident": "StiGroupFooterBand",
+          "Name": "GroupFooterBand2",
+          "ClientRectangle": "0,11.8,19.59,0.8",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "Text6",
+              "Guid": "14880b4f344441e3978b28c8f64c319d",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "0,0,6.2,1",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(Sum(GroupHeaderBand3,GeneralDaily.entry_credit),2)}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "1": {
+              "Ident": "StiText",
+              "Name": "Text7",
+              "Guid": "24d28b46ad6e4312bfd157c18dd203e7",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "6.2,0,6.4,1",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Round(Sum(GroupHeaderBand3,GeneralDaily.entry_debit),2)}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "2": {
+              "Ident": "StiText",
+              "Name": "Text8",
+              "Guid": "47cd2d78b7e241e99f7b750cf53f8bef",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "12.6,0,7,1",
+              "ComponentStyle": "Blue Steel_Header1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "إجمالى  {GeneralDaily.COM_BRN_AR_NAME}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9.75;Bold;",
+              "Border": "Top, Bottom;0,0,39;2;;;;true;solid:Black",
+              "Brush": "solid:79,129,189",
+              "TextBrush": "solid:White",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            }
+          }
+        },
+        "8": {
+          "Ident": "StiFooterBand",
+          "Name": "FooterGeneralDaily",
+          "ClientRectangle": "0,13.4,19.59,0.6",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:"
+        }
+      },
+      "PaperSize": "Letter",
+      "PageWidth": 21.59,
+      "PageHeight": 27.94,
+      "Watermark": {
+        "TextBrush": "solid:50,0,0,0"
+      },
+      "Margins": {
+        "Left": 1,
+        "Right": 1,
+        "Top": 1,
+        "Bottom": 1
+      }
+    }
+  }
 }
-</Script>
-  <ScriptLanguage>CSharp</ScriptLanguage>
-  <Styles isList="true" count="12">
-    <Blue_x0020_Steel_Report_Title1 Ref="29" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>Transparent</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item29 Ref="30" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image</ComponentType>
-          <Placement>ReportTitle</Placement>
-          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item29>
-      </Conditions>
-      <Font>Arial,14,Bold</Font>
-      <Name>Blue Steel_Report_Title1</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>[79:129:189]</TextBrush>
-    </Blue_x0020_Steel_Report_Title1>
-    <Blue_x0020_Steel_Report_Title2 Ref="31" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>Transparent</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item31 Ref="32" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image</ComponentType>
-          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
-          <Placement>ReportTitle</Placement>
-          <PlacementNestedLevel>2</PlacementNestedLevel>
-          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item31>
-      </Conditions>
-      <Font>Arial,10,Bold</Font>
-      <Name>Blue Steel_Report_Title2</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>[79:129:189]</TextBrush>
-    </Blue_x0020_Steel_Report_Title2>
-    <Blue_x0020_Steel_Report_Summary Ref="33" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>Transparent</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item33 Ref="34" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image</ComponentType>
-          <Placement>ReportSummary</Placement>
-          <Type>ComponentType, Placement</Type>
-        </Item33>
-      </Conditions>
-      <Font>Arial,10,Bold</Font>
-      <Name>Blue Steel_Report_Summary</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>[79:129:189]</TextBrush>
-    </Blue_x0020_Steel_Report_Summary>
-    <Blue_x0020_Steel_Page_Header Ref="35" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>Transparent</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item35 Ref="36" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image</ComponentType>
-          <Placement>PageHeader</Placement>
-          <Type>ComponentType, Placement</Type>
-        </Item35>
-      </Conditions>
-      <Font>Arial,10</Font>
-      <Name>Blue Steel_Page_Header</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>Black</TextBrush>
-    </Blue_x0020_Steel_Page_Header>
-    <Blue_x0020_Steel_Page_Footer Ref="37" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>Transparent</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item37 Ref="38" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image</ComponentType>
-          <Placement>PageFooter</Placement>
-          <Type>ComponentType, Placement</Type>
-        </Item37>
-      </Conditions>
-      <Font>Arial,10</Font>
-      <Name>Blue Steel_Page_Footer</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>Black</TextBrush>
-    </Blue_x0020_Steel_Page_Footer>
-    <Blue_x0020_Steel_Group_Header1 Ref="39" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>Top, Bottom;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>Transparent</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item39 Ref="40" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image</ComponentType>
-          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
-          <Placement>GroupHeader</Placement>
-          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item39>
-      </Conditions>
-      <Font>Arial,13,Bold</Font>
-      <Name>Blue Steel_Group_Header1</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>[79:129:189]</TextBrush>
-    </Blue_x0020_Steel_Group_Header1>
-    <Blue_x0020_Steel_Group_Footer1 Ref="41" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>Top, Bottom;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>Transparent</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item41 Ref="42" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image</ComponentType>
-          <Placement>GroupFooter</Placement>
-          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item41>
-      </Conditions>
-      <Font>Arial,9.75,Bold,Point,False,204</Font>
-      <Name>Blue Steel_Group_Footer1</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>[79:129:189]</TextBrush>
-    </Blue_x0020_Steel_Group_Footer1>
-    <Blue_x0020_Steel_Header1 Ref="43" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
-      <Brush>[79:129:189]</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item43 Ref="44" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image</ComponentType>
-          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
-          <Placement>Header</Placement>
-          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item43>
-      </Conditions>
-      <Font>Arial,9.75,Bold,Point,False,204</Font>
-      <Name>Blue Steel_Header1</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>White</TextBrush>
-    </Blue_x0020_Steel_Header1>
-    <Blue_x0020_Steel_Data1 Ref="45" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>Transparent</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item45 Ref="46" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
-          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
-          <Placement>Data</Placement>
-          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item45>
-      </Conditions>
-      <Font>Arial,8</Font>
-      <Name>Blue Steel_Data1</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>[0:0:0]</TextBrush>
-    </Blue_x0020_Steel_Data1>
-    <Blue_x0020_Steel_Data1_Odd_x0020_Style Ref="47" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>[255:255:255]</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item47 Ref="48" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
-          <Placement>DataOddStyle</Placement>
-          <Type>Placement, PlacementNestedLevel</Type>
-        </Item47>
-      </Conditions>
-      <Font>Arial,8</Font>
-      <Name>Blue Steel_Data1_Odd Style</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>[0:0:0]</TextBrush>
-    </Blue_x0020_Steel_Data1_Odd_x0020_Style>
-    <Blue_x0020_Steel_Data1_Even_x0020_Style Ref="49" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
-      <Brush>[216:216:216]</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item49 Ref="50" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
-          <Placement>DataEvenStyle</Placement>
-          <Type>Placement, PlacementNestedLevel</Type>
-        </Item49>
-      </Conditions>
-      <Font>Arial,8</Font>
-      <Name>Blue Steel_Data1_Even Style</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>[0:0:0]</TextBrush>
-    </Blue_x0020_Steel_Data1_Even_x0020_Style>
-    <Blue_x0020_Steel_Footer1 Ref="51" type="Stimulsoft.Report.StiStyle" isKey="true">
-      <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black</Border>
-      <Brush>White</Brush>
-      <CollectionName>Blue Steel</CollectionName>
-      <Conditions isList="true" count="1">
-        <Item51 Ref="52" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
-          <ComponentType>Text, Primitive, Image</ComponentType>
-          <Placement>Footer</Placement>
-          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item51>
-      </Conditions>
-      <Font>Arial,8.25,Bold,Point,False,204</Font>
-      <Name>Blue Steel_Footer1</Name>
-      <NegativeTextBrush>Red</NegativeTextBrush>
-      <TextBrush>Black</TextBrush>
-    </Blue_x0020_Steel_Footer1>
-  </Styles>
-</StiSerializer>

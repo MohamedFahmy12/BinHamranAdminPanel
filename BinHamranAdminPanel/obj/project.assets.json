@@ -10146,27 +10146,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\modyf\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\alkasim\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\modyf\\Source\\Repos\\BinHamranAdminPanel3\\BinHamranAdminPanel\\BinHamranAdminPanel.csproj",
+      "projectUniqueName": "D:\\New project\\BinHamranAdminPanel3\\BinHamranAdminPanel\\BinHamranAdminPanel.csproj",
       "projectName": "BinHamranAdminPanel",
-      "projectPath": "C:\\Users\\modyf\\Source\\Repos\\BinHamranAdminPanel3\\BinHamranAdminPanel\\BinHamranAdminPanel.csproj",
-      "packagesPath": "C:\\Users\\modyf\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\modyf\\Source\\Repos\\BinHamranAdminPanel3\\BinHamranAdminPanel\\obj\\",
+      "projectPath": "D:\\New project\\BinHamranAdminPanel3\\BinHamranAdminPanel\\BinHamranAdminPanel.csproj",
+      "packagesPath": "C:\\Users\\alkasim\\.nuget\\packages\\",
+      "outputPath": "D:\\New project\\BinHamranAdminPanel3\\BinHamranAdminPanel\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\modyf\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\alkasim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
